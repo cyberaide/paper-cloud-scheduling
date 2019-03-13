@@ -69,6 +69,14 @@
 
 %\journal{FGCS}
 
+\makeatletter
+\def\ps@pprintTitle{%
+ \let\@oddhead\@empty
+ \let\@evenhead\@empty
+ \def\@oddfoot{}%
+ \let\@evenfoot\@oddfoot}
+\makeatother
+
 \begin{document}
 
 \begin{frontmatter}
