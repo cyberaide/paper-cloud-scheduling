@@ -1,5 +1,6 @@
 FILENAME=laszewski-cloud-scheduling
-#FILENAME=y
+DIR=paper-cloud-scheduling
+
 all: $(FILENAME).pdf
 
 # MAIN LATEXMK RULE
@@ -24,3 +25,7 @@ regular:
 	bibtex $(FILENAME)
 	pdflatex $(FILENAME)
 	pdflatex $(FILENAME)
+
+zip: clean
+	cd ..; zip -r $(DIR).zip $(DIR)
+	cd ..; mv $(DIR).zip $(DIR)
