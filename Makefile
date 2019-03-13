@@ -27,5 +27,5 @@ regular:
 	pdflatex $(FILENAME)
 
 zip: clean
-	cd ..; zip -r $(DIR).zip $(DIR)
-	cd ..; mv $(DIR).zip $(DIR)
+	zip -x "*.git*" "*bin*" "*zip" "*.md" "Makefile" -r $(FILENAME).zip .
+
