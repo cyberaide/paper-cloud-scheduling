@@ -1,5 +1,0 @@
-Gregor von Laszewski is an Assistant Director DSC in the School of Informatics and Computing at Indiana University. He holds also a position as Adjunct Professor in the Intelligent Systems Engineering Department. Previously he held Adjunct Professor positions at the Computer Science Department at Indiana University and University of North Texas, hes has taught on voluntary basis at Illinois Institute of Technology. He received a Masters Degree in 1990 from the University of Bonn, Germany, and a Ph.D. in 1996 from Syracuse University in computer science.
-
-His current interest and projects include cloud computing, big data, and scientific impact metrics. He is working tightly with SDSC on virtual clusters for XSEDE comet. He initiated the Cloudmesh project (http://cloudmesh.github.io/client/) which is a toolkit to enable cloud computing across various Cloud and Container IaaS such as OpenStack, AWS, Azure, docker, docker swarm, and kubernetes.
-
-To contact me please send mail to laszewski@gmail.com
