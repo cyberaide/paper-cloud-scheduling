@@ -28,7 +28,7 @@ regular:
 
 
 zip: clean
-	cd ..; zip -x "*/*.git*" "*/*bin*" "*/*zip" "*/*.md" "*/Makefile" -r $(DIR)/$(paper).zip $(DIR)
+	cd ..; zip -x "*/.DS*" "*/*.git*" "*/*bin*" "*/*zip" "*/*.md" "*/Makefile" -r $(DIR)/paper.zip $(DIR)
 
 flatzip: clean
 	zip -x "*.git*" "*bin*" "*zip" "*.md" "Makefile" -r $(FILENAME).zip .
