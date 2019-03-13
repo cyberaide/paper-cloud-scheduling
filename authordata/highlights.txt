@@ -1,0 +1,10 @@
+
+In this paper, we have surveyed the many important aspects of
+scheduling problems in cloud computing. After introducing the needed
+terminology, we presented a comprehensive taxonomy of the different
+cloud scheduling approaches and issues. A layered and phased
+scheduling model is presented that differentiates the concerns between
+infrastructure, platform, servers and function as a service models. A
+comprehensive investigation has been conducted to verify that the
+taxonomy is valid and that existing scheduling techniques motivate its
+validity.

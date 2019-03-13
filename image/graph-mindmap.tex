@@ -1,0 +1,46 @@
+\begin{figure}[htb]
+\caption{Cloud scheduling aspects}\label{F:mindmap}
+  \centering
+  \resizebox{1.0\columnwidth}{!}{%
+\begin{tikzpicture}
+  \path[mindmap,concept color=black,text=white]
+    node[concept] {Cloud Scheduling}
+    [clockwise from=0]
+    child[concept color=blue!50!black] {
+      node[concept] {Infrastructure}
+      [clockwise from=90]
+      child { node[concept] {Connectivity Model} }
+      child { node[concept] {Resource Model} }
+      child { node[concept] {Physical Model} }
+    }  
+    child[concept color=orange!75!black] {
+      node[concept] {Cloud Scheduling Algorithms}
+      [clockwise from=45]
+      child { node[concept] {Strategy} }
+      child { node[concept] {Deterministic} }
+      child { node[concept] {Heuristic} }
+    }
+    child[concept color=red!75!black] {
+      node[concept] {Cloud Scheduling Challenges}
+      [clockwise from=-30]
+      child { node[concept] {Diversity} }
+      child { node[concept] {Multi-tenancy} }
+      child { node[concept] {Heterogeneity} }
+      child { node[concept] {Distributed} }
+      child { node[concept] {Scalability} }
+      child { node[concept] {Dynamicity} }
+      child { node[concept] {Traditional Scheduling Challenges} }
+    }
+    child[concept color=green!25!black] { node[concept] {General Metrics} }
+    child[concept color=green!50!black] {
+      node[concept] {Cloud Scheduling Model}
+      [clockwise from=-100]
+      child { node[concept] {Compute Resource-based} }
+      child { node[concept] {Data-based} }
+      child { node[concept] {Location-based} }
+      child { node[concept] {Energy-based} }
+      child { node[concept] {Security-based} }
+    }
+\end{tikzpicture}
+}
+\end{figure}
