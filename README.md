@@ -1,3 +1,14 @@
-# paper-cloud-scheduling
+Paper about cloud scheduling taxonomy
 
-Paper about cloud scheduling
+To create the paper use:
+
+```
+make
+```
+
+To edit it and what the PDF change at the same time, use
+
+```
+make watch
+```
+
