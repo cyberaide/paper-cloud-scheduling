@@ -1,6 +1,7 @@
 %\documentclass[preprint,12pt,3p]{elsarticle}
 \documentclass[final,5p,times,twocolumn]{elsarticle}
 
+\usepackage{dtk-logos}
 \usepackage{amssymb}
 \usepackage{comment}
 \usepackage{fullpage}
@@ -11,8 +12,11 @@
 \usepackage{makecell}
 
 \usepackage{tikz}
-\usetikzlibrary{mindmap,trees}
+\usetikzlibrary{arrows,mindmap,trees,backgrounds,shapes,arrows,positioning,calc,snakes,fit}
+\usepgflibrary{decorations.markings}
 
+
+\usepackage{verbatim}
 \usepackage{forest}
 \usepackage{hyperref}
 \usepackage{adjustbox}
@@ -1374,7 +1378,7 @@ We realize that although we have analyzed a large number of papers,
 there are more papers in that area available. Please inform us as we<
 intend to collect them for further updates to this paper. We like to
 especially pay attention to papers that may motivate us to refine our
-taxonomy. Please send us your reference in \bibtex format while adding
+taxonomy. Please send us your reference in \BibTeX format while adding
 in the abstract what your paper provides and how it fits in our
 scheduling taxonomy. The contribution can be send either to
 \verb|laszewski@gmail.com|, or via a github pull request at

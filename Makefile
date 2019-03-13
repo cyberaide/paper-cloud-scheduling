@@ -1,4 +1,5 @@
 FILENAME=laszewski-cloud-scheduling
+#FILENAME=y
 all: $(FILENAME).pdf
 
 # MAIN LATEXMK RULE
@@ -17,3 +18,9 @@ watch: $(FILENAME).pdf
 clean:
 	latexmk -C -bibtex
 	rm -rf $(FILENAME).spl
+
+regular:
+	pdflatex $(FILENAME)
+	bibtex $(FILENAME)
+	pdflatex $(FILENAME)
+	pdflatex $(FILENAME)
