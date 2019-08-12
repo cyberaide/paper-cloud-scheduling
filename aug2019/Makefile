@@ -23,6 +23,7 @@ clean:
 	rm -rf $(FILENAME).spl
 	rm -f *_bibertool.bib
 	rm -f *.ttt
+	rm -f *.blg
 
 
 regular:
