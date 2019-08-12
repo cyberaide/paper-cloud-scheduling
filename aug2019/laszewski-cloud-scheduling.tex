@@ -4,6 +4,7 @@
 
 \documentclass[final,5p,times,twocolumn]{elsarticle}
 
+\usepackage[T1]{fontenc}
 \usepackage{comment}
 \usepackage{fullpage}
 \usepackage{graphicx}
@@ -13,7 +14,10 @@
 \usepackage{makecell}
 \usepackage{xcolor}
 \usepackage{tikz}
+\usetikzlibrary{arrows}
 \usetikzlibrary{mindmap,trees}
+\usetikzlibrary{backgrounds,shapes,arrows,positioning,calc,snakes,fit}
+\usepgflibrary{decorations.markings}
 
 \usepackage{forest}
 \usepackage{hyperref}
@@ -187,8 +191,8 @@ on the task, job, and cluster level but integrates the data center and
 even regional and global data centers while adding on demand resource
 needs. Our study identifies services that assist in the formulation of
 the scheduling needs and interfaces for the NIST Big Data Reference
-Architecture (NIST-BDRA) \cite{nist-bdra-vol6} and it's interface
-definitions currently under development \cite{nist-bdra-vol8}.
+Architecture (NIST-BDRA)~\cite{nist-bdra-vol6} and it's interface
+definitions currently under development~\cite{nist-bdra-vol8}.
 
 The paper is structured as follows. We present first in
 Section~\ref{sec:terminology} our general terminology we use throughout
@@ -196,8 +200,8 @@ the paper. Next we present in Section ~\ref{sec:taxonomy} our
 architecture view and taxonomy that we have derived from our practical
 experience with FutureGrid
 \cite{las12fg-bookchapter,fox2013futuregrid}, FutureSystem, and
-Software such as Cloudmesh \cite{von2014accessing}, Virtual Clusters
-\cite{las-comet}, and Rain \cite{las-fg-1295,las10dynamic,las-rain}
+Software such as Cloudmesh~\cite{von2014accessing}, Virtual Clusters
+\cite{las-comet}, and Rain~\cite{las-fg-1295,las10dynamic,las-rain}
 while working on multi-hosted heterogeneous cloud frameworks. This
 view is backed up by our extensive literature research in Sections
 \ref{sec:literature} and our classification based on the taxonomy we
@@ -362,7 +366,7 @@ associated with the provisioning step:
 
 In this section we introduce our scheduling taxonomy for clouds. Our
 taxonomy integrates the classical cloud architecture as defined by
-NIST \cite{mell2011nist}. However, as scheduling is conducted with
+NIST~\cite{mell2011nist}. However, as scheduling is conducted with
 resources in mind we also focus on aspects to deal with cloud
 resources, their physical instantiation and their connectivity while
 showcasing their relationship in our taxonomy.
@@ -589,7 +593,7 @@ figure only a relevant subset of algorithm classifications including
 the distinction between VM placement and QoS parameters based
 algorithms. Dependent on the locality and scope of the scheduling task
 often a deterministic approach is not suitable. When looking at
-heuristics \cite{vivekanandan2011study} we find traditional algorithms
+heuristics~\cite{vivekanandan2011study} we find traditional algorithms
 such as hill-climbing but also a variety of nature inspired
 algorithms. The detail description of existing work in the field of
 resource scheduling algorithm is done in the next section.
@@ -700,7 +704,7 @@ Energy consumption is a key issue for cloud providers due to the
 enormous cost associated with operating large cloud data center. By
 using server consolidation, optimizing operation on physical machines
 and using dynamic voltage scaling processors, energy consumption can
-be reduced as shown in \cite{las09dvfs,las10dvfs,calheiros2014energy}.
+be reduced as shown in~\cite{las09dvfs,las10dvfs,calheiros2014energy}.
 
 Various scheduling methods such as minimize the total
 makespan~\cite{bessis2013using}, dynamic
@@ -749,7 +753,7 @@ contains moving data in and out of the compute center or storage, but
 also may contain message exchange between to sometime complex
 distributed applications that run in these cloud data
 centers. Minimizing the distance between data providers and data
-consumers while for example replicating data \cite{www-akamai} can save
+consumers while for example replicating data~\cite{www-akamai} can save
 significant amount of traffic and has long been applied in the
 internet as one of its beneficial strategies. Service level agreements
 (SLA)~\cite{breitgand2012improving} are playing an important role to
@@ -827,13 +831,17 @@ deadlines~\cite{arabnejad2017scheduling}.
 
 Besides virtual machine and task scheduling it is also important to
 integrate data-aware scheduling to reduce access time to the
-data~\cite{van2013online}. As already mentioned previously, historical
-data~\cite{thomas2015credit} or proxies~ \cite{erdil2013autonomic}
+data~\cite{van2013online}.
+
+\TODO{THIS REFERNCE DOES NOT EXIST}
+
+As already mentioned previously, historical
+data~\cite{thomas2015credit} or proxies~~\cite{erdil2013autonomic}
 about execution times help designing time-aware scheduling algorithms.
 
 We find algorithms that integrate
 deadline constraint ~\cite{li2016energy}, 
-completion time~\cite{xu2011job} with fairness~\cite{jasso1989theory}, 
+completion time~\cite{xu2011job} with fairness,
 low downtime to improve time for execution~\cite{frincu2014scheduling},
 and 
 delay bounds 
@@ -983,7 +991,7 @@ platforms and bare metal provisioning.
   motivators for such hardware. In industry we for example find
   computational fluid dynamics, and modeling of biochemical processes
   as one of its user communities. Example offerings for HPC in AWS
-  \cite{www-aws-hpc}, Azure \cite{www-azure-hpc}, Google \cite{www-google-hpc},
+  \cite{www-aws-hpc}, Azure~\cite{www-azure-hpc}, Google~\cite{www-google-hpc},
   but also other less prominent clouds such as Penguin Computing HPC
   in the cloud~\cite{PODHPCCloud2019}, and
   SabalCore~\cite{Sabalcore2019}.
@@ -1000,7 +1008,7 @@ platforms and bare metal provisioning.
   Univa Grid Engine~\cite{www-univa}, PBSpro~\cite{www-pbs-manual}, LSF~\cite{www-lsf-job-dep},
   Moab~\cite{www-moab-job-dep}. 
   \color{red}
-  Table ~\refl{T:l} present the comparison of the different batch resource management systems. 
+  Table ~\ref{T:l} present the comparison of the different batch resource management systems.
   
   \color{black}
 
@@ -1123,7 +1131,7 @@ fulfill this demand.
 Other providers have focused on making use of multicloud virtual
 machine placement possible while offering optimization strategies for
 workflows~\cite{CloudSigma2016} including detailed analysis of cost
-metrics \cite{Cloudmetrics2019}
+metrics~\cite{Cloudmetrics2019}
 
 Other efforts such as~\cite{las12fg-bookchapter,fox2013futuregrid}
 have early on uniquely focused on scheduling bare metal resources
@@ -1167,7 +1175,7 @@ Singularity, and Mesos.
 
 
 \item[Docker Swarm.] Docker Swarm is a clustering and scheduling
-tool for Docker containers \cite{Dockerswarmengine2018} across compute
+tool for Docker containers~\cite{Dockerswarmengine2018} across compute
 servers. In a docker swarm we distinguish manager nodes and worker
 nodes. The manager uses load balancing to place the containers onto
 the worker nodes. Once a task is placed on a server it is executed
@@ -1207,13 +1215,13 @@ system's capability in terms of scalability and robustness.
 \item[Community Efforts.] Many community efforts to improve
 container scheduling are conducted. This includes for example the use
 of genetic algorithm~\cite{guerrero2018genetic}, container and host
-selection policies for cloud deployment models \cite{hanafy2017novel}
+selection policies for cloud deployment models~\cite{hanafy2017novel}
 with SLA's, the characterization of
 applications~\cite{medel2017client} scheduling of virtual
 clusters~\cite{dziurzanskivalue}, and migration~\cite{Flocker2018},
 and systems integrating multiple schedulers such as Nomad which offer
 service scheduler, batch scheduler and a systems scheduler while
-focusing on the support of long running jobs \cite{Nomad2018}.  
+focusing on the support of long running jobs~\cite{Nomad2018}.
 \end{description}
 Table ~\ref{T:z} shows the comparison of existing work related to scheduling. 
 
@@ -1413,8 +1421,8 @@ run on the top of the operating system kernel. Hence, a container is a
 lightweight approach to implement the virtualization technology
 leveraging the underlying OS. The memory consumption by containers is
 less then the resources required to boot a virtual machine with its
-virtualized OS. As example we point out Kubernetes \cite{Kuber2018}
-where containers within a pod \cite{Kubernates2018} share an IP
+virtualized OS. As example we point out Kubernetes~\cite{Kuber2018}
+where containers within a pod~\cite{Kubernates2018} share an IP
 address and find each other via local host. Communication among them
 is done by inter-process communications, such as, SystemV semaphores
 or POSIX shared memory. Containers in different pods cannot
@@ -1470,7 +1478,7 @@ We realize that although we have analyzed a large number of papers,
 there are more papers in that area available. Please inform us as we
 intend to collect them for further updates to this paper. We like to
 especially pay attention to papers that may motivate us to refine our
-taxonomy. Please send us your reference in \BiBtex format while adding
+taxonomy. Please send us your reference in \textsc{Bib}\TeX format while adding
 in the abstract what your paper provides and how it fits in our
 scheduling taxonomy. The contribution can be send either to
 \verb|laszewski@gmail.com|, or via a github pull request at
