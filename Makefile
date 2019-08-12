@@ -8,7 +8,7 @@ all: $(FILENAME).pdf
 $(FILENAME).pdf: $(FILENAME).tex
 	latexmk -quiet -bibtex $(PREVIEW_CONTINUOUSLY) -f -pdf -pdflatex="pdflatex -synctex=1 -interaction=nonstopmode" -use-make $(FILENAME).tex
 
-
+.PRECIOUS: %.pdf
 .PHONY: watch
 
 watch: PREVIEW_CONTINUOUSLY=-pvc
