@@ -1,0 +1,43 @@
+\begin{table*}[p]
+%\centering
+\caption{Comparison of Different Resource Management Systems}\label{T:distr-cloud}
+\centering
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|p{1.9cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}|}
+  \hline
+ \textbf{Framework} & \textbf{Architecture} &  \textbf{Usage} & \textbf{Open source} & \textbf{Support} & \textbf{Applications}   & \textbf{Programming Framework} 
+\\ \hline
+
+Eagle~\cite{delgado2016job} & Hybrid & Differentiates short and long jobs & EPFL IC IINFCOM LABOS, Switzerland & Spark & Different workloads and Parallel jobs & Python, Java, PHP, Python, Ruby 
+\\ \hline
+
+Hopper~\cite{ren2015hopper} &  Decentralized &  Speculation-aware job scheduler & Microsoft Research & Spark  & CPU intensive & Java, Php, .net
+\\ \hline
+
+Tetris~\cite{grandl2015multi} & Centralized & Multi-resource bin-packing & Microsoft & Generic applications & CPU intensive & Python, Perl, Java, PHP, Ruby, Node.js, Erlang, Scala, 
+\\ \hline
+
+Fawkes~\cite{ghit2014balanced} & Centralized & Dynamic resource balancing &TU Delft & Mapreduce frameworks & Data intensive & Python, Java, PHP, Python, Ruby 
+\\ \hline
+
+Omega~\cite{schwarzkopf2013omega} &  Decentralized & Shared state abstraction & University of Cambridge & Custom applications & Parallel applications &Java, Php, .net
+\\ \hline
+
+OurGrid~\cite{andrade2003ourgrid} & Centralized  & Equitable Resource Sharing & Universidade Federal de CampinaGrand, Brazil & Generic applications  & Bag of Tasks  & Java, Python
+\\ \hline
+
+Sparrow~\cite{ousterhout2013sparrow}& Decentralized & Randomized sampling approach &  U.C. Berkeley AMPLab & Spark& CPU intensive& Python, Perl, Java, PHP, Ruby, Node.js, Erlang, Scala, Clojure, .Net
+\\ \hline
+
+Yarn~\cite{vavilapalli2013apache} & Monolithic  & Resource requests with containers &Hadoop  & Spark & Data intensive  &Python, Java, PHP, Python, Ruby, Clojour
+\\ \hline
+
+%Mesos~\cite{Mesos2018} & Two way protocol  & Pessimistic resource offers & University of California, Berkeley & Spark & CPU and Data Intensive & Python, Perl, PHP, Rest, Ruby, .net, C\#
+%\\ \hline
+
+\end{tabular}
+}
+
+\end{table*}
+

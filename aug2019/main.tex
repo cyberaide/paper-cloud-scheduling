@@ -1,0 +1,72 @@
+%\documentclass[preprint,12pt,3p]{elsarticle}
+\documentclass[final,1p,times,twocolumn]{elsarticle}
+
+\usepackage{amssymb}
+
+
+\journal{FGCS}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Sample article to present \texttt{elsarticle} class\tnoteref{label0}}
+\tnotetext[label0]{This is only an example}
+
+
+\author[label1,label2]{Author One\corref{cor1}\fnref{label3}}
+\address[label1]{Address One}
+\address[label2]{Address Two\fnref{label4}}
+
+\cortext[cor1]{I am corresponding author}
+\fntext[label3]{I also want to inform about\ldots}
+\fntext[label4]{Small city}
+
+\ead{author.one@mail.com}
+\ead[url]{author-one-homepage.com}
+
+\author[label5]{Author Two}
+\address[label5]{Some University}
+\ead{author.two@mail.com}
+
+\author[label1,label5]{Author Three}
+\ead{author.three@mail.com}
+
+\begin{abstract}
+Text of abstract. Text of abstract. Text of abstract. Text of abstract. Text of abstract. 
+\end{abstract}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+example \sep \LaTeX \sep template
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+\end{keyword}
+
+\end{frontmatter}
+
+\section{Sample section}
+\label{sec1}
+
+Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. 
+Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. 
+Sample text. Sample text. Citation of Einstein paper~\cite{Einstein}.
+\
+
+
+\appendix
+
+\section{Section in Appendix}
+\label{appendix-sec1}
+
+Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. 
+Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. 
+Sample text. 
+
+\bibliographystyle{elsarticle-num}
+
+
+\bibliography{sample}
+
+
+\end{document}

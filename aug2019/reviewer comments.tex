@@ -1,0 +1,128 @@
+Reviewer 1
+
+  -
+
+This work is a survey of resource scheduling researches in cloud computing area. The authors design a resource scheduling taxonomy from their experience in utilizing and managing multi-cloud environments. As an academic paper, rather than a technical report, the professionalism and rigor of language needs to be improved. The authors should check their sentences in this work carefully and make clearer and correct expressions. Some comments are given as follows:
+
+1. Abstract: The authors should clearly illustrate the brief contributions of this work. In "It justifies our model and provides an overview of existing scheduling techniques in cloud computing.”, the mentions about "our model" is confusing for readers to understand the intent of this paper.
+
+2. Introduction: As mentioned in the Abstract part, the authors should make their descriptions more professional and logical. In particular, they should highlight their own contributions clearly. 
+
+3. General Scheduling Terminology for Clouds: In my own opinion, it is not necessary to use a section to put the terminologies used in a paper. A table can be used to summarize the terminologies that you should explain. Also, a present of the definition such as "Cloud Resource: Is a resource offered......" is not professional and looks strange.
+
+\color{red}
+Section 2  need to merge with subsection 3.7
+or 
+Section 3.7 can be merged with section number 2.
+
+\color{black}
+4. The structure of Sec.3 is confusing. The first paragraph of this section should give readers a clear guide about what they are gonging to read.
+
+\reply 
+
+-Reviewer 2
+
+  -
+
+# Summary
+
+This paper presents a taxonomy to approach resource scheduling from a perspective that can be seen as a standard to be followed when implementing resource scheduling frameworks. This taxonomy takes into account the different layers of infrastructure on which it is possible to deploy and schedule workloads, several metrics that can guide such scheduling decision and finally, the challenges of resource scheduling from different point of views. Containers and functions are added to the study which is of interest. An extensive literature review is also presented.
+
+
+# Content
+
++ Section 2, which introduces the terminology later used throughout the paper, may be too brief for the paper's own sake. Only a handful of terms are described while I believe many others that the reader may need may be left out. For example, although the paper centers on schedulers and its policies to implement applications on the Cloud, neither a basic description of what a scheduler is nor a description of the policy concept are given. Throughout the paper several schedulers as several different policies are presented, thus, I think it would be interesting to make the distinction between scheduler and scheduler's policy with a definition.
+
+
+\reply: Section 2  need to merge with subsection 3.7 
+
++ Regarding Section 3, I believe that a single big topic, "scheduling" and two subtopics, 1) "taxonomies applied to Cloud" and 2) "Cloud challenges", have been mixed on this Section with no clear connection which overall leads to confusion to the reader. While Subsections 1 and 3 describe scheduling design and models, several taxonomies are introduced in Subsections 2,7 and 8 and challenges are introduced in Subsections 4, 5 and 6. Although Subsection 4 is titled as "Taxonomy of Challenges in Cloud Scheduling", I believe it is not correct to describe as a taxonomy a set of challenges, as they do not possess any hierarchy among themselves that allows to build such 'taxa'. This is not the case with, for example, Subsection 7, where scheduling unit are presented in a hierarchical manner. Nevertheless, for this latter Subsection I would re-assess the resource unit taxonomy presented. The "Deployment" unit is defined by using the term Job, which belongs to another classification. In a similar manner, the unit 'Scheduler' is defined as a process, thus, a running program and because of this, if considered, it should not be described as a resource but rather as a task (or this may even be the definition lacking in Section 2). For this Section I recommend a better organization, possibly by even creating different Sections for each topic as they can be addressed separately.
+
+\reply section 3 need to reorganize and challenges we can take in the last section. 
+
++ Both Sections 2 and 3 lay some theoretical ground work that is very slightly used afterwards in the rest of the paper to guide the reader or contrast the literature reviews presented.
+
+
++ In Section 4:
+
+* In Subsection 4.1, reference 15 is completely unrelated to the citation context.
+\reply 
+comment is resolved.
+
+* In Subsection 4.2.1, reference 22 is missing in its respective table (Table 2), even though it is an algorithm.
+
+\reply
+\todo{please check this one}
+
+
+* Subsection 4.4 may be unrelated to the paper's topic or may address too many topics, some of which may be unrelated. One of the topics are the HPC services and bare-metal provisioning offered by Cloud providers, both of which may rely on simple queue schedulers or the user's own infrastructure deployment choice, respectively, with little room for resource scheduling algorithms. Another topic is the Cloud but as an extension of HPC systems for bursting. Finally both using HPC infrastructure to run containers or otherwise Cloud platforms such as Hadoop may be unrelated to any scheduling algorithm study overall.
+
+\todo{Please check one this comment too}
+
+* Subsection 4.5, which refers to workflows, uses references that may be too old (they range from 2000 to 2010) for the reader's interest. This is further supported by the fact that many of the references are for workflows on the Grid, while this paper tries to address scheduling for the newest technologies and environments such as containers and FaaS in the Cloud. There has to be more recent research which addresses workflows, the Cloud, containers, FaaS....
+
+* Subsection 4.6 is centered around the topic of Cloud pricing and the comparison of different Cloud provider models. The scheduling of instances is addressed but such scheduling is reduced to simple operations of starting and stooping instances or whole services, which may not be of interest to the reader.
+
+
++ In the conclusions in Section 5, I find some of the presented lessons as unrelated to the paper's work. Both the "Analytics Services" and the "Edge Computing" lessons belong more as part of a future work section, as they have not been addressed anywhere in the paper. In other lessons such as "More than VM scheduling" or "integration for data", technologies like FaaS or Big Data are mentioned even though the scheduling aspects for both have been only slightly described. Considering that the addition of FaaS to the Cloud scheduling state of the art is one of the paper's selling points, more citations describing algorithms or policies for FaaS would be appreciated, mainly in Subsection 4.8. In regards to Big Data and its 'management of data', to support this lesson a sort of data-based scheduling study would need to be mentioned, according to Figure 5 "Data-based scheduling model" and in accordance to the sections devoted to "energy aware" or "network aware".
+
+
+# Language
+
+English should be greatly improved for this paper as numerous errors are present (e.g., "distingtion", "and this play a significant roll") as well as grammatically incorrect or ambiguous sentences and misleading punctuation.
+
+
+# Layout, figures and tables
+
++ There are multiple broken references to figures and tables.
+
++ Figure 3 is not properly displayed in the printed form. Although in the digital form it may be more easy to analyze, I would still recommend an alternative palette of colours, font size or a different format of mindmap. The main problem overall is the fact that the labels are difficult to read due to the fontsize and strong background colours.
+
++ Due to the content length some tables are difficult to read as the font sizes are scaled down and end up being too small for a comfortable reading. If all the table's content is maintained, I would suggest displaying the tables in a landscape mode using a whole page.
+
++ The citations inside the tables are not ordered making it difficult to correlate the citations in the text (ordered) to the ones in the table (unordered).
+
++ Table 9 is not referenced in the paper and I can not place where it could be.
+
++ In Section 4.2 there is a broken Figure reference that I deem could be important. I do not know if the Figure is missing or if it is any of the ones referenced previous to that section, as there are no more Figures in the rest of the paper. At any rate I can not imagine which figure would it be.
+
++ In Table 1 reference number 21 is misplaced, it belongs to and it is placed on Table 2.
+
++ Throughout all the tables a normalization of terms and style would be needed (e.g., use of lower and upper case indistinctly, same terms written in different way like DC Sim and DCSim, Energy based and Energy-based...)
+
+
+# References
+
++ References 103/115, and 102/112 may be analogous
+
++ References with typos that I detected: 31, 149
+
++ Broken references I detected: 11, 145
+
++ References 19, 27, 28, 42, 61, 68 are missing the year
+
++ Reference 66 is completely unrelated to the paper, topic or even knowledge area.
+
+
+-Reviewer 3
+
+  -
+Major Comments:
+
+    I would like to see the inclusion of the most popular workloads, benchmarks, simulation tools used by the researchers while implementing different scheduling policy in Cloud. Example TPC-H, BigDataBench, AMPLab Big data benchmark, Google Cluster traces, CloudSim etc.
+    It would be great to have a separate section only describing different algorithmic approaches used in scheduling. The papers shown in different tables to cover various aspects, objectives of scheduling algorithms is sufficient already. However, there should be a clear discussion on when to use what algorithms. For example, the authors can start from linear programming models and how it is used to solve the scheduling problems, how the computational complexity involved in finding optimal solution led the researchers to use heuristic-based approaches, how meta-heuristics can improve the result, when we should use data-driven approaches and use prediction models in conjunction with scheduling for better resource management, how some algorithms might become system-specific and we need to tune it for every system, how AI can aid in this situation and automate the scheduling process (future direction).
+    There should be a separate challenges and future directions section showing the open challenges, and future research directions for researchers.
+    I really missed some of the promising research done recently which use AI-based approaches for scheduling. I think like many other domains, research in resource management and scheduling in the cloud is also heading towards AI. For example, Deep Reinforcement Learning (DeepRL) based approaches can automatically learn to schedule more efficiently and can also adapt to any system changes. As we have more compute resources available now-a-days, both simulation and real experimental approaches can use AI based approaches. Some good papers to study and include: 
+
+
+    DRL-cloud: Deep reinforcement learning-based resource provisioning and task scheduling for cloud service providers by Mingxi Cheng.
+    Learning Scheduling Algorithms for Data Processing Clusters by Hongzi Mao
+
+
+Minor Comments:
+
+    In section 2, terminologies such as task scheduling, job scheduling, application scheduling should be discussed to provide the user with a clear understanding of the key concepts before going need. From the cloud perspective, it is often very confusing to define what level of scheduling is actually used in research (job, task or resource, VM, physical host?). Perhaps, the author can try to define these terms from their own experience.
+    This paper needs to be carefully revised to fix all the grammatical mistakes or typos.
+    Missing figure references in many cases: 3.3, 4.2, 4.2.1
+
+

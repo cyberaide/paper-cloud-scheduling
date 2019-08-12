@@ -1,0 +1,39 @@
+\begin{table*}[!htbp]
+ \caption{Comparison of Dynamic Scheduling Algorithms}
+     \label{T:dynamic-scheduling}
+   \centering
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|p{1.9cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{1.5cm}|}
+  \hline
+ \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{Scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters} & \textbf{Taxonomy Classification} 
+\\ \hline
+
+Sun et al.~\cite{sun2015live} & Introduction of a virtual data center to solve VM migration issues & Low complexity & Fixed band-with & Heuristic algorithm & Simulated environment & VM migration cost and time & Energy-basedd, energy source
+\\ \hline
+
+Tighe et al.~\cite{tighe2014integrating} & Auto scaling  algorithm  alongside  a  dynamic VM  allocation  algorithm  & Reduce a number of migrations & No optimization criteria &Rule based heuristic&  DCSim & Power, SLA, Migrations & Energy-basedd, VM migration
+\\ \hline
+
+Keller et al.~\cite{keller2014hierarchical} &  Management of data center resources to reduce the management scope &  Reducing  the  overhead  in  the  data centre management network & High complexity & Greedy algorithm & DCSim  & Power, number of migrations, average number of racks, active hosts & Energy-basedd
+\\ \hline 
+
+Tighe et al.~\cite{tighe2013distributed} &  Trade-off  among number of  migrations, SLA  violation and power & Consider energy and SLA & more bandwidth usage & First fit algorithm &  DCSim  & Power consumption, number of migrations, SLA violations & Energy-based, PUE
+\\ \hline 
+
+Tordsson et al.~\cite{tordsson2012cloud} &  Optimized placement of applications in multi-cloud environments & Emphasized on Price and performance in terms of hardware configuration, load balancing & Ignored security and energy efficiency at time of scheduling & Integer programming formulations & Amazon EC2 & Throughput, number of jobs & Compute-resource based, VM based
+\\ \hline
+
+
+Younge et al.~\cite{las10cloudsched} & 
+Power aware & 
+reduces cost & 
+slight reduction in performance & 
+heuristic & on premise cloud & 
+power consumption & 
+Energy-based, VM-based
+\\ \hline
+
+\end{tabular}
+}
+\end{table*}

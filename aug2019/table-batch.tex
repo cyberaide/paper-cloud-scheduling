@@ -1,0 +1,52 @@
+
+\begin{table*}[p]
+%\centering
+\caption{Comparison of Different Batch Resource Management Systems}\label{T:l}
+\centering
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|p{1.9cm} p{2.3cm} p{2cm} p{1.5cm} p{2cm}|}
+  \hline
+ \textbf{Framework} & \textbf{Batch Features} &  \textbf{Bursting} & \textbf{Containers} & \textbf{Comment}  
+\\ \hline
+
+Load Sharing Facility (LSF)~\cite{LSF2018} & 
+Policy driven, backfill, exclusive, non-exclusive access to compute nodes &  IBM Cloud, AWS, Google and Azure & 
+Yes & 
+Previously OpenLava, IBM  Open Source 
+\\ \hline
+
+Slurm~\cite{www-slurm} & 
+Policy driven, backfill, exclusive and non-exclusive access to compute nodes & 
+AWS, Azure, Google, Oracle & 
+Yes & 
+Open Source, popular
+\\ \hline
+
+Open Portable Batch System (OpenPBS)~\cite{Openpbs2018,Henderson1995} & 
+Policy driven, backfill, exclusive and non-exclusive access to compute nodes, fault tolerant master & 
+AWS, Azure, Google, Oracle & 
+Yes & 
+Open Source
+\\ \hline
+
+Moab~\cite{Moab2019} & 
+Fairness policies, dynamic priorities, and extensive reservations &
+AWS, Azure, Oracle, Google &
+Yes & 
+Open Source
+\\ \hline
+
+Univa Grid Engine~\cite{www-univa} & 
+Policy driven, backfill, exclusive and non-exclusive access to compute nodes, fault tolerant master & 
+AWS, Azure, Google & 
+Yes & 
+previously SUN Grid Engine, Genias Codine
+\\ \hline
+
+
+
+\end{tabular}
+}
+
+\end{table*}
