@@ -122,20 +122,23 @@
 
 
 \begin{keyword}
-Taxonomy, Scheduling, Cloud, Containers, HPC in the Cloud. VM Scheduling, FaaS Scheduling
+
+  Taxonomy, Scheduling, Cloud, Containers, HPC in the Cloud,
+  VM Scheduling, FaaS Scheduling, Y-Cloud Taxonomy
+
 \end{keyword}
 
 \begin{abstract}
 
-The growth and development of scientific applications in the cloud
-demands the creation of efficient resource management systems. Due to
-the scale of resources, the heterogeneity of services, their
-inter-dependencies and unpredictability of load this is a complex
-problem. We present a resource scheduling taxonomy that is originating
-from our experience in utilizing and managing multi-cloud environments. 
-Our study is backed up by a literature review that
-targets not only virtual machine, but also container and Function as a
-Service frameworks. It justifies
+  The growth and development of scientific applications in the cloud
+  demands the creation of efficient resource management systems. Due
+  to the scale of resources, the heterogeneity of services, their
+  inter-dependencies and unpredictability of load this is a complex
+  problem. We present a resource scheduling taxonomy that is
+  originating from our experience in utilizing and managing
+  multi-cloud environments.  Our study is backed up by a literature
+  review that targets not only virtual machine, but also container and
+  Function as a Service frameworks. It justifies
 
 \color{red}
 
@@ -193,54 +196,61 @@ the formulation of the scheduling needs and interfaces with the NIST Big Data
 Reference Architecture (NIST-BDRA)~\cite{nist-bdra-vol6}
 definitions currently under development~\cite{nist-bdra-vol8}.
 
-ZZZZ
-
-
-The paper is structured as follows.  In Section~\ref{sec:terminology} we present
-a general terminology that is used throughout the paper. Next we present in
-Section ~\ref{sec:taxonomy} our architecture view and taxonomy that we have
+The paper is structured as follows.  In Section~\ref{sec:terminology} the
+terminology used in the paper is introduced. Next, in
+Section ~\ref{sec:taxonomy} an architecture view and taxonomy that we
 derived from our practical experience with FutureGrid
 \cite{las12fg-bookchapter,fox2013futuregrid}, FutureSystem, and Software such as
 Cloudmesh~\cite{von2014accessing}, Virtual Clusters \cite{las-comet}, and
 Rain~\cite{las-fg-1295,las10dynamic,las-rain} while working on multi-hosted
-heterogeneous cloud frameworks. This view is backed up by our extensive
-literature research in Sections \ref{sec:literature} and our classification
-based on the taxonomy we introduced in the previous sections. Lastly, we provide
+heterogeneous cloud frameworks is presenthed.
+
+This view is backed up by an extensive
+literature research in Sections \ref{sec:literature} and their classification
+based on the taxonomy introduced in the previous sections. Lastly, we provide
 some concluding remarks in Section~\ref{sec:conclusion}.
 
+\subsection{Contributions}
 
-\subsection{Our Contributions}
-
-\color{red}
-This research paper aims to provide an overview of the problem and a systematic review of the state-of-the-art techniques for cloud resource scheduling, with contributions including: 
+The contributions of this paper are the following:
 
 \begin{itemize}
 
-\item A systematic survey of cloud scheduling approaches with analysis
-  of their pros and cons.
+\item We introduce a resource Provider focussed Y-Cloud Taxonomy
+  \ref{sec:y} that introduces a provider view associating a cloud
+  pyhsical, resource, and connectivity mode with each other (Section
+  \ref{sec:y}).
 
-\item A layered and phased scheduling model that allows to separate
-  concerns between infrastructure, platform, software, and function as
-  a Service is presented. Scheduling Taxonomy for clouds is also
-  presented.
+\item We outline specific chracteristics of we face in cloud computing
+  that identify its scheduling challanges.
 
-\item A comprehensive investigation has been conducted to study
-  various existing scheduling techniques in cloud resource management
-  systems accomplished by in-depth learning of resource scheduling
-  algorithms.
+\item We introduce a detailed general classification of cloud
+  scheduling while analyzing cloud related aspects such as
+  infrastructure, models to describe and utilize the infrastructure
+  efficiently, algorithm categories used as part of the analysis,
 
-\item Analysis of challenges ahead and potential future research
-  directions in the area of Big data processing jobs, analytic as a
-  service in the cloud are presented.
+\item Based on the lessons learnd while being a resource provider for
+  clouds, a developer and a researcher of cloud software and
+  applications we identified that a layered and phased scheduling
+  model is beneficial. The benefits of such a model include the
+  separation of scheduling concerns between infrastructure, platform, software,
+  and function as a Service while at the same time projecting a
+  holistic approach.
+
+\item We provide a systematic survey of cloud scheduling approaches
+  and accociate them with our scheduling taxonomy.
+
+\item We identify areas that have not yet been addressed by this paper
+  and outline future activities.
 
 \end{itemize}
 
-\color{black}
-
-
+ZZZZ
 
 \section{Basic Concepts and Terminology}\label{sec:terminology}
+
 \color{red}
+
 In this section, basic concepts related to cloud and scheduling are discussed. 
 
 
@@ -284,6 +294,7 @@ We use the following terminology for Cloud computing and Resource scheduling:
 \subsection{Scheduling Units}
 
 \color{red}
+
 The traditional units for scheduling include, processes, tasks, and
 jobs. However in the cloud we have an enhanced model that needs in
 addition to this address scheduling of virtual machines, containers,
@@ -434,7 +445,7 @@ These aspects are elaborated in more detail next.
 
 \input{graph-mindmap}
 
-\subsection{Resource Provider Focused Y-Cloud Taxonomy}
+\subsection{Resource Provider Focused Y-Cloud Taxonomy}\label{sec:y}
 
 To showcase the interaction between the different layers more clearly
 we like to refer the reader to the Y-cloud scheduling diagram
