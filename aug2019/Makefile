@@ -1,7 +1,12 @@
+# include this in ~/.latexmkrc
+# $pdf_previewer = "open -a Skim"
+
 FILENAME=laszewski-cloud-scheduling
 DIR=paper-cloud-scheduling
 
-# .PHONY: $(FILENAME).pdf
+.PHONY: $(FILENAME).pdf watch clean
+
+.PRECIOUS: %.pdf
 
 all: $(FILENAME).pdf
 
@@ -10,13 +15,10 @@ all: $(FILENAME).pdf
 $(FILENAME).pdf: $(FILENAME).tex
 	latexmk -quiet -bibtex $(PREVIEW_CONTINUOUSLY) -f -pdf -pdflatex="pdflatex -synctex=1 -interaction=nonstopmode" -use-make $(FILENAME).tex
 
-.PRECIOUS: %.pdf
-.PHONY: watch
 
 watch: PREVIEW_CONTINUOUSLY=-pvc
 watch: $(FILENAME).pdf
 
-.PHONY: clean
 
 clean:
 	latexmk -C -bibtex
