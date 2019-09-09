@@ -1,4 +1,4 @@
-Paper about cloud scheduling taxonomy
+# Paper about cloud scheduling taxonomy
 
 To create the paper use:
 
