@@ -1,3 +1,4 @@
+
 \RequirePackage[hyphens]{url}
 %\documentclass[10pt,twocolumn]{article}
 %\documentclass[preprint,12pt,3p]{elsarticle}
@@ -68,7 +69,7 @@
   },
 }
 
-\newcommand{\TITLE}{Cloud Resource Scheduling Taxonomy Revised1}
+\newcommand{\TITLE}{Cloud Resource Scheduling Taxonomy }
 
 \author[label1]{Gregor von Laszewski\corref{cor1}\fnref{label3}}
 \address[iu]{{\small $^1$ Intelligent Systems Engineering Dep., Indiana University, Bloomington, IN 47408, USA.}
@@ -1111,12 +1112,28 @@ platforms and bare metal provisioning.
 In the previous sections we already pointed out several workflow
 related scheduling algorithms while using specific metrics to conduct
 the scheduling. In addition we can integrate virtual machines,
-containers, and tasks.
+containers, and tasks. The main intent of the cloud workflow is to automate
+repeated task in a reliable way. 
 
-Workflow schedulers are often distinguished by
+
+Traditionally, workflow schedulers are often distinguished by
 DAG~\cite{deelman2005pegasus,deelman2004pegasus,thain2005distributed}
 and non-DAG scheduling while some support
-both~\cite{las-karajan,las-cogkit-1,las06-workflow-book}. Even prior
+both~\cite{las-karajan,las-cogkit-1,las06-workflow-book}.
+For cloud cloud workflow management services such as
+Nintex ~\cite{www-nintex-wf}, Amazon Simple Workflow,
+Hadoop streaming ~\cite{www-hadoop-streaming} for
+map reduce workflows are used. The main intent of Amzon
+simple workflow is to provide the support to build,
+run, and scale background jobs that have parallel or
+sequential steps The main intent of Spark
+streaming ~\cite{www-spark-streaming} is to provide scalable,
+high-throughput and fault-tolerant
+stream processing of live data streams. Argo ~\cite{www-argo-wf},
+a container-native workflow
+engine is used for orchestrating parallel jobs on Kubernetes.
+
+ Even prior
 to the official FaaS frameworks existed that focused on the execution
 of functions~\cite{las-infogram}.  Scientific applications such as
 bio-informatics have introduced not only workflow systems, but also
@@ -1132,7 +1149,12 @@ contain features for job dependency management. In many cases these
 features can be used to accommodate the users needs for scheduling
 workflows onto the same hardware or in some cases clusters that are
 managed through the same queuing
-system~\cite{www-lsf,www-moab,www-univa-GE-manual,www-pbs-manual}.
+system
+~\cite{www-lsf-job-dep,www-moab-job-dep,www-univa-GE-manual,www-pbs-manual}.
+
+
+
+
 
 
 
