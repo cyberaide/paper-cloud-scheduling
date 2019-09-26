@@ -20,6 +20,13 @@ watch: PREVIEW_CONTINUOUSLY=-pvc
 watch: $(FILENAME).pdf
 
 
+simple:
+	pdflatex $(FILENAME).tex
+	bibtex $(FILENAME)
+	pdflatex $(FILENAME).tex
+	pdflatex $(FILENAME).tex
+	open $(FILENAME).pdf
+
 clean:
 	latexmk -C -bibtex
 	rm -rf $(FILENAME).spl
