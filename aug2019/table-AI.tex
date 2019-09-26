@@ -1,29 +1,31 @@
+\newcolumntype{g}{>{\columncolor{Gray}}p}
 \begin{table*}[!htbp]
 \caption{Comparison of AI based Scheduling Algorithms}\label{T:j1}
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|p{1.9cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}|}
+\begin{tabular}{|g{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}|}
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-\textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters}
-& \textbf{Taxonomy Classification} 
+ \textbf{Taxonomy Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters}
+
+
 \\ \hline
 
-Mingxi Cheng et al.~\cite{cheng2018drl} &  Two stage resource provisioning and/or task scheduling processor & Consideration of energy consumption aspects & No security consideration  & Reinforcement approach & Simulation Testbed & Energy cost and runtime & compute resource based, job based
+Compute resource based, job based & Mingxi Cheng et al.~\cite{cheng2018drl} &  Two stage resource provisioning and/or task scheduling processor & Consideration of energy consumption aspects & No security consideration  & Reinforcement approach & Simulation Testbed & Energy cost and runtime 
 \\ \hline
 
 
-Hongzi Mao et al. ~\cite{mao2018learning} & Presented Decima scheduler & Consideration of low latency scheduling decisions & High complexity & Reinforcement learning method & Simulated environment  & Execution time & Compute resource based, workflow based
+Compute resource based, workflow based & Hongzi Mao et al. ~\cite{mao2018learning} & Presented Decima scheduler & Consideration of low latency scheduling decisions & High complexity & Reinforcement learning method & Simulated environment  & Execution time 
 \\ \hline
 
-Qingchen Zhang et al. ~\cite{zhang2017energy} & A hybrid dynamic voltage and frequency scaling (DVFS) scheduling algorithm   & Minimize energy consumption & does not handle security & Deep Q-learning model & Simulation environment & energy consumption & compute resource based, job based
+Compute resource based, job based & Qingchen Zhang et al. ~\cite{zhang2017energy} & A hybrid dynamic voltage and frequency scaling (DVFS) scheduling algorithm   & Minimize energy consumption & does not handle security & Deep Q-learning model & Simulation environment & energy consumption 
 \\ \hline
 
-Yuandou Wang et al. ~\cite{wang2019multi} & Focused on workflow scheduling & Minimize energy consumption & Ignored time, security & Markov method & Simulated environment & Energy efficiency & Compute resource based, workflow
+Compute resource based, workflow & Yuandou Wang et al. ~\cite{wang2019multi} & Focused on workflow scheduling & Minimize energy consumption & Ignored time, security & Markov method & Simulated environment & Energy efficiency 
 \\ \hline
 
-Enda Barret et al. ~\cite{barrett2013applying} & Guided  an optimal decision in the process of resource allocation & Reduced Time & Ignored security & Deep Q learning method & Simulation & Makespan & Compute resource based, task based
+Compute resource based, task based & Enda Barret et al. ~\cite{barrett2013applying} & Guided  an optimal decision in the process of resource allocation & Reduced Time & Ignored security & Deep Q learning method & Simulation & Makespan 
 \\ \hline
 
 

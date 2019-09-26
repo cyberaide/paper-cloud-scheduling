@@ -1,26 +1,26 @@
-
+\newcolumntype{g}{>{\columncolor{Gray}}p}
 \begin{table*}[!htbp]
 \caption{Comparison of Reliability based Scheduling Algorithms}\label{T:h}
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|p{1.9cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}|}
+\begin{tabular}{|g{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{1.9cm}|}
   \hline
-  \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Environments} &\textbf{Performance matrices} 
- & \textbf{Taxonomy Classification} 
+   \textbf{Taxonomy Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters} 
+   
 \\ \hline
 
-Abdulhamid et al.~\cite{latiff2016fault} & Uncountable numeric nodes for resource in clouds & Lower makespan & No optimization & League championship algorithm & CloudSim & Failure ratio, the failure slowdown and the performance improvement rate & Compute -resource based, Task based
+Compute -resource based, Task based & Abdulhamid et al.~\cite{latiff2016fault} & Uncountable numeric nodes for resource in clouds & Lower makespan & No optimization & League championship algorithm & CloudSim & Failure ratio, the failure slowdown and the performance improvement rate 
 \\ \hline
 
-Tang et al.~\cite{tang2016energy} &  Reliability and energy-aware task scheduling architecture & To get good trade off among performance, reliability, and energy consumption & No support for cost optimization& Heuristic method & Discrete event simulation environment  & Schedule length, Energy consumption,  Application reliability & energy-aware , energy source
+Energy-aware , energy source & Tang et al.~\cite{tang2016energy} &  Reliability and energy-aware task scheduling architecture & To get good trade off among performance, reliability, and energy consumption & No support for cost optimization& Heuristic method & Discrete event simulation environment  & Schedule length, Energy consumption,  Application reliability 
  \\ \hline
  
- Jing et al.~\cite{jing2015reliability} &  Model for fault-tolerant aware scheduling &  Low complexity  & No cost, time optimization & Adaptive secure scheduling algorithm & Simulated environment & Reliability & Compute-resource based, Job based
+ Compute-resource based, Job based & Jing et al.~\cite{jing2015reliability} &  Model for fault-tolerant aware scheduling &  Low complexity  & No cost, time optimization & Adaptive secure scheduling algorithm & Simulated environment & Reliability 
 \\ \hline
 
 
-Malik et al.~\cite{malik2012reliability} & Reliability assessment mechanism for scheduling resources & Reliability assessment algorithms for general applications and real time applications  & No security and energy parameters consideration & Max -min & Amazon EC2 cloud & Fault tolerance, time & Compute resource based, Job based
+Compute resource based, Job based & Malik et al.~\cite{malik2012reliability} & Reliability assessment mechanism for scheduling resources & Reliability assessment algorithms for general applications and real time applications  & No security and energy parameters consideration & Max -min & Amazon EC2 cloud & Fault tolerance, time 
 \\ \hline
 
 
