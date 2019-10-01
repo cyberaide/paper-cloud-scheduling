@@ -986,42 +986,10 @@ algorithm is done in~\ref{T:j}.
 Deep Reinforcement Learning (DeepRL) based approaches can
 automatically learn to schedule more efficiently and can also adapt to
 any system changes. AI based approached can be used to handle the
-scheduling decisions in Cloud computing environment.
-
-\TODO{THIS DOS NOT FOLLOW OUR PAPER STRUCTURE WHERE WE FOCUS ON
-  CONTENT AND NOT PEOPLE}
-
-\TODO{Content was added for reference so that it could be changed as per the paper style}
-
-Mingxi Cheng et al.~\cite{cheng2018drl} have proposed two stage
-resource provisioning and/or task scheduling processor using deep
-reinforcement learning approach. The main intent of the processor is
-to generate best long term decisions by observing user request
-patterns and realistic electric price. The proposed algorithm helps to
-minimize the energy cost efficiency and reduce run-time too.
-
-Hongzi Mao et al. ~\cite{mao2018learning} presented reinforcement
-learning based scheduler, Decima, for scheduling complex data
-processing jobs. Authors have evaluated Decima on a real Spark cluster
-testbed and in simulations with a production workload.The main intent
-of scheduler is to make low-latency scheduling decisions.
-
-Qingchen Zhang et al. ~\cite{zhang2017energy} proposed a hybrid
-dynamic voltage and frequency scaling (DVFS) scheduling algorithm by
-using deep Q-learning model. Their main intent to reduce the energy
-consumption.
-
-
-Yuandou Wang et al. ~\cite{wang2019multi} designed a markov model that
-aims to consider number of workflow applications and VMs as state
-input and maximum completion time and cost as rewards. They have
-applied deep Q network model to schedule the workflow application on
-IaaS clouds.
-
-Enda Barret et al. ~\cite{barrett2013applying} proposed a novel
-parallel Q learning approach that help to guide the optimal decision
-in the process of resource allocation at the time of scheduling. They
-have also used markov decision process to handle the uncertainty.  A
+scheduling decisions in Cloud computing environment. Various studies have been conducted to analyze the effect of AI based scheduling apparoach in the Cloud computing environment. This includes deep reinforcement approach
+~\cite{cheng2018drl,mao2018learning},  Q-learning model~\cite{zhang2017energy} and Q network model ~\cite{wang2019multi}. Markov decision based approach
+~\cite{barrett2013applying} is also studied to handle the uncertainity to provide optimal decision at the tiem of scheduling. 
+  A
 comparison of artificial intelligence based scheduling algorithm is
 done in~\ref{T:j1}.
 
@@ -1160,7 +1128,7 @@ features can be used to accommodate the users needs for scheduling
 workflows onto the same hardware or in some cases clusters that are
 managed through the same queuing
 system
-~\cite{www-lsf-job-dep,www-moab-job-dep,www-univa-GE-manual,www-pbs-manual}.
+~\cite{www-lsf,www-moab,www-univa-GE-manual,www-pbs-manual}.
 
 
 
