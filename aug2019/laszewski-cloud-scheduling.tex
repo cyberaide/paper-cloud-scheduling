@@ -139,15 +139,15 @@
   to the scale of resources, the heterogeneity of services, their
   inter-dependencies and unpredictability of load this is a complex
   problem. We present a resource scheduling taxonomy that originates
-  from our experience in utilizing and managing
-  multi-cloud environments.  Our study is backed up by a literature
-  review that targets not only virtual machine, but also container and
-  Function as a Service frameworks. It justifies
+  from our experience in utilizing and managing multi-cloud
+  environments.  Our study is backed up by a literature review that
+  targets not only virtual machine, but also container and Function as
+  a Service frameworks. It justifies
 
 \color{red}
 
-our proposed resource provider focused Y-cloud taxonomy and provides a an overview
-of existing scheduling techniques in cloud computing.
+our proposed resource provider focused Y-cloud taxonomy and provides a
+an overview of existing scheduling techniques in cloud computing.
 
 \color{black}
 
@@ -161,8 +161,6 @@ NIST Big Data Reference Architecture.
 \end{abstract}
 
 \end{frontmatter}
-
-\color{black}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
@@ -192,7 +190,7 @@ during runtime run-time of cloud applications. Information has to be passed
 between the various layers that comprise this scheduling architecture for clouds
 to guide the optimal placement onto resources. Hence, a cloud-based scheduling
 models is more comprehensive than previous classical scheduling approaches as it
-is conducted on scales and ppols of resources that were previously not
+is conducted on scales and pools of resources that were previously not
 considered. The scheduling is not only done on the task, job, and cluster level
 but integrates the data center and even regional and global data centers while
 adding on demand resource needs. Our study identifies services that assist in
@@ -222,18 +220,18 @@ The contributions of this paper are the following:
 
 \item We introduce a resource Provider focussed Y-Cloud Taxonomy
   \ref{sec:y} that introduces a provider view associating a cloud
-  pyhsical, resource, and connectivity mode with each other (Section
+  physical, resource, and connectivity mode with each other (Section
   \ref{sec:y}).
 
-\item We outline specific chracteristics of we face in cloud computing
-  that identify its scheduling challanges.
+\item We outline specific characteristics of we face in cloud computing
+  that identify its scheduling challenges.
 
 \item We introduce a detailed general classification of cloud
   scheduling while analyzing cloud related aspects such as
   infrastructure, models to describe and utilize the infrastructure
   efficiently, algorithm categories used as part of the analysis,
 
-\item Based on the lessons learnd while being a resource provider for
+\item Based on the lessons learned while being a resource provider for
   clouds, a developer and a researcher of cloud software and
   applications we identified that a layered and phased scheduling
   model is beneficial. The benefits of such a model include the
@@ -242,7 +240,7 @@ The contributions of this paper are the following:
   holistic approach.
 
 \item We provide a systematic survey of cloud scheduling approaches
-  and accociate them with our scheduling taxonomy.
+  and associate them with our scheduling taxonomy.
 
 \item We identify areas that have not yet been addressed by this paper
   and outline future activities.
@@ -845,7 +843,7 @@ of deadlines~\cite{zhang2018dynamic}.  Other strategies include the
 introduction of penalties as part of SLA~\cite{wu2012sla}. Typical
 resource utilization such as optimizing processor
 sharing~\cite{lee2012profit} data placements~\cite{lee2012profit},
-have known to decrease cost. Obviously also dynamic dynamic
+have known to decrease cost. Obviously also dynamic
 adaptations at run-time allow reduction of cost~\cite{ari2013design}
 
 Table \ref{T:e} presents a comparison of cost aware scheduling algorithms.
@@ -868,7 +866,7 @@ data~\cite{vandenbosshe2013}.
 
 \TODO{THIS REFERNCE DOES NOT EXIST}
 
-\TODO{Refernce is in table too}
+\TODO{Reference is in table too}
 
 As already mentioned previously, historical
 data~\cite{thomas2015credit} or proxies~~\cite{erdil2013autonomic}
@@ -986,12 +984,16 @@ algorithm is done in~\ref{T:j}.
 Deep Reinforcement Learning (DeepRL) based approaches can
 automatically learn to schedule more efficiently and can also adapt to
 any system changes. AI based approached can be used to handle the
-scheduling decisions in Cloud computing environment. Various studies have been conducted to analyze the effect of AI based scheduling apparoach in the Cloud computing environment. This includes deep reinforcement approach
-~\cite{cheng2018drl,mao2018learning},  Q-learning model~\cite{zhang2017energy} and Q network model ~\cite{wang2019multi}. Markov decision based approach
-~\cite{barrett2013applying} is also studied to handle the uncertainity to provide optimal decision at the tiem of scheduling. 
-  A
-comparison of artificial intelligence based scheduling algorithm is
-done in~\ref{T:j1}.
+scheduling decisions in Cloud computing environment. Various studies
+have been conducted to analyze the effect of AI based scheduling
+approach in the Cloud computing environment. This includes deep
+reinforcement approach ~\cite{cheng2018drl,mao2018learning},
+Q-learning model~\cite{zhang2017energy} and Q network model
+~\cite{wang2019multi}. Markov decision based approach
+~\cite{barrett2013applying} is also studied to handle the uncertainty
+to provide optimal decision at the tiem of scheduling.  A comparison
+of artificial intelligence based scheduling algorithm is done
+in~\ref{T:j1}.
 
 \color{black}
 \input{table-AI}
@@ -1098,10 +1100,10 @@ Traditionally, workflow schedulers are often distinguished by
 DAG~\cite{deelman2005pegasus,deelman2004pegasus,thain2005distributed}
 and non-DAG scheduling while some support
 both~\cite{las-karajan,las-cogkit-1,las06-workflow-book}.
-For cloud cloud workflow management services such as
+For cloud workflow management services such as
 Nintex ~\cite{www-nintex-wf}, Amazon Simple Workflow,
 Hadoop streaming ~\cite{www-hadoop-streaming} for
-map reduce workflows are used. The main intent of Amzon
+map reduce workflows are used. The main intent of Amazon
 simple workflow is to provide the support to build,
 run, and scale background jobs that have parallel or
 sequential steps The main intent of Spark
@@ -1545,8 +1547,8 @@ especially pay attention to papers that may motivate us to refine our
 taxonomy. Please send us your reference in \textsc{Bib}\TeX format while adding
 in the abstract what your paper provides and how it fits in our
 scheduling taxonomy. The contribution can be send either to
-\verb|laszewski@gmail.com|, or via a github pull request at
-\url{https://github.com/cloudmesh/bib/blob/master/cloud-scheduling.bib}.
+\verb|laszewski@gmail.com|, or via a GitHub pull request at
+\url{https://github.com/cyberaide/paper-cloud-scheduling/blob/master/aug2019/vonlaszewski.bib}.
 
 \TODO{I need to place the bib on github}
 
