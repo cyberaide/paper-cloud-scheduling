@@ -252,17 +252,12 @@ The contributions of this paper are the following:
 
 \end{itemize}
 
-ZZZZ
 
-\section{Basic Concepts and Terminology}\label{sec:terminology}
+\section{Terminology and Basic Concepts}\label{sec:terminology}
 
-\color{red}
+In this section, terminology and basic concepts related to cloud and
+scheduling are discussed.
 
-In this section, basic concepts related to cloud and scheduling are discussed. 
-
-
-
-\color{black}
 \subsection{General Scheduling Terminology for Clouds}
 
 We use the following terminology for Cloud computing and Resource scheduling:
@@ -275,120 +270,124 @@ We use the following terminology for Cloud computing and Resource scheduling:
   be rapidly provisioned and released with minimal management effort
   or service provider interaction~\cite{mell2011nist}.
 
-\item[Cloud Resource:] Is a resource offered by a cloud provider as
-  part of the implementation of a cloud application that may use this
-  resource.
+\item[Cloud Resource:] Is a resource offered by a cloud provider on
+  which cloud services are run as part of the implementation of a
+  cloud application that may use this resource.
 
 \item[Cloud Service:] Is a service offered by a cloud provider or
   developed as part of an application utilizing cloud resources and
   exposing the functionality as a service.
   
 \item[Cloud Application:] Is an application that uses cloud services
-  and resources to target an application providing concrete
-  implementations for its instantiation and execution.
+  and resources for its instantiation and execution.
 
 \item [Resource Provisioning in the Cloud:] The allocation of the
-  resources demanded by users to specific
-  applications is called provisioning. 
+  resources demanded by services and applications. 
   
 \item [Resource Scheduling in the Cloud:] Resource scheduling in the
-  cloud refers to the mapping of resources to fulfill the jobs
-  resource requirements.
+  cloud refers to the mapping of resources to fulfill the cloud service
+  requirements.
 
 \end{description}
 
 
 \subsection{Scheduling Units}
 
-\color{red}
-
 The traditional units for scheduling include, processes, tasks, and
-jobs. However in the cloud we have an enhanced model that needs in
-addition to this address scheduling of virtual machines, containers,
-functions, platforms, clusters, and other infrastructure or services
-used by the clients or cloud related services. Naturally such units
-can be abstracted into tasks that are coordinated as part of
-workflows. Hence, we distinguish as part of this model the following
-units that typically define work units:
+jobs. However in the cloud it is beneficial to consider an enhanced
+set of scheduling units. These units must include scheduling of
+virtual machines, containers, functions, platforms, clusters,
+services, and other infrastructure or services used by the clients or
+cloud related services. Naturally such units can be abstracted into
+tasks that are coordinated as part of cloud workflows.
+
+Hence, we distinguish the following scheduling units related to cloud
+computing:
 
 \begin{description}
 
-\item[Task:] represents an abstract unit to be run on a cloud that may
-  have complex resource association attached with it and may itself be
-  build from other tasks with dependencies. It is not yet mapped onto
-  a resource.
+\item[Task] is an abstract unit to be run on a cloud that may
+  have complex resource requirements attached with them and may itself be
+  build from other tasks. 
 
-\item[Job:] A job is a computational activity made up of several tasks
-  that may require different processing capabilities.
+\item[Job] is a computational activity made up of several tasks
+  that may require different processing capabilities while resolving
+  the resource requirements as part of a scheduling process.
 
-\item[Function:] represents a small computational unit with precisely
-  specified resource requirements to run on a cloud.
+\item[Function] is a small computational units executed as
+  service with precisely specified resource requirements to run on a
+  cloud. Please note that to distinguish them from the common term we
+  also refer to them as Function as a Service.
 
-\item[Application:] An application is a software for solving a (large)
-  problem in a computational infrastructure; it may require splitting
-  the computation into many jobs or it may be a monolithic
-  application. In the later case, the whole application is allocated
-  in a computational node and is usually referred to as application
-  deployment.
+\item[Application] is a software solution for solving a (large)
+  problem in a computational infrastructure. Applications may require
+  splitting the use of any combination of tasks, jobs, services, and
+  functions, while using Cloud resources to solve the requirements of
+  the applications. The allocation of the resources is usually
+  referred to as application deployment.
 
-\item[Workflow:] A workflow contains a combination of Tasks, Jobs,
-Functions, and applications with dependencies assuring the order of
-execution.
+\item[Workflow] contains a combination of Tasks, Jobs,
+  Functions, and applications with dependencies assuring the order of
+  execution.
 
 \end{description}
 
-On the other hand we find resources units that are typically
-associated with the provisioning step:
+Tasks, services, functions and applications must be must be mapped
+onto cloud resources to be able to be executed. The association of
+such resources is typically conducted in the resource provisioning. We
+list next the terminology related to provisioning:
 
 \begin{description}
 
-\item[Resource:] A resource is a basic computational entity that can
+\item[Resource] is a basic computational entity that can
   be used to fulfill the requirements of application's execution.
-  Resources have their own characteristics such as CPU
-  characteristics, memory, software, etc. It can be a source of
-  information and expertise. Resource is phenomenon that enhances the
-  quality of application. Various parameters are associated with a
-  resource, among them, the data speed, the processing speed, space
-  and workload, which change over time.
+  Resources have their own characteristics such as CPU, memory,
+  software, disks, etc. Various performance and policy parameters are
+  associated with a resource, among them, the data speed, the
+  processing speed, space and workload, which change over time, as
+  well as cost, authentication and authorization policies.
 
-\item[Deployment:] A deployment is a series of jobs that deploy a
-  service onto the cloud that can be used for subsequent use.
+\item[Deployment] is a series of jobs that deploy services onto
+  the cloud that can be used for subsequent use as part of an
+  application or service.
 
-\item[Containers:] can be defined as a any service related to
-  scheduling, made available to users on demand from a cloud computing
-  provider's servers.
+\item[Container] is a agglomeration of software that includes all
+  pancakes and dependencies so it can be run easily on cloud computing
+  resources due to its standardized specification.
 
-\item[Virtual machine:] Virtual Machine (VM) is a simple software
-  program which simulates the functions of a physical machine.
+\item[Virtual machine (VM)] is a simple software program which
+  simulates the functions of a physical machine.
 
-\item[Virtual clusters:] An agglomeration of virtual services that
-  build the core of a computational resource hosted in the cloud. They
-  can be comprised out of many resources including virtual machines,
-  containers, platform as a service frameworks, data services and
-  resources, and more. A virtual cluster is typically associated with
-  an application and utilized for it. Just as containers or virtual
-  machines it can be created, suspended, resumed, or terminated
+\item[Virtual cluster] is an agglomeration of virtual services that
+  builds the core of a computational resource hosted in the cloud. A
+  virtual cluster can be comprised out of many resources including
+  virtual machines, containers, platform as a service frameworks, data
+  services and resources, and more. A virtual cluster may be
+  associated with an application and optimized for it's use. Just as
+  containers or virtual machines, a virtual cluster can be created, suspended,
+  resumed, or terminated. 
 
-\item[Schedulers:] Schedulers are processes that decide which task and
+\item[Scheduler] is a processe that decides which task and
   process should be accessed and run at what time by the available
-  resources. It helps to keep the performance of cloud at the highest
-  level by scheduling in optimized way. Based on the frequency of
-  schedulers operations, categorization is done: local scheduler,
-  global scheduler and enterprise scheduler etc.
+  resources. Schedulers helps to keep the performance of cloud at the highest
+  level by using optimization strategies. Based on the scope of resources
+  involved in the scheduling decision we distinguish between global, 
+  regional,  and local schedulers.
   
-\item[Task scheduling:] The process to allocate an ingredient resource
-  to particular task is called task scheduling. The main intent of the
-  task scheduling is enhance the utilization of resources and reduce
-  the task completion time.
+\item[Task, Job, Application, Service, Function scheduling] is the process
+  to allocate resources to particular scheduling unit so they can be
+  executed. Limited resource availability and their cost motivates the
+  development of optimized scheduling algorithms to address the
+  problem of task scheduling.
   
-  
-\item[Application scheduling:]
-  
-\item[Job scheduling:] The main intent of the job scheduling is to
-  provide mapping of the job on the particular resource under the
-  fulfilling the requirements of resource in cloud environment.
+\item[Provisioning] is a process to aggregate resources and services
+  that are used as part of the application or software service
+  related infrastructure setup. Provisioning helps users to simplify
+  the resource management tasks while accessing resources that are
+  hosted in the cloud and made available to the user through
+  provisioning. 
+
 \end{description}
-\color{black}
 
 
 
