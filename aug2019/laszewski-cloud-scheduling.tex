@@ -162,6 +162,7 @@
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\TODO{two tables do not follow the new format, they need to be changed}
 
 Cloud computing has emerged as a computing paradigm to fulfill large-scale
 application requirements in domains including science, e-commerce, lifestyle,
@@ -1216,10 +1217,10 @@ resources~\cite{Containers2018,de2018distributed}. Typically a default
 scheduling policy is provided. Policies might place new services on
 hosts with the fewest currently active services.
 
-Based on our Y-diagram we need to distinguish 2 different
+Based on our Y-diagram we need to distinguish two different
 services. First, scheduling on the same server and second scheduling
 on a number of servers that are treated typically as one abstract
-resource.
+cloud resource
 
 For the first scheduling task we need to consider data management to
 efficiently utilize the memory hierarchy, but also for example
@@ -1244,11 +1245,11 @@ strategy~\cite{Dockerswarm2018}.
 
 \item[Kubernetes.] Kubernetes is an open-source orchestrator
 developed by Google for automating container management and
-deployment~\cite{Kubernates2018}. The basic deploy-able object is a
+deployment~\cite{Kubernates2018}. The basic deployable object is a
 Pod which consists of one or more containers running in a shared
 context. An API is used to declare policies and scalability
 constraints. The Kubernetes scheduler is topology aware and workload
-aware which can be integrated into the policy policy constraints to
+aware which can be integrated into the policy constraints to
 expose availability, performance and capacity. Auto-scaling, load
 balancing and secrets managements are also provided by Kubernetes.
 
@@ -1280,8 +1281,12 @@ clusters~\cite{dziurzanskivalue}, and migration~\cite{Flocker2018},
 and systems integrating multiple schedulers such as Nomad which offer
 service scheduler, batch scheduler and a systems scheduler while
 focusing on the support of long running jobs~\cite{Nomad2018}.
+
 \end{description}
-Table ~\ref{T:z} shows the comparison of existing work related to scheduling. 
+
+
+Table ~\ref{T:z} shows the comparison of existing work related to
+container scheduling. 
 
 
 
@@ -1299,13 +1304,13 @@ Table ~\ref{T:z} shows the comparison of existing work related to scheduling.
 
 
 To further improve scheduling on cloud resources, the concept of
-function as a services was introduced.  It allows the invocation of
+Function as a Services was introduced.  It allows the invocation of
 small functions with limited resource constraints on
 servers~\cite{lasbook}. For example a minimum execution time per
-request is five minutes provided by AWS lambda and azure
-functions~\cite{ServerlessComputing2018}. It supports manage user
+request is five minutes provided by AWS lambda and Azure
+functions~\cite{ServerlessComputing2018}. It supports managed user
 defined functions on highly available infrastructure in an unified
-manner~\cite{nastic2017serverless}. This also allows the scheduling of
+fashion~\cite{nastic2017serverless}. This also allows the scheduling of
 workflows comprised out of
 functions~\cite{alqaryouti2018serverless}. In~\cite{fox2017status} we
 discuss the status of serverless computing and function as a service
@@ -1333,11 +1338,8 @@ OpenWhisk~\cite{OpenWhisk2018} allow users to install FaaS services on
 their own infrastructure.
 
 
-\subsection{Scheduling among Distributed Resources and Providers}
+\subsection{Scheduling Among Distributed Resources and Providers}
 \label{sec:distributed}
-
-
-
 
 
 Users may have the desire to not only use services on one cloud but on
@@ -1345,9 +1347,9 @@ multiple clouds. This is motivated largely by avoiding vendor lock-in,
 unique service offerings, or combining services from different
 vendors.
 
-\input{table-distr-cloud}
-
-Such efforts contain Eagle, a hybrid data center scheduler for
+Such scheduling efforts can be as simple as switching the cloud
+provider such as promoted in Cloudmesh~\cite{von2014accessing}.
+Other efforts such as Eagle, provide a hybrid data center scheduler for
 data-parallel programs~\cite{delgado2016job};
 Hopper~\cite{ren2015hopper}, a job scheduler that trades off existing
 and speculated job scheduling decisions; Tetris
@@ -1361,20 +1363,23 @@ Sparrow~\cite{ousterhout2013sparrow} and fine-grained task scheduling
 scheduler.
   
 We can also find more prominent schedulers such a contains Apache's
-  Hadoop YARN~\cite{vavilapalli2013apache} which acts as a resource
-  management systems to for example schedule Hadoop distributed
-  processing framework considering QoS, scalability, higher efficiency
-  and fair resource usage.
+Hadoop YARN~\cite{vavilapalli2013apache} which acts as a resource
+management systems to for example schedule Hadoop distributed
+processing framework considering QoS, scalability, higher efficiency
+and fair resource usage.
 
 We contrast different resource management systems, used for
 maintaining resources in distributed environments such as Clouds (see
 Table \label{T:distr-cloud}).
 
+\input{table-distr-cloud}
+
+
 \subsection{Service Mashups} 
 \label{sec:mesh}
 
 To support scheduling across clouds and services, service mashups can
-be used. This includes long standing efforts such as Cloudmesh, which
+be used. This includes long standing efforts such as Cloudmesh~\cite{von2014accessing}, which
 targets the creation of reproducible environments to easily manage
 virtual machines, bare metal provisioned operating systems, platform
 deployments and more recently data services in a multi-cloud
@@ -1402,11 +1407,11 @@ In this section we summarize some of the lessons we learned from our activities.
 
 \item[More than VM scheduling.] Due to the shift and enhancement of
 clouds from VM to containers and FaaS, we must consider also new
-scheduling strategies as motivated by thes new cloud compute
-offerings.
+scheduling strategies as motivated by new cloud compute service
+offerings utilizing them.
 
 \item[Energy.] Energy costs for data centers are enormous and this
-play a significant roll for providers, but also for users to which
+plays a significant roll for providers, but also for users to which
 energy cost are passed along. Not only good scheduling algorithms are
 needed, but the design of the data center close to cheap energy is an
 important Issues.
@@ -1451,31 +1456,36 @@ management issues in hyper-scale data centers.
 
 \subsection{Future Directions}
 
-
+In this section we summarize some of the future directions we need to
+address.
 
 \begin{description}
 
-\color{red}
-  
-\item[Integration for data.] Big Data and management of data in
-general motivate the integration of data resources as firs class
-activity within scheduling.
+\item[Integration for data.] While we focused mostly on compute
+  resource scheduling an additional studdy is needed to more
+  explicilty address aspects that integrate Big Data and of it while
+  adressing scheduling aspects.
 
 \item[Analytics Services.] While FaaS provide the ability to schedule
-resource restricted functions the next level of schedulers will
-address Analytics as a Service (AaaS) where more resource bound
-functions are cast as analytical calculations.
-\item[Edge Computing and Fog computing.] Due to the increased edge and
-Fog computing computational powers available. significant activities
-can also be conducted on edge devices. Billions of cellphones today
-already conduct a significant amount of computation thus scheduling
-must balance between activities that can take place on the edge (Fog)
-or needs to be conducted in the cloud.
+  resource restricted functions the next level of schedulers will
+  address Analytics as a Service (AaaS) where more resource bound
+  functions are cast and exposed to cloud users as analytical calculations.
+  
+\item[Edge Computing.] Due to the increased of the computational powr
+  of edge devices scheduling algorithms must include the power
+  available on these devices instead of sending all the requests to a
+  cloud. Billions of cellphones today already conduct a significant
+  amount of computation thus scheduling must balance between
+  activities that can take place on the edge or needs to be conducted
+  in the cloud.
 
 \item[Scheduling Challenges Arising form use of Containers.] By using
-  virtualization technologies such as virtual machines, they help to
-  provide the illusion of a hardware resources but introduce a cost to
-  also virtualize the operating system. Containers however use
+  virtualization technologies such as virtual machines the cloud
+  provides the illusion of a hardware resources but introduce a cost
+  to also virtualize the operating system.
+
+
+  Containers however use
   virtualization within the operating system level. Multiple
   containers run on the top of the operating system kernel. Hence, a
   container is a lightweight approach to implement the virtualization
@@ -1493,17 +1503,17 @@ or needs to be conducted in the cloud.
   pre-existing scheduling algorithms, but also provides the ability to
   replace them with customized approaches.
 
-The challenge here is to assure that containers between users do not
-create security or violate privacy issues. Also the access to
-potentially elevated system privileges may cause other issues.
-Therefore systems such as Singularity offer users an isolated use of
-containers within traditional HPC queuing systems to mitigate that
-issue. Still once on such a system, we still have to be aware of
-elevated privileges, and containers may only be offered in limited
-form to its users. Once this has been clarified, also for containers
-the typical quality assertions during its use apply just as for
-virtual machines. Such challenges must be integrated into a scheduling
-strategy when adding containerized cloud resources.
+  The challenge here is to assure that containers between users do not
+  create security or violate privacy issues. Also the access to
+  potentially elevated system privileges may cause other issues.
+  Therefore systems such as Singularity offer users an isolated use of
+  containers within traditional HPC queuing systems to mitigate that
+  issue. Still once on such a system, we still have to be aware of
+  elevated privileges, and containers may only be offered in limited
+  form to its users. Once this has been clarified, also for containers
+  the typical quality assertions during its use apply just as for
+  virtual machines. Such challenges must be integrated into a
+  scheduling strategy when adding containerized cloud resources.
 
 
 \item[Challenges in Function as a Service.] The {\em Function as a
@@ -1517,18 +1527,20 @@ strategy when adding containerized cloud resources.
   integrated in order to avoid FaaS failures based on resource
   starvation or an excess of resources used. In addition more resource
   intense functions may require splitting them up in smaller functions
-  so they can be fulfill resource constraints of the FaaS framework.
-  Such limitations must be understood by the developer in order not to
-  create a function that is impossible to schedule.
+  so they can be fulfill resource constraints of the FaaS
+  framework. Naturally, while splitting up a larger model into smaller
+  functions increases the overhead.  Such limitations must be
+  understood by the developer in order not to create a function that
+  is impossible to schedule.
 
 \end{description}
 
 \color{black}
 
-In this paper, we have surveyed the many important classifications of
-scheduling problems in cloud computing. After introducing the needed
-terminology, we presented a comprehensive taxonomy of the different
-cloud scheduling approaches and issues. A layered and phased
+In this paper, we have surveyed the many important classes related to 
+scheduling in cloud computing. After introducing the needed
+terminology, we presented a comprehensive taxonomy for cloud
+scheduling including a Y-cloud taxonomy. A layered and phased
 scheduling model is presented that differentiates the concerns between
 infrastructure, platform, servers and function as a service models. A
 comprehensive investigation has been conducted to verify that the
@@ -1539,19 +1551,18 @@ validity.
 
 \section*{Postface}
 
-
-
 We realize that although we have analyzed a large number of papers,
-there are more papers in that area available. Please inform us as we
-intend to collect them for further updates to this paper. We like to
-especially pay attention to papers that may motivate us to refine our
-taxonomy. Please send us your reference in \textsc{Bib}\TeX format while adding
-in the abstract what your paper provides and how it fits in our
-scheduling taxonomy. The contribution can be send either to
+there are more papers in that area of cloud scheduling available. The
+papers cited here are used as examples to showcase some important
+features related to cloud scheduling.  We appreciate if you inform us
+about other efforts as we intend to collect them for further updates
+to this paper. We like to especially pay attention to papers that may
+motivate us to refine our taxonomy. Please send us your reference in
+\textsc{Bib}\TeX format while pointing out how your paper enhances the
+taxonomy. The contribution can be send either to
 \verb|laszewski@gmail.com|, or via a GitHub pull request at
 \url{https://github.com/cyberaide/paper-cloud-scheduling/blob/master/aug2019/vonlaszewski.bib}.
 
-\TODO{I need to place the bib on github}
 
 %\bibliographystyle{elsarticle-num}
 \bibliographystyle{elsarticle}
