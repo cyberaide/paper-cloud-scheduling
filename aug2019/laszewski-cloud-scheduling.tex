@@ -441,13 +441,13 @@ infrastructure by scheduling small well defined functions with limited
 resource needs.
 
 Certainly, the goal of hiding the scheduling decisions between each
-layer is still important to reduce complexity exposed to the users,
-but if enough information between the layers is exchanged, this
-information can lead to good scheduling decisions on each of the
+layer is still important to reduce complexity exposed to the users and
+developers, but if enough information between the layers is exchanged,
+this information can lead to good scheduling decisions on each of the
 layers.
 
 When put together, we distinguish several classifications that
-comprise Cloud scheduling into a scheduling taxonomy. This includes
+comprise a cloud scheduling taxonomy. This includes
 metrics, cloud scheduling models, cloud scheduling challenges, the
 cloud infrastructure, and algorithms specifically designed to address
 clouds as seen in Figure~{F:graph-mindmap}.  These classifications are
@@ -464,7 +464,7 @@ introduced by Laszewski in~\cite{lasbook}.
 In this taxonomy we are concerned about how resources are placed on
 physical models and are interconnected with each other to facilitate
 scheduling algorithms. Figure~\ref{F:graph-y} depicts the different
-models integrated in the Taxonomy. It includes:
+models that are integral part of this taxonomy. It includes the 
 
 \begin{description}
 
@@ -472,12 +472,12 @@ models integrated in the Taxonomy. It includes:
   enable a hierarchical scheduling strategy across multiple data
   centers, data centers, racks, servers, and computing cores.
 
-\item[Resource Model] representing models that the scheduling
-  algorithm addresses including containers and functions, virtual
+\item[Resource Model] representing resource-based scheduling
+  decisions while dealing with  containers and functions, virtual
   machines and jobs, virtual clusters, provider managed resources, and
   multi-region provider managed resources.
 
-\item[Connectivity Model] introduces a connectivity between components
+\item[Connectivity Model] introducing connectivity between components
   when addressing scheduling. This includes components such as memory,
   processes, connectivity to distributed resources, hyper-graphs to
   formulate hierarchies of provider based resources, and region
