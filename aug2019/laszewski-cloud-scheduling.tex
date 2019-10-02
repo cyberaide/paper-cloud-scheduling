@@ -127,8 +127,11 @@
 
 \begin{keyword}
 
-  Taxonomy, Scheduling, Cloud, Containers, HPC in the Cloud,
-  VM Scheduling, FaaS Scheduling, Y-Cloud Taxonomy
+  Y-Cloud Taxonomy,
+  Cloud Scheduling,
+  Scheduling Virtual Machines,
+  Scheduling Containers,
+  Scheduling FaaS
 
 \end{keyword}
 
@@ -142,21 +145,15 @@
   from our experience in utilizing and managing multi-cloud
   environments.  Our study is backed up by a literature review that
   targets not only virtual machine, but also container and Function as
-  a Service frameworks. It justifies
-
-\color{red}
-
-our proposed resource provider focused Y-cloud taxonomy and provides a
-an overview of existing scheduling techniques in cloud computing.
-
-\color{black}
-
-As a result this work can lead to a better understanding of the
-complex field of scheduling for clouds in general. Furthermore, the
-study promotes through the Y-cloud taxonomy the vision of a layered
-scheduling architecture that will be useful for the implementation of
-application and resource-based scheduling frameworks in support of the
-NIST Big Data Reference Architecture.
+  a Service frameworks. It justifies our proposed resource provider
+  focused Y-cloud taxonomy and provides a an overview of existing
+  scheduling techniques in cloud computing.  As a result this work can
+  lead to a better understanding of the complex field of scheduling
+  for clouds in general. Furthermore, the study promotes through the
+  Y-cloud taxonomy the vision of a layered scheduling architecture
+  that will be useful for the implementation of application and
+  resource-based scheduling frameworks in support of the NIST Big Data
+  Reference Architecture.
 
 \end{abstract}
 
@@ -183,34 +180,40 @@ utilization and optimization. Consequently, Resource scheduling is an important
 service of any cloud framework as it is responsible for orchestrating the
 resources to both cloud providers and cloud users in an efficient manner.
 
-In this paper we contribute to the argument that scheduling in the cloud
-requires a multi-layered approach that not only schedules tasks and jobs, but
-also integrates resource provisioning and dynamic resource dynamic adaptation
-during runtime run-time of cloud applications. Information has to be passed
-between the various layers that comprise this scheduling architecture for clouds
-to guide the optimal placement onto resources. Hence, a cloud-based scheduling
-models is more comprehensive than previous classical scheduling approaches as it
-is conducted on scales and pools of resources that were previously not
-considered. The scheduling is not only done on the task, job, and cluster level
-but integrates the data center and even regional and global data centers while
-adding on demand resource needs. Our study identifies services that assist in
-the formulation of the scheduling needs and interfaces with the NIST Big Data
-Reference Architecture (NIST-BDRA)~\cite{nist-bdra-vol6}
+In this paper we contribute to the argument that scheduling in the
+cloud requires a multi-layered approach that not only schedules tasks
+and jobs, but also integrates resource provisioning and dynamic
+resource adaptation during the runtime of cloud
+applications. Information has to be passed between the various layers
+that comprise this scheduling architecture for clouds to guide the
+optimal placement onto resources. Hence, a cloud-based scheduling
+model is more comprehensive than previous classical scheduling
+approaches as it is conducted on scales and types of resources that
+were previously not considered. Scheduling is not only done on the
+task, job, and cluster level but integrates the data center and even
+regional and global data centers while adding on demand resource
+needs. To work towards a layered scheduling model we have introduced a
+Y-Cloud-Taxonomy that allows us to work towards the identification and
+implementation of scheduling models and algorithms at different
+junction points.  Furthermore, our study already contributed
+considerably to the identification of services that assist in the
+formulation of the scheduling needs and interfaces with the NIST Big
+Data Reference Architecture (NIST-BDRA)~\cite{nist-bdra-vol6}
 definitions currently under development~\cite{nist-bdra-vol8}.
 
 The paper is structured as follows.  In Section~\ref{sec:terminology} the
-terminology used in the paper is introduced. Next, in
+terminology used in the paper is introduced. Next, we present in
 Section ~\ref{sec:taxonomy} an architecture view and taxonomy that we
 derived from our practical experience with FutureGrid
 \cite{las12fg-bookchapter,fox2013futuregrid}, FutureSystem, and Software such as
 Cloudmesh~\cite{von2014accessing}, Virtual Clusters \cite{las-comet}, and
-Rain~\cite{las-fg-1295,las10dynamic,las-rain} while working on multi-hosted
-heterogeneous cloud frameworks is presenthed.
+Rain~\cite{las-fg-1295,las10dynamic,las-rain} while working on
+hybrid and multicloud frameworks.
 
-This view is backed up by an extensive
-literature research in Sections \ref{sec:literature} and their classification
-based on the taxonomy introduced in the previous sections. Lastly, we provide
-some concluding remarks in Section~\ref{sec:conclusion}.
+This view is backed up by an extensive literature research in Sections
+\ref{sec:literature} and their classification based on the taxonomy
+introduced in Section~\ref{sec:taxonomy}. Lastly, we provide some
+concluding remarks in Section~\ref{sec:conclusion}.
 
 \subsection{Contributions}
 
