@@ -653,34 +653,48 @@ Figure~\ref{F:graph-scheduling}.
 \section{Literature review of Cloud Resource Scheduling Algorithms}\label{sec:literature}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
 In this section we conduct an exemplary but extensive literature
-review of cloud scheduling in order to confirm our taxonomy. As part
-of this review, we present a number of tables to compare the reviewed
-research and frameworks related to cloud scheduling.
+review of cloud scheduling in order to confirm our {\bf taxonomy
+  categories}. As part of this review, we present a number of tables
+to identify the categories from research and frameworks we reviewed
+and are related to cloud scheduling. We augmented each table with a
+first column that is highlighted and refers to the cloud scheduling
+taxonomy category we identified for this work.
 
-We organize this section by scheduling classifications related to 
+To provide an additional guide while grouping some work together we
+have introduced a number of sections focusing on a topic and grouped
+the literature based on its main contribution into these
+groups. However, we avoided double listing of the research in multiple
+groups as much as possible to keep the tables small.
 
-dynamic scheduling (Section~\ref{sec:dynamic})
+As a result we organize this section by scheduling categories related to 
+%
+dynamic scheduling (Section~\ref{sec:dynamic}),
 cloud metric based scheduling with emphasize (Section~\ref{sec:vm-scheduling}) on 
-energy (Section~\ref{sec:energy})
-network (Section~\ref{sec:network})
-cost (Section~\ref{sec:cost})
-time (Section~\ref{sec:time})
-reliability (Section~\ref{sec:reliability})
-security (Section~\ref{sec:security}),
+energy (Section~\ref{sec:energy}),
+network (Section~\ref{sec:network}),
+cost (Section~\ref{sec:cost}),
+time (Section~\ref{sec:time}),
+reliability (Section~\ref{sec:reliability}),
+security (Section~\ref{sec:security}), 
 and heuristics (Section~\ref{sec:heuristic}).
 
-We review scheduling needs for 
-HPC in the cloud (Section~\ref{sec:hpc}) and 
-workflows (Section~\ref{sec:workflow}).
+As High Performance Computing in the cloud is also a service offered
+by several providers, w also review scheduling for HPC in the cloud
+(Section~\ref{sec:hpc}) and scientific workflows
+(Section~\ref{sec:workflow}) which is going to become a field of
+interest for the scientific community as the transition to clouds
+takes place and is explicitly an area of interrest fro NIST as
+discussed in the Big Data Reference Architecture Working Group while
+leveraging activities from the community including the past Grid
+community.
 
-We mention scheduling in public clouds (Section~\ref{sec:public})
-while also looking at containers (Section~\ref{sec:container}),
-function as a service (Section~\ref{sec:faas}) as well as distributed
-resource providers (Section~\ref{sec:distributed}) which can utilize
-service mesh (Section~\ref{sec:mesh}).
+In this sections we also review papers with emphasize on scheduling in
+public clouds (Section~\ref{sec:public}), 
+containers (Section~\ref{sec:container}), function as a service
+(Section~\ref{sec:faas}) as well as distributed resource providers
+(Section~\ref{sec:distributed}) which can utilize a service mesh
+(Section~\ref{sec:mesh}).
 
 
 
