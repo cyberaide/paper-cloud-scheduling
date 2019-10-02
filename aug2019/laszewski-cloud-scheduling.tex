@@ -900,18 +900,18 @@ scheduling algorithms.
 
 
 
-Users and providers need the guarantee of reliability. Thus many
-scheduling efforts integrate how to increase reliability. Strategies
-such as replication of data and compute services are common
-practice. Obviously this comes often at a price and increased cost may
-occur when reliability is concerned. The distributed nature of clouds
-make it a formidable challenge to offer reliability. However at the
-same time while providing large scale data centers to offer cloud
-services with highly specialized operating staff and abilities to
-replicate and migrate workloads to other services increases
-reliability when compared to on-premise data centers due to larger
-efficiency of the cloud data centers in regards to overall cost for
-its users.
+Cloud Users and providers need the guarantee of reliability. Thus many
+cloud scheduling efforts address how to increase
+reliability. Strategies such as replication of data and compute
+services are common practice. Obviously this comes often at a price
+and increased cost may occur when reliability is of concern. The
+distributed nature of clouds make it a formidable challenge to offer
+reliability. However at the same time while providing (a) large scale
+data centers to offer cloud services with (b) highly specialized
+operating staff and (c) abilities to replicate and migrate workloads
+to other services, it increases reliability when compared to
+on-premise data centers. This is often due to larger efficiency of the
+cloud data centers in regards to overall cost for its users.
 
 Various studies have been conducted to analyze the effect of reliability on clouds.
 
@@ -923,8 +923,6 @@ scheduling metrics such as energy and reliability have also been
 studied~\cite{tang2016energy}.
 
 A comparison of reliability and scheduling is given in Table~\ref{T:h}.
-
-
 
 \input{table-reliability}
 
@@ -1017,7 +1015,7 @@ of ML-based scheduling algorithm is done in Table~\ref{T:j1}.
 
 Next we review scheduling classifications related to traditional High
 Performance Computing (HPC). It is important to recognize, that HPC
-and its frameworks must not be excluded as part of cloud scheduling
+and its frameworks must not be excluded as part of cloud scheduling review
 due to its exposure for scientific application in industry and
 academia. More importantly HPC is now also offered as one of the supported
 compute services in public cloud providers. When looking at the services offered
@@ -1027,35 +1025,32 @@ platforms and bare metal provisioning.
 
 \begin{description}
 
-\item[HPC Batch Queuing in the Cloud.] These are specialized
-  high-performance super-computing systems that are offered to
+\item[HPC Batch Queuing in the Cloud.] Cloud providers offer specialized
+  high-performance super-computing systems to
   customers with computation needs that can only be fulfilled by large
   scale specialized hardware. Grand challenge problems are often
   motivators for such hardware. In industry we for example find
   computational fluid dynamics, and modeling of biochemical processes
-  as one of its user communities. Example offerings for HPC in AWS
+  as one of its drivers. Example offerings for HPC in the cloud are
+  provided by AWS
   \cite{www-aws-hpc}, Azure~\cite{www-azure-hpc}, Google~\cite{www-google-hpc},
   but also other less prominent clouds such as Penguin Computing HPC
   in the cloud~\cite{PODHPCCloud2019}, and
   SabalCore~\cite{Sabalcore2019}.
   
-\item[Cloud Bursting of On Premise HPC tasks.] The HPC systems are
-  often over-utilized and thus the situation of resource starvation is
-  to be considered. For this reason many batch queuing system allow
-  the integration of cloud resources in such a fashion that task and
-  workflows may be executed in the cloud through the integration of
-  commercial or on premise cloud resources. In this case the term
-  cloud bursting is used
-  \cite{CloudBursting2019,BurstingHPC2019}. Example for the
+\item[Cloud Bursting of On Premise HPC tasks.] The on-premisse HPC
+  systems are often over-utilized and thus the situation of resource
+  starvation motivates the provider to gain additional resources
+  in the cloud. For this reason many batch queuing
+  system allow the integration of cloud resources in such a fashion
+  that task and workflows may be executed in the cloud through the
+  integration of commercial or on premise cloud resources. In this
+  case the term cloud bursting is used
+  \cite{CloudBursting2019,BurstingHPC2019}. Examples for the
   integration in prominent HPC scheduling includes
   Slurm~\cite{www-slurm}, Univa Grid Engine~\cite{www-univa},
   PBSpro~\cite{www-pbs-manual}, LSF~\cite{www-lsf},
   Moab~\cite{www-moab}.
-
-  \color{red}
-  Table ~\ref{T:l} present the comparison of the different batch resource management systems.
-  
-  \color{black}
 
 \item[Container Isolation.] Due to the usage of queuing systems it is
   also possible to provide in part an improved container security
@@ -1084,6 +1079,10 @@ platforms and bare metal provisioning.
 
 \end{description}
 
+\TODO{THE TABLE \ref{T:l} IS INCOMPLETE}
+
+Table ~\ref{T:l} presents a selected comparison of the different batch resource management systems.
+  
 
 \input{table-batch}
 
@@ -1096,75 +1095,68 @@ platforms and bare metal provisioning.
 \subsection{Workflow Scheduling Frameworks} 
 \label{sec:workflow}
 
-
-
 In the previous sections we already pointed out several workflow
 related scheduling algorithms while using specific metrics to conduct
 the scheduling. In addition we can integrate virtual machines,
 containers, and tasks. The main intent of the cloud workflow is to automate
 repeated task in a reliable way. 
 
-
-Traditionally, workflow schedulers are often distinguished by
+It is important to recognize that previous academic workflow engines
+can easily be utilized to integrate cloud scheduling activities. This includes
+traditionally, workflow schedulers are often distinguished by
 DAG~\cite{deelman2005pegasus,deelman2004pegasus,thain2005distributed}
 and non-DAG scheduling while some support
 both~\cite{las-karajan,las-cogkit-1,las06-workflow-book}.
-For cloud workflow management services such as
-Nintex ~\cite{www-nintex-wf}, Amazon Simple Workflow,
+
+However, we have to recognize that workflows are now also offered as a
+service as part of many cloud providers. and solution providers. This
+includes efforts such as 
+Nintex ~\cite{www-nintex-wf}, Amazon Simple Workflow (ASW),
 Hadoop streaming ~\cite{www-hadoop-streaming} for
-map reduce workflows are used. The main intent of Amazon
-simple workflow is to provide the support to build,
+map reduce workflows are used. The intend for ASW
+is to provide the support to build,
 run, and scale background jobs that have parallel or
-sequential steps The main intent of Spark
+sequential steps. The main intent of Spark
 streaming ~\cite{www-spark-streaming} is to provide scalable,
 high-throughput and fault-tolerant
 stream processing of live data streams. Argo ~\cite{www-argo-wf},
 a container-native workflow
 engine is used for orchestrating parallel jobs on Kubernetes.
+It is clear that this will become a rich area of research as workflows
+need to utilize resources and efficient workflow schedulers to utilize
+cloud resources is an important goal.
 
- Even prior
-to the official FaaS frameworks existed that focused on the execution
-of functions~\cite{las-infogram}.  Scientific applications such as
-bio-informatics have introduced not only workflow systems, but also
-promoted graphical workflow design tools to create dependency graphs
-the are executed by workflow
-schedulers~\cite{oinn2004taverna,tan2010comparison}.
+Even prior to FaaS frameworks services existed that focused on the
+execution of functions~\cite{las-infogram}.  Scientific applications
+such as bio-informatics have introduced not only workflow systems, but
+also promoted graphical workflow design tools to create dependency
+graphs the are executed by workflow
+schedulers~\cite{oinn2004taverna,tan2010comparison,yu2005taxonomy}.
   
-In addition to our findings, in~\cite{yu2005taxonomy} workflows are
-also organized by design, scheduling and data movement abilities.
-
-It is often an overlooked fact that existing HPC batch queuing systems
-contain features for job dependency management. In many cases these
-features can be used to accommodate the users needs for scheduling
-workflows onto the same hardware or in some cases clusters that are
-managed through the same queuing
-system
-~\cite{www-lsf,www-moab,www-univa-GE-manual,www-pbs-manual}.
-
-
-
-
+Furthermore, It is often an overlooked fact that as part of the
+scheduling within existing HPC batch queuing systems workflow
+abstractions exists that could be utilized to integrate cloud
+scheduling tasks. Such queuing systems
+include~\cite{www-lsf,www-moab,www-univa-GE-manual,www-pbs-manual}.
 
 
 
 \subsection{Scheduling in Public Cloud Providers}
 \label{sec:public}
 
-
-
 Next, we compare scheduling methods and needs offered in public cloud
-service providers are presented. This includes AWS, Azure, Google,
+service providers. This includes AWS, Azure, Google,
 Rackspace, but also academic clouds such as FutureGrid and
 FutureSystems Comet, Jetstream, and Chameleon Cloud.
 
 It is important to recognize that today public cloud providers offer
 not only virtual machines to the users, but a large variety of
 compute, data, and analytical services. Some of them may even use bare
-metal while others are having heightened security demands to for
-example fulfill heath care or government isolation needs as part of
+metal while others are having heightened security demands, to for
+example, fulfill heath care or government isolation needs as part of
 the infrastructure. All these issues naturally influence the
 scheduling efforts which need to be addressed by the provider. In many
-cases we do not find some of the information on how such scheduling is
+cases we do not find sufficient information on how such scheduling is
 conducted due to security and company secrets.
 
 However we find metrics that users can utilize to formulate their own
@@ -1189,13 +1181,12 @@ centers~\cite{MicrosoftAzure2014}.
 In ~\cite{Rackspace2016} cloud load-balancer, round robin and least
 connections-based algorithms are commonly used so that workload could
 be distributed equally on all resources.  As one of the original tasks
-of clouds was hosting of Web services under traffic load. public
-clouds include strategies the scale up and down the services-based on
-such loads and allocate dynamically through a scheduler resources to
-fulfill this demand.
+of clouds was hosting of Web services under traffic load, public
+clouds include strategies that scale up and down the services-based on
+such loads and allocate resources dynamically.
 
 Other providers have focused on making use of multi-cloud virtual
-machine placement possible while offering optimization strategies for
+machine placements while offering optimization strategies for
 workflows~\cite{CloudSigma2016} including detailed analysis of cost
 metrics~\cite{Cloudmetrics2019}
 
@@ -1205,7 +1196,8 @@ between the use of HPC and clouds, while running HPC queuing systems
 on the same resources as cloud resources. Dynamic provisioning allowed
 resources to be provisioned to the one or the other by
 demand. In~\cite{las-comet} the re-provisioning is even done with the
-help of a traditional batch queuing system.
+help of a traditional batch queuing system enabling a sophisticated
+scheduling approach
 
 Table~\ref{T:iaas} depicts examples as used in public cloud providers.
 
