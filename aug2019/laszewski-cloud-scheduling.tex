@@ -964,12 +964,13 @@ Table~\ref{T:i}).
 \subsection{Heuristic-based Scheduling}\label{sec:heuristic}
 
 
-Heuristic methods help to design efficient algorithm to fulfill the
-users application requirements. We provide here a small sample of
-different heuristics as found in literature. This includes particle
-swarm optimization~\cite{pandey2010particle}, multi-objective genetic
-algorithm-based ~\cite{mezmaz2011parallel,gkasior2016metaheuristic},
-colony optimization with swarm intelligence~\cite{mateos2013aco}, bee
+Heuristic methods help to design efficient algorithm in case where
+deterministic methods can not be applied. We provide here a small
+sample of heuristics applied to clouds as found in literature. This
+includes particle swarm optimization~\cite{pandey2010particle},
+multi-objective genetic algorithm-based
+~\cite{mezmaz2011parallel,gkasior2016metaheuristic}, colony
+optimization with swarm intelligence~\cite{mateos2013aco}, bee
 colony~\cite{ld2013honey}, artificial neural
 networks~\cite{kousiouris2011effects}, simulated
 annealing~\cite{torabzadeh2010cloud},
@@ -982,34 +983,30 @@ workflows to be the scheduling unit in
 heuristics~\cite{bousselmi2016qos}.
 
 A comparison of heuristic-based scheduling
-algorithm is done in~\ref{T:j}.
-
-
+algorithm is provided in  Table~\ref{T:j}.
 
 \input{table-heuristic}
 
 
-\subsection{AI-based Scheduling}\label{sec:AI}
+\subsection{ML-based Scheduling}\label{sec:AI}
 
-\color{red}
-
-Deep Reinforcement Learning (DeepRL)-based approaches can
-automatically learn to schedule more efficiently and can also adapt to
-any system changes. Artificial intelligence(AI)-based approached can be used to handle the
-scheduling decisions in Cloud computing environment. Various studies
-have been conducted to analyze the effect of AI-based scheduling
-approach in the Cloud computing environment. This includes deep
-reinforcement approach ~\cite{cheng2018drl,mao2018learning},
-Q-learning model~\cite{zhang2017energy} and Q network model
+Recently, Machine Learning, and especially Deep Reinforcement Learning
+(DeepRL)-based approaches have become quite popular due to significant
+progress in the field. These methods can also be applied to
+automatically learn to schedule more efficiently in a cloud while it
+can also adapt to system changes. Various studies have been conducted
+to analyze the effect of ML-based scheduling approach in the Cloud
+computing environment. This includes deep reinforcement approach
+~\cite{cheng2018drl,mao2018learning}, Q-learning
+model~\cite{zhang2017energy} and Q network model
 ~\cite{wang2019multi}. Markov decision-based approach
 ~\cite{barrett2013applying} is also studied to handle the uncertainty
 to provide optimal decision at the tiem of scheduling.  A comparison
-of AI-based scheduling algorithm is done
-in~\ref{T:j1}.
+of ML-based scheduling algorithm is done in Table~\ref{T:j1}.
 
-\color{black}
 \input{table-AI}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % HPC AND CLOUD
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
