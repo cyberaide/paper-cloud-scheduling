@@ -392,23 +392,24 @@ list next the terminology related to provisioning:
 
 \section{Scheduling Taxonomy for Clouds}\label{sec:taxonomy}
 
-
 In this section we introduce our scheduling taxonomy for clouds. Our
-taxonomy integrates the classical cloud architecture as defined by
-NIST~\cite{mell2011nist}. However, as scheduling is conducted with
-resources in mind we also focus on aspects to deal with cloud
-resources, their physical instantiation and their connectivity while
-showcasing their relationship in our taxonomy.
+taxonomy integrates the classical service oriented cloud architecture
+as defined by NIST~\cite{mell2011nist}. However, as scheduling is
+conducted with resources in mind we also focus on classifications to deal with
+cloud resources, their physical instantiation and their connectivity
+while showcasing their relationship in our taxonomy.
 
 \subsection{Layered scheduling}
 
 The NIST cloud model promotes an easy to understand separation between
-infrastructure, platforms and services. This separation motivates a
-scheduling taxonomy separated by the different layers in which service
-providers and users attempt to place compute, data and other services
-in order to optimize the use of the infrastructure as is showcased in
-Figure~\ref{F:graph-layer} while enhancing it with Function as a Service
-(FaaS).
+infrastructure, platforms and software as a service. This separation
+motivates a scheduling taxonomy separated by the different layers in
+which service providers and users attempt to place compute, data and
+other services in order to optimize the use of the infrastructure as
+is showcased in Figure~\ref{F:graph-layer}, in which we added also
+Function as a Service (FaaS) as it is going to be playing a major role
+in upcoming cloud Software as a Service offerings, just as platforms
+did.
 
 \input{graph-layer}
 
@@ -426,27 +427,31 @@ are not under direct control by the developer and users.
 
 Thus one strategy to develop scheduling algorithms for the cloud is to
 integrate the service boundaries of the layered cloud architecture
-into the strategy of conducting a multi-layered scheduling approach in
-which we separate concerns as showcased in Figure~\ref{F:graph-flow}.
-As most recently the FaaS model is introduced by the community we
-added it to the figure to indicate that although they are defined by
-the user, the functions have well defined resource constraints that
-make scheduling decisions on the infrastructure provider level easier.
-Hence to optimize usage of the infrastructure, providers have come up
-with an easy to use extension to the original NIST model allowing for
-better potential of utilizing the infrastructure by scheduling small
-well defined functions with limited resource needs.
+into conducting a multi-layered scheduling approach. In this approach
+we separate scheduling concerns related to resources, platform,
+function and application scheduling as showcased in
+Figure~\ref{F:graph-flow}.  As most recently the FaaS model has gained
+traction we added it to the figure to indicate that through the use of
+resource bound functions scheduling decisions propagated to the
+infrastructure provider level become easier.  Hence to optimize usage
+of the infrastructure, cloud providers have integrated the use of
+functions in their portfolio in addition to the original NIST model.
+This integration allows for better potential of utilizing the
+infrastructure by scheduling small well defined functions with limited
+resource needs.
 
-Certainly the goal of hiding the scheduling decisions between each
-layer is still important, but enough information between the layers
-needs to be exchanged to facilitate good scheduling decisions on each
-of the layers.
+Certainly, the goal of hiding the scheduling decisions between each
+layer is still important to reduce complexity exposed to the users,
+but if enough information between the layers is exchanged, this
+information can lead to good scheduling decisions on each of the
+layers.
 
-When put together, we distinguish several aspects that comprise Cloud
-scheduling. This includes metrics, cloud scheduling models, cloud
-scheduling challenges, the cloud infrastructure, and algorithms
-specifically designed to address clouds as seen in Figure~{F:graph-mindmap}.
-These aspects are elaborated in more detail next.
+When put together, we distinguish several classifications that
+comprise Cloud scheduling into a scheduling taxonomy. This includes
+metrics, cloud scheduling models, cloud scheduling challenges, the
+cloud infrastructure, and algorithms specifically designed to address
+clouds as seen in Figure~{F:graph-mindmap}.  These classifications are
+elaborated in more detail next.
 
 \input{graph-mindmap}
 
@@ -488,7 +493,7 @@ models integrated in the Taxonomy. It includes:
 \subsection{Cloud Scheduling Model}
 
 Now that we have identified the resource provider focused Y-Cloud
-taxonomy we can identify some important aspects that govern the
+taxonomy we can identify some important classifications that govern the
 scheduling decisions to effectively use these resources. This includes
 metrics that influence the scheduling. Traditional scheduling metrics
 and attributes for scheduling algorithms are shown in
@@ -657,7 +662,7 @@ review of cloud scheduling in order to confirm our taxonomy. As part
 of this review, we present a number of tables to compare the reviewed
 research and frameworks related to cloud scheduling.
 
-We organize this section by scheduling aspects related to 
+We organize this section by scheduling classifications related to 
 
 dynamic scheduling (Section~\ref{sec:dynamic})
 cloud metric based scheduling with emphasize (Section~\ref{sec:vm-scheduling}) on 
@@ -924,7 +929,7 @@ A comparison of reliability and scheduling is given in Table~\ref{T:h}.
 
 
 
-As mentioned earlier security as a key aspect cloud users and
+As mentioned earlier security as a key issue cloud users and
 providers require in order for cloud infrastructure to be useful for
 many applications.
 
@@ -1009,7 +1014,7 @@ in~\ref{T:j1}.
 \label{sec:hpc}
 
 
-Next we review scheduling aspects related to traditional High
+Next we review scheduling classifications related to traditional High
 Performance Computing (HPC). It is important to recognize, that HPC
 and its frameworks must not be excluded as part of cloud scheduling
 due to its exposure for scientific application in industry and
@@ -1156,7 +1161,7 @@ not only virtual machines to the users, but a large variety of
 compute, data, and analytical services. Some of them may even use bare
 metal while others are having heightened security demands to for
 example fulfill heath care or government isolation needs as part of
-the infrastructure. All these aspects naturally influence the
+the infrastructure. All these issues naturally influence the
 scheduling efforts which need to be addressed by the provider. In many
 cases we do not find some of the information on how such scheduling is
 conducted due to security and company secrets.
@@ -1227,7 +1232,7 @@ For the first scheduling task we need to consider data management to
 efficiently utilize the memory hierarchy, but also for example
 execution deadlines or privacy concerns to organize the computation
 tasks as required. In the distributed case we also need to integrate
-communication related aspects. We focus next on the distributed
+communication related issues. We focus next on the distributed
 frameworks in more detail we focus on Docker Swarm, Kubernetes,
 Singularity, and Mesos.
 
@@ -1411,7 +1416,7 @@ offerings.
 play a significant roll for providers, but also for users to which
 energy cost are passed along. Not only good scheduling algorithms are
 needed, but the design of the data center close to cheap energy is an
-important aspect.
+important Issues.
 
 \item[Y-Diagram.] Our Y-diagram promotes scheduling across scale and
 models. This allows to create hierarchy of interfacing scheduling
@@ -1527,7 +1532,7 @@ strategy when adding containerized cloud resources.
 
 \color{black}
 
-In this paper, we have surveyed the many important aspects of
+In this paper, we have surveyed the many important classifications of
 scheduling problems in cloud computing. After introducing the needed
 terminology, we presented a comprehensive taxonomy of the different
 cloud scheduling approaches and issues. A layered and phased
