@@ -500,13 +500,6 @@ and attributes for scheduling algorithms are shown in
 Figure~\ref{F:graph-metrics}. They include typically cost, time, space,
 reliability, energy, and security.
 
-\TODO{for some reason this image is out commented, is content
-  elsewhere?. I out-commented it, lets check carefully. The text seems
-  also not to match. seems to replicate what we have in Fig. 7.}
-
-\TODO{In the previous submitted paper, the same text was there. Fig
-  5 was missing. So in the revised version, fig 5 is included.}
-
 \input{graph-metrics}
 
 When looking into the specifics of these metrics applied to cloud
@@ -615,8 +608,7 @@ resources.
 
 In both cases under-utilization prevents a resource from performing
 optimally, incurring idle time, whereas over-utilization causes a
-resource to function more, thereby, sometimes, degrading the node's
-performance.
+resource to degrade the node's performance.
 
 \input{graph-challenges}
 
@@ -626,17 +618,22 @@ performance.
 \subsection{Taxonomy Classification of Resource Scheduling Algorithms}\label{S:algo}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Next we present a short sample on resource scheduling algorithms that
-we found in literature related to cloud computing scheduling as
-showcased in Figure~\ref{F:graph-algorithm}. We present in the
-figure only a relevant subset of algorithm classifications including
-the distinction between VM placement and QoS parameters based
-algorithms. Dependent on the locality and scope of the scheduling task
-often a deterministic approach is not suitable. When looking at
-heuristics~\cite{vivekanandan2011study} we find traditional algorithms
-such as hill-climbing but also a variety of nature inspired
-algorithms. The detail description of existing work in the field of
-resource scheduling algorithm is done in the next section.
+Next we present in Figure~\ref{F:graph-algorithm} a classification of
+resource scheduling algorithms that we found while reviewing a
+significant set of literature related to cloud computing. We focus in
+Figure~\ref{F:graph-algorithm} on a relevant subset while focussing on
+VM placement while considering QoS parameters to guide the scheduling
+task. An additional classification is based on the type of algorithm
+used for the scheduling task.  Dependent on the locality and large
+scale of the scheduling task in many cases a deterministic approach is
+not suitable. Hence, different algorithm categories are listed in
+Figure~\ref{F:graph-scheduling}.
+
+%When looking at heuristics~\cite{vivekanandan2011study}
+%we find traditional algorithms such as hill-climbing but also a
+%variety of nature inspired algorithms. The detail description of
+%existing work in the field of resource scheduling algorithm is done in
+%the next section.
 
 \input{graph-algorithms}
 
@@ -724,17 +721,14 @@ dynamic scheduling while focusing on virtual machine placement.
 
 \subsection{Cloud Metric-based Scheduling}\label{sec:vm-scheduling}
 
-
-
 Due to the complexity of cloud environments, many different metrics
 are used to guide the scheduling of virtual machines, containers,
-platforms, tasks, batch jobs and
-workflows. Figure ~\ref{F:graph-metrics-flower} showcases many
-different metrics that influence their schedule.  '
+platforms, tasks, batch jobs and workflows. As already pointed out
+many different metrics that influence their schedule (see
+Figure~\ref{F:graph-metrics}).
 
-
-
-\input{graph-metrics-flower}
+% Figure ~\ref{F:graph-metrics-flower} showcases
+%\input{graph-metrics-flower}
 
 \subsubsection{Energy Aware Scheduling}\label{sec:energy}
 
