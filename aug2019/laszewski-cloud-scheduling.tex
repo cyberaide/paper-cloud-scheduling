@@ -529,10 +529,9 @@ scheduling as categorized next.
 
 \subsection{Taxonomy of Challenges in Cloud Scheduling}\label{sec:challange}
 
-Some of the obvious characteristics and challenges that are
-specifically related to clouds are listed next and are summarized in
-Figure~\ref{F:graph-challenges} while enhancing the traditional scheduling
-challenges we introduced earlier.
+Some of the obvious cloud characteristics and challenges that lead to
+a categorization are listed next and are summarized in
+Figure~\ref{F:graph-challenges}.
 
 \begin{description}
 
@@ -541,25 +540,27 @@ challenges we introduced earlier.
   constraints set by providers and users. A cloud involving a plethora
   of resources spanning across the globe is obviously a huge
   infrastructure. The range of functions, tasks, jobs and applications
-  need to get catered at any point of time too can be in large scale.
+  need to be scheduled at any point of time onto available resources.
   Handling them in such scale requires efficient resource management.
-  As such, scheduling becomes a complex endeavor. Rather a complex,
-  dynamic and multi-faceted scheduling is necessary.
+  As such, scheduling becomes a complex endeavor, integrating dynamic
+  and multi-faceted scheduling. 
             
-\item [Dynamic nature of clouds:] Due to the dynamic nature of the
-  physical cloud infrastructure in which resources belonging to
+\item [Dynamic nature of clouds:] Clouds encompass a dynamically
+  changing resource environment of in which resources belong to
   different administrative domains keep on joining and leaving the
-  system scheduling must be adaptive.
+  clods. Hence scheduling must be adaptive and address the dynamic
+  resource availability.
 
-\item[Heterogeneous providers and services:] There is no single cloud,
-  but we have to recognize that the competitive nature in the cloud
+\item[Heterogeneous providers and services:] There is no single cloud.
+  We have to recognize that the competitive nature in the cloud
   market promotes not only heterogeneous cloud providers, but also
   heterogeneous cloud services that may compete with each other and
   either offer the same or customized services targeting a particular
-  user community. Resources in cloud environment are highly
+  user community. Resources in clouds are highly
   diversified in nature, capacity, working style and administrative
-  domains. Being owned by different organizations, the resources offer
-  minimal control over them making multi-layered scheduling necessary,
+  domains. The inclusion of different resource providers with the
+  desire to lock customers into their own services and products, makes
+  heterogeneous multicloud scheduling multi-layered a formidable challange.
 
 \item [Highly diversified:] Due to the large diverse set of
   applications (but also infrastructure) smart strategies to schedule
@@ -595,15 +596,15 @@ challenges we introduced earlier.
 \end{description}
 
 Thus we need to distinguish a number of scheduling challenges one of
-which is governed by on differentiating users and providers. Here, on
+which is governed by differentiating users and providers. Here, on
 the one hand, we focus on cloud providers that try to utilize in the
 best possible way the existing resources for the customers under
 optimization constraints such as cost, high availability, fault
 tolerance for the providing cloud resources and services. On the other
-hand, we have customers that expect these quality assurances, but also
-have own constraints such as deadlines, cost, and implicit
-requirements from their applications such as data placement and
-management.
+hand, we have customers that expect quality assurances, but also
+have their own constraints such as deadlines, cost, and implicit
+requirements from their applications including data placement and
+management that may influence the scheduling decision,
 
 In both cases we need to address the challenge of provisioning
 resources and also the challenge of scheduling services onto these
