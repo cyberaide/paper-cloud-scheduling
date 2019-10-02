@@ -702,28 +702,31 @@ containers (Section~\ref{sec:container}), function as a service
 
 \subsection{Dynamic Scheduling}\label{sec:dynamic}
 
+In literature we find the distinction between static and dynamic cloud
+scheduling algorithms.  In static scheduling resources are scheduled
+once, while in dynamic scheduling updates are applied constantly to
+find better resource utilization during runtime.
 
 
-As part of this scheduling task we often also find the distinction
-between static scheduling, where resources are scheduled once and dynamic scheduling, which is
-constantly updated during execution to find better resource
-utilization over time. The later is often motivated by need for
+The later is often motivated by the need for
 scalability~\cite{keller2014hierarchical} across and within data
 centers or increased fault
 tolerance~\cite{tighe2013distributed}. Association of other metrics
-into the dynamic scheduling approach is common to for example
-integrate power, reduce network bandwidth and enable more
-sophisticated Service level agreements~\cite{tighe2013distributed}. In
-many cases not only the cloud user, but obviously also the cloud
+into the dynamic scheduling approach is common while including power,
+network bandwidth and the integration of sophisticated service level
+agreements~\cite{tighe2013distributed}.
+
+In many cases not only the cloud user, but obviously also the cloud
 provider can benefit from dynamic
-scheduling~\cite{tighe2014integrating}. We find that it can be
-beneficial to separate the scheduling task in multiple steps such as
-shown in~\cite{sun2015live}. Here live migration for correlated VMs is
-optimizing on data, compute, and bandwidth. Other cloud metrics such
-as price~\cite{tordsson2012cloud} are also common and will be in more
-detail addressed in Section ~\ref{sec:cost}. Obviously a rich number
-of algorithm can be applied such as shown in
-Section~\ref{sec:heuristic}.
+scheduling~\cite{tighe2014integrating}.
+
+We find that it can be beneficial to separate the scheduling task in
+multiple steps such as shown in~\cite{sun2015live}. Here live
+migration for correlated VMs is optimizing on data, compute, and
+bandwidth are conducted in several steps. Other cloud metrics such as
+price~\cite{tordsson2012cloud} are also common and will be addressed
+in Section ~\ref{sec:cost}.  To address the scale problem many such
+algorithms use heuristics as showcased in Section~\ref{sec:heuristic}.
 
 Table~\ref{T:dynamic-scheduling} lists a number of efforts related to
 dynamic scheduling while focusing on virtual machine placement.
