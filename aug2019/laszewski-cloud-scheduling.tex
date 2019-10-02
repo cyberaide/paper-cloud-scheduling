@@ -749,10 +749,7 @@ integrates such metrics into their scheduling algorithm.
 % \input{graph-metrics-flower}
 
 
-
 \subsubsection{Energy Aware Scheduling}\label{sec:energy}
-
-
 
 Energy consumption is a key issue for cloud providers due to the
 enormous cost associated with operating hyper-scale and large cloud
@@ -798,14 +795,14 @@ Table~\ref{T:g}.
 \subsubsection{Network Aware Scheduling}\label{sec:network}
 
 
+Clouds promote large scale network traffic to, from, and within
+network aware scheduling must be considered for scheduling.  This not
+only contains moving data in and out of the cloud data center, but
+also may contain message exchange between complex distributed
+applications that run in these cloud data centers in many times
+distributed fashion.
 
-
-As clouds project remote large scale resources network traffic to,
-from, and within must be considered for scheduling. This not only
-contains moving data in and out of the compute center or storage, but
-also may contain message exchange between to sometime complex
-distributed applications that run in these cloud data
-centers. Minimizing the distance between data providers and data
+Minimizing the distance between data providers and data
 consumers while for example replicating data~\cite{www-akamai} can save
 significant amount of traffic and has long been applied in the
 internet as one of its beneficial strategies. Service level agreements
@@ -813,19 +810,23 @@ internet as one of its beneficial strategies. Service level agreements
 achieve proper utilization as part of the scheduling effort. Treating
 the network as shared scarce resource~\cite{rampersaud2016sharing}
 motivates the development of network-based scheduling algorithms.
-Just as in other metric-based scheduling models, we find the
+Also in network aware scheduling, we find the
 distinction between static~\cite{biran2012stable} and dynamic
-scheduling during runtime so we can deal with traffic bursts.
+scheduling at runtime so we can deal with traffic bursts.
 
-A variety of resource abstractions (see Figure~\ref{F:class-metric}) are
-applicable also to scheduling as part of the network traffic, such as
-demonstrated by~\cite{yu2017survivable} to optimize traffic in virtual
-clusters.  Scheduling across on multiple layers is especially of
-benefit for networking~\cite{bi2015sla} to minimize across different
-tiers.  Scheduling of platforms such as Hadoop offers naturally
-advantages when networking is integrated~\cite{kondikoppa2012network}.  Having access to lower level infrastructure
-such as offered by OpenStack presents opportunities to include Network
-Function Virtualization (NVF)~\cite{lucrezia2015introducing}
+\TODO{THIS FIGURE IS MISSING}
+
+A variety of traditional scheduling metrics (see
+Figure~\ref{F:graph-metrics}) are often used to improve scheduling
+while considering network traffic. An example is demonstrated in
+~\cite{yu2017survivable} to optimize traffic in virtual clusters.
+Scheduling across multiple layers is especially of benefit for
+networking~\cite{bi2015sla} that minimize across different tiers.
+Scheduling of platforms such as Hadoop offers naturally advantages
+when networking is integrated~\cite{kondikoppa2012network}.  Having
+access to lower level infrastructure such as offered by OpenStack
+presents opportunities to include Network Function Virtualization
+(NVF)~\cite{lucrezia2015introducing}.
 
 Table \ref{T:c} shows examples for network aware scheduling algorithms
 in cloud computing.
