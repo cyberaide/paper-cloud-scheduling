@@ -4,6 +4,8 @@
 
 \documentclass[final,5p,times,twocolumn]{elsarticle}
 
+\usepackage[tablesonly]{endfloat}
+
 \usepackage[T1]{fontenc}
 \usepackage{comment}
 \usepackage{fullpage}
@@ -25,6 +27,7 @@
 \usepackage{forest}
 \usepackage{hyperref}
 \usepackage{adjustbox}
+\usepackage{rotating}
 
 \usetikzlibrary{arrows.meta,shadows}
 
@@ -141,10 +144,10 @@
   to the scale of resources, the heterogeneity of services, their
   inter-dependencies and unpredictability of load this is a complex
   problem. We present a resource scheduling taxonomy that originates
-  from our experience in utilizing and managing multi-cloud
-  environments.  Our study is backed up by a literature review that
+  from the experience in utilizing and managing multi-cloud
+  environments.  This study is backed up by a literature review that
   targets not only virtual machine, but also container and Function as
-  a Service frameworks. It justifies our proposed resource provider
+  a Service frameworks. It justifies a proposed resource provider
   focused Y-cloud taxonomy and provides a an overview of existing
   scheduling techniques in cloud computing.  As a result this work can
   lead to a better understanding of the complex field of scheduling
@@ -195,7 +198,7 @@ regional and global data centers while adding on demand resource
 needs. To work towards a layered scheduling model we have introduced a
 Y-Cloud-Taxonomy that allows us to work towards the identification and
 implementation of scheduling models and algorithms at different
-junction points.  Furthermore, our study already contributed
+junction points.  Furthermore, this study already contributed
 considerably to the identification of services that assist in the
 formulation of the scheduling needs and interfaces with the NIST Big
 Data Reference Architecture (NIST-BDRA)~\cite{nist-bdra-vol6}
@@ -204,7 +207,7 @@ definitions currently under development~\cite{nist-bdra-vol8}.
 The paper is structured as follows.  In Section~\ref{sec:terminology} the
 terminology used in the paper is introduced. Next, we present in
 Section ~\ref{sec:taxonomy} an architecture view and taxonomy that we
-derived from our practical experience with FutureGrid
+derived from the practical experience with FutureGrid
 \cite{las12fg-bookchapter,fox2013futuregrid}, FutureSystem, and Software such as
 Cloudmesh~\cite{von2014accessing}, Virtual Clusters \cite{las-comet}, and
 Rain~\cite{las-fg-1295,las10dynamic,las-rain} while working on
@@ -245,7 +248,7 @@ The contributions of this paper are the following:
   holistic approach.
 
 \item We provide a systematic survey of cloud scheduling approaches
-  and associate them with our scheduling taxonomy.
+  and associate them with the presented scheduling taxonomy.
 
 \item We identify areas that have not yet been addressed by this paper
   and outline future activities.
@@ -281,12 +284,25 @@ We use the following terminology for Cloud computing and Resource scheduling:
 \item[Cloud Application] is an application that uses cloud services
   and resources for its instantiation and execution.
 
-\item [Resource Provisioning in the Cloud] is the process of allocating 
+\item[Resource Provisioning in the Cloud] is the process of allocating 
   resources demanded by services and applications running in the cloud.
   
-\item [Resource Scheduling in the Cloud] refers to the mapping of
+\item[Resource Scheduling in the Cloud] refers to the mapping of
   resources to fulfill the cloud service requirements.
 
+\item[Cloud Scheduler] refers to a service that maps basic cloud
+  scheduling units such as virtual machines, containers, functions,
+  and data onto cloud resources to utilize them while leveraging a 
+ a scheduling policy. 
+
+\item[Cloud Scheduling Policy] refers to a policy employed by the
+  scheduler to derive decisions as to how to guide a scheduling
+  algorithm.
+
+\item[Cloud Scheduling Algorithm] refers to an algorithm that hs cloud
+  units and policies, and resources as input and determines an
+  optimized mapping of cloud scheduling units to cloud resources.
+  
 \end{description}
 
 
@@ -392,12 +408,22 @@ list next the terminology related to provisioning:
 
 \section{Scheduling Taxonomy for Clouds}\label{sec:taxonomy}
 
-In this section we introduce our scheduling taxonomy for clouds. Our
+In this section we introduce a scheduling taxonomy for clouds. The
 taxonomy integrates the classical service oriented cloud architecture
-as defined by NIST~\cite{mell2011nist}. However, as scheduling is
-conducted with resources in mind we also focus on classifications to deal with
+as defined by NIST~\cite{mell2011nist}. 
+
+First, we will introduces a motivation for introducing the concept of layered
+scheduling that motivates the use of the taxonomy in the separate
+layers.
+
+Second, we will be introducing a resource provider focused Y-Cloud
+taxonomy that deals with showcasing the relationship between 
 cloud resources, their physical instantiation and their connectivity
-while showcasing their relationship in our taxonomy.
+in a layered fashion depicted as a Y-diagram.
+
+Next, we present in the taxonomy classifications motivated by
+challenges, metrics, and algorithms.
+
 
 \subsection{Layered scheduling}
 
@@ -431,14 +457,14 @@ into conducting a multi-layered scheduling approach. In this approach
 we separate scheduling concerns related to resources, platform,
 function and application scheduling as showcased in
 Figure~\ref{F:graph-flow}.  As most recently the FaaS model has gained
-traction we added it to the figure to indicate that through the use of
-resource bound functions scheduling decisions propagated to the
-infrastructure provider level become easier.  Hence to optimize usage
-of the infrastructure, cloud providers have integrated the use of
-functions in their portfolio in addition to the original NIST model.
-This integration allows for better potential of utilizing the
-infrastructure by scheduling small well defined functions with limited
-resource needs.
+traction we added it to Figure~\ref{F:graph-flow} to indicate that
+through the use of resource bound functions scheduling decisions
+propagated to the infrastructure provider level become easier.  Hence
+to optimize usage of the infrastructure, cloud providers have
+integrated the use of functions in their portfolio in addition to the
+original NIST model.  This integration allows for better potential of
+utilizing the infrastructure by scheduling small well defined
+functions with limited resource needs.
 
 Certainly, the goal of hiding the scheduling decisions between each
 layer is still important to reduce complexity exposed to the users and
@@ -450,7 +476,7 @@ When put together, we distinguish several classifications that
 comprise a cloud scheduling taxonomy. This includes
 metrics, cloud scheduling models, cloud scheduling challenges, the
 cloud infrastructure, and algorithms specifically designed to address
-clouds as seen in Figure~{F:graph-mindmap}.  These classifications are
+clouds as seen in Figure~\ref{F:graph-mindmap}.  These classifications are
 elaborated in more detail next.
 
 \input{graph-mindmap}
@@ -654,7 +680,7 @@ Figure~\ref{F:graph-scheduling}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this section we conduct an exemplary but extensive literature
-review of cloud scheduling in order to confirm our {\bf taxonomy
+review of cloud scheduling in order to confirm the {\bf taxonomy
   categories}. As part of this review, we present a number of tables
 to identify the categories from research and frameworks we reviewed
 and are related to cloud scheduling. We augmented each table with a
@@ -732,7 +758,7 @@ Table~\ref{T:dynamic-scheduling} lists a number of efforts related to
 dynamic scheduling while focusing on virtual machine placement.
 
 
-\input{table-dynamic-placement}
+%\input{table-dynamic-placement}
 
 
 
@@ -786,11 +812,11 @@ can also be utilized~\cite{hu2010scheduling}. Others focus on
 predicting future resource consumption needs~\cite{dabbagh2015energy}.
 
 A comparison of energy aware scheduling algorithm in cloud computing is shown in
-Table~\ref{T:g}.
+Table~\ref{T:g-a} and \ref{T:g-b}.
 
 
 
-\input{table-energy}
+%\input{table-energy}
 
 \subsubsection{Network Aware Scheduling}\label{sec:network}
 
@@ -833,7 +859,7 @@ in cloud computing.
 
 
 
-\input{table-network}
+%\input{table-network}
 
 
 \subsubsection{Cost Aware Scheduling}\label{sec:cost}
@@ -874,7 +900,7 @@ adaptations at run-time allow reduction of cost~\cite{ari2013design}
 Table \ref{T:e} presents a comparison of cost aware scheduling
 algorithms.
 
-\input{table-cost}
+%\input{table-cost}
 
 \subsubsection{Time-based Scheduling}\label{sec:time}
 
@@ -895,7 +921,7 @@ execution~\cite{frincu2014scheduling}, and delay bounds
 Table~\ref{T:f} presents a comparison of time aware
 scheduling algorithms.
 
-\input{table-time}
+%\input{table-time}
 
 \subsubsection{Reliability Aware Scheduling}\label{sec:reliability}
 
@@ -925,7 +951,7 @@ studied~\cite{tang2016energy}.
 
 A comparison of reliability and scheduling is given in Table~\ref{T:h}.
 
-\input{table-reliability}
+%\input{table-reliability}
 
 \subsubsection{Security-based Scheduling}\label{sec:security}
 
@@ -958,7 +984,7 @@ Table~\ref{T:i}).
 
 
 
-\input{table-security}
+%\input{table-security}
 
 \subsection{Heuristic-based Scheduling}\label{sec:heuristic}
 
@@ -984,7 +1010,7 @@ heuristics~\cite{bousselmi2016qos}.
 A comparison of heuristic-based scheduling
 algorithm is provided in  Table~\ref{T:j}.
 
-\input{table-heuristic}
+%\input{table-heuristic}
 
 
 \subsection{ML-based Scheduling}\label{sec:AI}
@@ -1003,7 +1029,7 @@ model~\cite{zhang2017energy} and Q network model
 to provide optimal decision at the tiem of scheduling.  A comparison
 of ML-based scheduling algorithm is done in Table~\ref{T:j1}.
 
-\input{table-AI}
+%\input{table-AI}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % HPC AND CLOUD
@@ -1204,7 +1230,7 @@ Table~\ref{T:iaas} depicts examples as used in public cloud providers.
 
 
 
-\input{table-iaas}
+%\input{table-iaas}
 
 
 \subsection{Scheduling in Container Frameworks}
@@ -1217,7 +1243,7 @@ resources~\cite{Containers2018,de2018distributed}. Typically a default
 scheduling policy is provided. Policies might place new services on
 hosts with the fewest currently active services.
 
-Based on our Y-diagram we need to distinguish two different
+Based on the Y-diagram we need to distinguish two different
 services. First, scheduling on the same server and second scheduling
 on a number of servers that are treated typically as one abstract
 cloud resource
@@ -1291,7 +1317,7 @@ container scheduling.
 
 
 
-\input{table-container}
+%\input{table-container}
 
 
 
@@ -1370,9 +1396,9 @@ and fair resource usage.
 
 We contrast different resource management systems, used for
 maintaining resources in distributed environments such as Clouds (see
-Table \label{T:distr-cloud}).
+Table \ref{T:distr-cloud}).
 
-\input{table-distr-cloud}
+%\input{table-distr-cloud}
 
 
 \subsection{Service Mashups} 
@@ -1416,7 +1442,7 @@ energy cost are passed along. Not only good scheduling algorithms are
 needed, but the design of the data center close to cheap energy is an
 important Issues.
 
-\item[Y-Diagram.] Our Y-diagram promotes scheduling across scale and
+\item[Y-Diagram.] The Y-diagram promotes scheduling across scale and
 models. This allows to create hierarchy of interfacing scheduling
 approaches for integrated and layered scheduling between resources at
 different scales.
@@ -1437,8 +1463,7 @@ approach seems appropriate.
 
 
 \item[Security and Privacy.]  We need to deal more stringently with
-security and privacy as part of our scheduling needs which contrasts
-traditional HPC scheduling efforts.
+security and privacy as part of scheduling needs.
 
 \item[Fault tolerance and Risk Analysis.] As part of the policy driven
 service level agreements with the cloud providers scheduling must
@@ -1557,7 +1582,7 @@ papers cited here are used as examples to showcase some important
 features related to cloud scheduling.  We appreciate if you inform us
 about other efforts as we intend to collect them for further updates
 to this paper. We like to especially pay attention to papers that may
-motivate us to refine our taxonomy. Please send us your reference in
+motivate us to refine the taxonomy. Please send us your reference in
 \textsc{Bib}\TeX format while pointing out how your paper enhances the
 taxonomy. The contribution can be send either to
 \verb|laszewski@gmail.com|, or via a GitHub pull request at
@@ -1568,6 +1593,28 @@ taxonomy. The contribution can be send either to
 \bibliographystyle{elsarticle}
 
 \bibliography{strings,cloud-scheduling,vonlaszewski}
+
+\appendix
+
+\section{Tables}
+
+\input{table-dynamic-placement}
+\input{table-energy}
+\input{table-network}
+\input{table-cost}
+\input{table-time}
+\input{table-reliability}
+\input{table-security}
+\input{table-heuristic}
+\input{table-AI}
+\input{table-batch}
+\input{table-iaas}
+\input{table-container}
+\input{table-distr-cloud}
+
+
+
+\afterpage{\clearpage}
 
 \input{0REVIEW.tex}
 

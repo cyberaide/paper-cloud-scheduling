@@ -17,7 +17,7 @@ professionalism and rigor of language needs to be improved. The
 authors should check their sentences in this work carefully and make
 clearer and correct expressions. 
 
-\RESOLUTION{TBD}
+\OK{Grammar and sentences have been corrected.}
 
 \subsubsection{1. Abstract:}
 
@@ -27,8 +27,8 @@ overview of existing scheduling techniques in cloud computing.”, the
 mentions about "our model" is confusing for readers to understand the
 intent of this paper.
 
-\RESOLUTION{TBD}
-\OK{ As per the suggestions, The brief contribution of the paper is included in the revised manuscript.}
+\OK{ We clarified the terminology and explicitly added a section which
+  liste the contributions of the paper}
 
 
 \subsubsection{2. Introduction:}
@@ -37,8 +37,7 @@ As mentioned in the Abstract part, the authors should
 make their descriptions more professional and logical. In particular,
 they should **highlight their own** contributions clearly.
 
-\RESOLUTION{TBD}
-\OK{Point raised in the above comment is resolved}
+\OK{A new section with a list of contributions was added}
 
 \subsubsection{3. General Scheduling Terminology for Clouds:}
 
@@ -52,14 +51,17 @@ strange.
 \RESOLUTION{We experimented with tables to place definitions in
 it, but found it did not increase readability. of the
 paper as the table would have been over multiple pages.
-Hence we left the definitions in the main text.}
+Hence we left the definitions in the main text. If however this were
+to be an issue that would prevent publication, we certainly can
+provide a table instead.}
 
 
 4. The structure of Sec.3 is confusing. The first paragraph of this
 section should give readers a clear guide about what they are gonging
 to read.
 
-\RESOLUTION{TBD}
+\OK{We heve introduced an introduction section for Section 3
+  to describe what the reader is going to read.}
 
 
 \subsection{Reviewer 2}
@@ -76,8 +78,6 @@ from different point of views. Containers and functions are added to
 the study which is of interest. An extensive literature review is also
 presented.
 
-\RESOLUTION{TBD}
-
 
 \subsubsection{Content Section 2}
 
@@ -93,9 +93,8 @@ it would be interesting to make the distinction between scheduler and
 scheduler's policy with a definition.
 
 
-
-
-\RESOLUTION{TBD. use more definitions such as scheduler and scheduler policy. There may be others}
+\OK{We added a signifia\cant amount more definitions including the
+  once pointed out by the reviewer}
 
 
 \subsubsection{Content Section 3}
@@ -131,9 +130,15 @@ separately.
 slightly used afterwards in the rest of the paper to guide the reader
 or contrast the literature reviews presented.
 
-\RESOLUTION{TBD}
 
-\OK{In sections 2 and 3, we have mentioned the basic terminology and proposed taxanomy. Section 4 presents the literature survey of cloud scheduling algorithms and comparison tables are also presented. One column Taxanomy classification is included in the table to justify the proposed taxanomy.}
+\OK{In sections 2 and 3, we have mentioned the basic terminology and
+  proposed taxonomy. Section 4 presents the literature survey of cloud
+  scheduling algorithms and comparison tables are also presented. One
+  column Taxonomy classification is included in the table to justify
+  the proposed taxonomy. To increase the visibility of the Taxonomy in
+the table we highlighted the column that motivated us to include this
+classification into the taxonomy. We added a section in the literature
+review that makes this clear.}
 
 
 \subsubsection{Content In Section 4:}
@@ -163,7 +168,12 @@ but as an extension of HPC systems for bursting. Finally both using
 HPC infrastructure to run containers or otherwise Cloud platforms such
 as Hadoop may be unrelated to any scheduling algorithm study overall.
 
-\RESOLUTION{TBD}
+\RESOLUTION{After many discussions, we still believe this section
+  including Bare metal provisioning, HPC in the cloud and even Hadoop
+is worthwhile to be integrated into the paper to showcase the depth of
+the scheduling problems in the cloud. Yes, we have done research in
+these areas which precisely motivated us to include this section.
+We clarified that this section is important.}
 
 \paragraph{Subsection 4.5}
 
@@ -232,21 +242,21 @@ are present (e.g., "distingtion", "and this play a significant roll")
 as well as grammatically incorrect or ambiguous sentences and
 misleading punctuation.
 
-\RESOLUTION{TBD}
+\OK{Grammar, spelling and punctuation have been improved.}
 
 
 \subsubsection{Layout, figures and tables}
 
 + There are multiple broken references to figures and tables.
 
-\RESOLUTION{TBD}
+\OK{the references have been fixed}
 
 + Figure 3 is not properly displayed in the printed form. Although in
 the digital form it may be more easy to analyze, I would still
-recommend an alternative palette of colours, font size or a different
+recommend an alternative palette of colors, font size or a different
 format of mindmap. The main problem overall is the fact that the
 labels are difficult to read due to the fontsize and strong background
-colours.
+colors.
 
 
 
@@ -263,7 +273,12 @@ font sizes are scaled down and end up being too small for a
 comfortable reading. If all the table's content is maintained, I would
 suggest displaying the tables in a landscape mode using a whole page.
 
-\RESOLUTION{TBD}
+\RESOLUTION{All tables have been included as sideways tables. However
+  the journal style switches the rotation between odd and even
+  numbers. This is likely caused by the journal latex style and could
+be fixed by the publication team. However we did not want to modify
+the document class ourselves and thus included the sideways tables as
+is without attempting to make them display all in one direction.}
 
 + The citations inside the tables are not ordered making it difficult
 to correlate the citations in the text (ordered) to the ones in the
@@ -274,7 +289,7 @@ table (unordered).
 + Table 9 is not referenced in the paper and I can not place where it
 could be.
 
-\RESOLUTION{TBD}
+\OK{Reference to Table 9 has been added in text}
 
 + In Section 4.2 there is a broken Figure reference that I deem could
 be important. I do not know if the Figure is missing or if it is any
@@ -282,12 +297,12 @@ of the ones referenced previous to that section, as there are no more
 Figures in the rest of the paper. At any rate I can not imagine which
 figure would it be.
 
-\RESOLUTION{TBD. This is now in figure 7. we need to clarify the text to make sure we point to it.}
+\OK{The missing figure reference has been added}
 
 + In Table 1 reference number 21 is misplaced, it belongs to and it is
 placed on Table 2.
 
-\OK{Refernce 21 has been moved to the correct table.}
+\OK{Reference 21 has been moved to the correct table.}
 
 + Throughout all the tables a normalization of terms and style would
 be needed (e.g., use of lower and upper case indistinctly, same terms
@@ -305,21 +320,19 @@ Energy-based)
 + References 103/115, and 102/112 may be analogous
 
 \OK{Although they were pinting for the section to concrete different aspect, they are still part of the same manual,
-so instead of pointing to the sections, we jsut point now to the product/manual}
+so instead of pointing to the sections, we just point now to the product/manual}
 
 + References with typos that I detected: 31, 149
 
-\OK{Fixed refernces 31, 149}
+\OK{Fixed references 31, 149}
 
 + Broken references I detected: 11, 145
 
-\RESOLUTION{TBD. 11, is gregors whitepaper}
-
-\OK{145}
+\OK{The references are updated}
 
 + References 19, 27, 28, 42, 61, 68 are missing the year
 
-\OK{Years were added to. However as we added new refernces,
+\OK{Years were added to. However as we added new references,
 the numbers are not the same in the new version.  19, 27,
 28,
 42,
@@ -367,7 +380,7 @@ There should be a separate challenges and future directions section
 showing the open challenges, and future research directions for
 researchers.
 
-\RESOLUTION{TBD. Add two different sections.}
+\RESOLUTION{A new section was added.}
 
 I really missed some of the promising research done recently which use
 AI-based approaches for scheduling. I think like many other domains,
@@ -379,15 +392,17 @@ resources available now-a-days, both simulation and real experimental
 approaches can use AI based approaches. Some good papers to study and
 include:
 
+\RESOLUTION{A new section about ML and Deep Learning was added}
+
 
 DRL-cloud: Deep reinforcement learning-based resource provisioning and
 task scheduling for cloud service providers by Mingxi Cheng.
 
-\RESOLUTION{TBD}
+\RESOLUTION{The paper is included in the updated version}
 
 Learning Scheduling Algorithms for Data Processing Clusters by Hongzi Mao
 
-\RESOLUTION{TBD}
+\RESOLUTION{The paper is included in the updated version}
 
 
 \subsubsection{Minor Comments:}
@@ -414,5 +429,8 @@ mistakes or typos.
 
 Missing figure references in many cases: 3.3, 4.2, 4.2.1
 
-\RESOLUTION{TBD}
+\RESOLUTION{All tables and figures have been cited in the text with
+  the appropriate figure number.}
+
+
 

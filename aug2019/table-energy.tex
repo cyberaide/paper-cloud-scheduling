@@ -1,9 +1,9 @@
 \newcolumntype{g}{>{\columncolor{Gray}}p}
 
 
-\begin{table*}[!htbp]
+\begin{sidewaystable*}[!htbp]
 
-\caption{Comparison of Energy-aware VM Placement-based Scheduling Algorithms}\label{T:g}
+\caption{Comparison of Energy-aware VM Placement-based Scheduling Algorithms (A)}\label{T:g-a}
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
@@ -47,6 +47,27 @@ Energy-aware Green IT & Keke et al.~\cite{gai2016dynamic} & Cloudlets for energy
 Energy source, VM based & Dabbagh et al.~\cite{dabbagh2015energy} &  Energy-aware resource management decisions  & improved performance & No optimization criteria, high complexity& K- means clustering& Testbed & Average CPU and Network utilization 
 \\ \hline
 
+
+\end{tabular}
+}
+\end{sidewaystable*}
+  
+
+ \begin{sidewaystable*}[!htbp]
+
+   \caption{Comparison of Energy-aware VM Placement-based Scheduling Algorithms (B)}\label{T:g-b}
+   \hspace{8pt}
+  
+\centering
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|g{2cm} p{1.5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+\textbf{Taxonomy Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters} 
+   
+\\ \hline
+
 Energy source, PUE & Ding  et al.~\cite{ding2015energy} & Dynamic VMs scheduling & Increased Processing Capacity & Ignored VM migration, Power penalties of status transitions of processor & FCFS & Simulated environment  & Deadline, Energy consumption 
 \\ \hline 
 
@@ -73,4 +94,4 @@ Energ based Energy source & Beloglazov et al.~\cite{beloglazov2010energy} &  Enh
 
 \end{tabular}
 }
-\end{table*}
+\end{sidewaystable*}
