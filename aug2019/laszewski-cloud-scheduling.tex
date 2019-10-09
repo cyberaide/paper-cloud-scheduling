@@ -4,7 +4,11 @@
 
 \documentclass[final,5p,times,twocolumn]{elsarticle}
 
-\usepackage[tablesonly]{endfloat}
+\usepackage{pdflscape}
+%\usepackage[tablesonly]{endfloat}
+\usepackage{fancyhdr}
+
+
 
 \usepackage[T1]{fontenc}
 \usepackage{comment}
@@ -27,8 +31,8 @@
 \usepackage{forest}
 \usepackage{hyperref}
 \usepackage{adjustbox}
-\usepackage{rotating}
-
+\usepackage[figuresright]{rotating}
+  
 \usetikzlibrary{arrows.meta,shadows}
 
 \newcommand{\ngreen}{bottom color=green!20}
@@ -74,6 +78,8 @@
   },
 }
 
+\newcolumntype{g}{>{\columncolor{Gray}}p}
+
 \newcommand{\TITLE}{Cloud Resource Scheduling Taxonomy }
 
 \author[label1]{Gregor von Laszewski\corref{cor1}\fnref{label3}}
@@ -103,6 +109,22 @@
 %   \let\@evenfoot\@oddfoot
 %}
 %\makeatother
+
+\makeatletter
+\newenvironment{rotatepage}
+        {%
+            \if@twoside%
+                \ifthispageodd{\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}}{%
+                \pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 270}}%
+            \else%
+                \pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}%
+            \fi%
+        }%
+        {\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 0}}%
+\makeatother
+
+\BeforeBeginEnvironment{sidewaystable}{\begin{rotatepage}}
+  \AfterEndEnvironment{sidewaystable}{\end{rotatepage}}
 
 \begin{document}
 
@@ -1111,11 +1133,11 @@ platforms and bare metal provisioning.
 Table ~\ref{T:l} presents a selected comparison of the different batch resource management systems.
   
 
-\input{table-batch}
+%\input{table-batch}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% WORkflow
+% Workflow
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -1613,11 +1635,12 @@ taxonomy. The contribution can be send either to
 \input{table-distr-cloud}
 
 
-
-\afterpage{\clearpage}
+\clearpage
 
 \input{0REVIEW.tex}
 
 
 
 \end{document}
+
+% a

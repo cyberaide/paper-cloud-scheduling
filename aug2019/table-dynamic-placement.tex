@@ -1,5 +1,4 @@
-\newcolumntype{g}{>{\columncolor{Gray}}p}
-\begin{sidewaystable*}[!htbp]
+\begin{rotatepage}\begin{sidewaystable*}[!htbp]
  \caption{Comparison of Dynamic Scheduling Algorithms}
      \label{T:dynamic-scheduling}
    \centering
@@ -7,8 +6,7 @@
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|g{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{1.5cm}|}
   \hline
- \textbf{Taxonomy Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters}
-
+ \textbf{Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters}
 \\ \hline
 
  Energy-basedd, energy source & Sun et al.~\cite{sun2015live} & Introduction of a virtual data center to solve VM migration issues & Low complexity & Fixed band-with & Heuristic algorithm & Simulated environment & VM migration cost and time
@@ -26,16 +24,9 @@ Energy-based, PUE & Tighe et al.~\cite{tighe2013distributed} &  Trade-off  among
 Compute-resource based, VM based & Tordsson et al.~\cite{tordsson2012cloud} &  Optimized placement of applications in multi-cloud environments & Emphasized on Price and performance in terms of hardware configuration, load balancing & Ignored security and energy efficiency at time of scheduling & Integer programming formulations & Amazon EC2 & Throughput, number of jobs 
 \\ \hline
 
-
-Energy-based, VM-based & Younge et al.~\cite{las10cloudsched} & 
-Power aware & 
-reduces cost & 
-slight reduction in performance & 
-heuristic & on premise cloud & 
-power consumption 
-
+Energy-based, VM-based & Younge et al.~\cite{las10cloudsched} & Power aware & reduces cost & slight reduction in performance & heuristic & on premise cloud & power consumption 
 \\ \hline
-
 \end{tabular}
 }
-\end{sidewaystable*}
+\end{sidewaystable*}\end{rotatepage}
+

@@ -15,10 +15,12 @@ all: $(FILENAME).pdf
 $(FILENAME).pdf: $(FILENAME).tex
 	latexmk -quiet -bibtex $(PREVIEW_CONTINUOUSLY) -f -pdf -pdflatex="pdflatex -synctex=1 -interaction=nonstopmode" -use-make $(FILENAME).tex
 
-
 watch: PREVIEW_CONTINUOUSLY=-pvc
+
 watch: $(FILENAME).pdf
 
+view:
+	open -a Skim $(FILENAME).pdf
 
 simple:
 	pdflatex $(FILENAME).tex
@@ -26,6 +28,13 @@ simple:
 	pdflatex $(FILENAME).tex
 	pdflatex $(FILENAME).tex
 	open $(FILENAME).pdf
+
+table:	
+	-rm $(FILENAME).pdf
+	-make -f Makefile $(FILENAME).pdf
+	-qpdf $(FILENAME).pdf --rotate=90:21-34 --replace-input
+	# open -a Skim $(FILENAME).pdf
+
 
 clean:
 	latexmk -C -bibtex

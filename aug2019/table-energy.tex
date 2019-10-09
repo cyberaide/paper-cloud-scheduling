@@ -1,6 +1,3 @@
-\newcolumntype{g}{>{\columncolor{Gray}}p}
-
-
 \begin{sidewaystable*}[!htbp]
 
 \caption{Comparison of Energy-aware VM Placement-based Scheduling Algorithms (A)}\label{T:g-a}
@@ -10,8 +7,7 @@
 \begin{tabular}{|g{2cm} p{1.5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}|}
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-\textbf{Taxonomy Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters} 
-   
+\textbf{Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters} 
 \\ \hline
 
  Energy-aware, VM-based &
@@ -20,8 +16,7 @@ Power aware &
 reduces cost & 
 slight reduction in performance & 
 heuristic & on premise cloud & 
-power consumption & 
-
+power consumption  
 \\ \hline
 
 Energy-aware, Energy source & Bi et al.~\cite{bi2017application} & Dynamic Scheduling algorithm for reducing energy consumption & Focused on performance and energy cost & High complexity due to virtualized Data centers & meta heuristic methods & Simulated environment & Profit, CPU utilization  
@@ -42,11 +37,8 @@ Energy-aware, Energy source, Compute resource based, workflow & Li et al.~\cite{
 Energy-aware Green IT & Keke et al.~\cite{gai2016dynamic} & Cloudlets for energy reduction & Reduced energy consumption & No time consideration & FCFS scheduling policy & DECM-Sim & Energy consumption 
 \\ \hline
 
- 
-
 Energy source, VM based & Dabbagh et al.~\cite{dabbagh2015energy} &  Energy-aware resource management decisions  & improved performance & No optimization criteria, high complexity& K- means clustering& Testbed & Average CPU and Network utilization 
 \\ \hline
-
 
 \end{tabular}
 }
