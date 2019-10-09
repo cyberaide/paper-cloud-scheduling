@@ -8,26 +8,25 @@
    \textbf{Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters} 
    
 \\ \hline
-
-Compute resource, data-based, task, latency, VM & Yuan et al.~\cite{yuan2017temporal}~\cite{yuan2017ttsa} & Emphasizing profit maximization & handles service delay bound & High complexity  & PSO and SA & simulation environment & Revenue
+\makecell{Compute\\ resource-based,\\  data-based,\\  task,\\  Latency,\\  VM-based,\\ Cost-based} & Yuan et al.~\cite{yuan2017temporal}~\cite{yuan2017ttsa} & Emphasizing profit maximization & handles service delay bound & High complexity  & PSO and SA & simulation environment & Revenue
 \\ \hline
 
-Compute resource-based, task-based & Bi et al.~\cite{bi2015sla}~\cite{bi2016trs} & Architecture for self management of data centers & Considered temporal request of multi-tier web applications  & does not consider security parameters  & Queuing approach &  trace-driven simulation & Cost
+\makecell{Compute\\ resource-based,\\ Task-based,\\ Cost-based} & Bi et al.~\cite{bi2015sla}~\cite{bi2016trs} & Architecture for self management of data centers & Considered temporal request of multi-tier web applications  & does not consider security parameters  & Queuing approach &  trace-driven simulation & Cost
 \\ \hline
 
-Compute resource-based, workflow-based & Arabnejad et al.~\cite{arabnejad2015cost} &  Re-use of pre-provisioned instances for scheduling & Less complexity& Ignored security and energy efficiency& Deadline early Tree algorithm & CloudSim & Cost and deadline
+\makecell{Compute\\ resource-based,\\  Workflow-based,\\ Cost-based} & Arabnejad et al.~\cite{arabnejad2015cost} &  Re-use of pre-provisioned instances for scheduling & Less complexity& Ignored security and energy efficiency& Deadline early Tree algorithm & CloudSim & Cost and deadline
 \\ \hline
 
-Compute resource-based, task-based  & Zuo et al.~\cite{zuo2015multi} & Multi-objective Task Scheduling  & Improved  performance & Ignored energy consumption & Ant colony optimization & CloudSim & Cost, makespan, deadline violation rate
+\makecell{Compute\\ resource-based,\\  Task-based,\\ Cost-based}  & Zuo et al.~\cite{zuo2015multi} & Multi-objective Task Scheduling  & Improved  performance & Ignored energy consumption & Ant colony optimization & CloudSim & Cost, makespan, deadline violation rate
 \\ \hline
 
-Compute resource-based, VM-based & Ari et al.~\cite{ari2013design} &  Finite Element Analysis cloud service with a focus on mechanical structural analysis, performance characterization and job scheduling issues & Throughput improvement and resource utilization & Ignored cost& Adaptive algorithm & Testbed & Throughput and time
+\makecell{Compute\\ resource-based,\\  VM-based,\\ Cost-based} & Ari et al.~\cite{ari2013design} &  Finite Element Analysis cloud service with a focus on mechanical structural analysis, performance characterization and job scheduling issues & Throughput improvement and resource utilization & Ignored cost& Adaptive algorithm & Testbed & Throughput and time
 \\ \hline
 
-Compute resource-based, VM-based & Wu et al.~\cite{wu2012sla} &  VM usage efficiency designed utility function by considering dynamic VM deploying time, processing time and data transfer time & Improved cost saving & Does not support security and energy efficient  & Admission control and scheduling algorithm & CloudSim & Average response time, total profit
+\makecell{Compute\\ resource-based,\\ VM-based,\\ Cost-based} & Wu et al.~\cite{wu2012sla} &  VM usage efficiency designed utility function by considering dynamic VM deploying time, processing time and data transfer time & Improved cost saving & Does not support security and energy efficient  & Admission control and scheduling algorithm & CloudSim & Average response time, total profit
 \\ \hline
 
-Data-based , access type & Lee et al.~\cite{lee2012profit} &  Personalized
+\makecell{Data-based,\\ Cost-based} & Lee et al.~\cite{lee2012profit} &  Personalized
 features of the user request and the elasticity of SLA properties & Reduced operational costs and increase profits & Objectives conflict with each other & binary integer programming & CloudSim & Average utilization, average net profit rate, average response time  
 \\ \hline
 \end{tabular}

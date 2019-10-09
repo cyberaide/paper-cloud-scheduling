@@ -3,33 +3,29 @@
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|g{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{1.9cm}|}
+\begin{tabular}{|g{2.1cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{1.9cm}|}
   \hline
    \textbf{Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters} 
    
 \\ \hline
 
-VM based & Yu et al.~\cite{yu2017survivable} & Service provisioning on IaaS platform while focusing on the inter-connected
+\makecell{VM-based (placement)} & Yu et al.~\cite{yu2017survivable} & Service provisioning on IaaS platform while focusing on the inter-connected
 VMs. &  High availability & High complexity & Heuristic algorithm & Simulator & Average VM consumption ratio, average running time 
 \\ \hline 
 
-Compute resource-based, VM based & Bi et al.~\cite{bi2015sla}~\cite{bi2016trs} & Architecture for self management of data centers & Considered temporal request of multi-tier web applications  & does not consider security parameters  & Queuing approach &  trace-driven simulation & Cost
+\makecell{Compute\\ resource-based, \\ VM-based (placement)}& Bi et al.~\cite{bi2015sla}~\cite{bi2016trs} & Architecture for self management of data centers & Considered temporal request of multi-tier web applications  & does not consider security parameters  & Queuing approach &  trace-driven simulation & Cost
 \\ \hline
 
- Compute resource-based & Rampersaud et al.~\cite{rampersaud2016sharing} & Used page-sharing concept to handle VM Packing problem & Improvement of memory sharing during allocation decisions & High complexity & Linear programming technique & Simulated environment & Memory reduction, number of excess servers
+\makecell{Compute\\ resource-based, \\ VM-based (placement)} & Rampersaud et al.~\cite{rampersaud2016sharing} & Used page-sharing concept to handle VM Packing problem & Improvement of memory sharing during allocation decisions & High complexity & Linear programming technique & Simulated environment & Memory reduction, number of excess servers
 \\ \hline
 
- Compute resource-VM based & Lucrezia et al.~\cite{lucrezia2015introducing} & Investigated OpenStack for the deployment of network service graphs & Increased throughput & Analyzing time is more, Ignored policy-constraints in  order  to  define  administration  rules&  Brute force algorithm  & KVM hypervisors &  VM locations, traffic throughput and latency 
+ \makecell{Compute\\ resource-based,\\ VM-based (placement)} & Lucrezia et al.~\cite{lucrezia2015introducing} & Investigated OpenStack for the deployment of network service graphs & Increased throughput & Analyzing time is more, Ignored policy-constraints in  order  to  define  administration  rules&  Brute force algorithm  & KVM hypervisors &  VM locations, traffic throughput and latency
 \\ \hline 
 
-Compute resource VM based & Biran et al.~\cite{biran2012stable}& Consideration of traffic  bursts  in  deployed  services & Minimizing  the  maximum load  ratio  over  all  the  network & Ignored energy consumption& Greedy heuristic algorithm & Testbed & Average packet delivery delay , placement solving time  
+\makecell{Compute\\ resource-based, \\VM-based (placement)} & Biran et al.~\cite{biran2012stable}& Consideration of traffic  bursts  in  deployed  services & Minimizing  the  maximum load  ratio  over  all  the  network & Ignored energy consumption& Greedy heuristic algorithm & Testbed & Average packet delivery delay , placement solving time
 \\ \hline
 
-
-
-
-Compute-resource based workflow based & Kondikoppa et al.~\cite {kondikoppa2012network} & To make Hadoop scheduler aware of network topology & Improved data locality& Ignored cost, energy, security & FIFO &Eucalyptus  based testbed & Execution time, delay for scheduling task 
-
+\makecell{Compute\\ resource-based,\\ Workflow, \\Network-based} & Kondikoppa et al.~\cite {kondikoppa2012network} & To make Hadoop scheduler aware of network topology & Improved data locality& Ignored cost, energy, security & FIFO &Eucalyptus-based testbed & Execution time, delay for scheduling task
 
 \\ \hline
 

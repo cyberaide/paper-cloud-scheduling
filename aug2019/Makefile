@@ -29,6 +29,10 @@ simple:
 	pdflatex $(FILENAME).tex
 	open $(FILENAME).pdf
 
+t:
+	make -f Makefile table
+	make -f Makefile table
+
 table:	
 	-rm $(FILENAME).pdf
 	-make -f Makefile $(FILENAME).pdf

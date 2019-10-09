@@ -9,7 +9,10 @@ skan tree
    [Compute-Resource-based
      [Workflow-based]
      [Job-based]
-     [VM-based]
+     [VM-based
+       [Migration]
+       [Placement]
+     ]
      [Task-based]
      [Container-based]
      [Function-based]
@@ -19,8 +22,10 @@ skan tree
         [Storage Type]
         [Volume]
         [Redundancy]
-        [Bandwidth]
-        [Latency]
+        [Network-based
+          [Bandwidth]
+          [Latency]
+        ]
     ]
     [Location-based
             [Processor-based]
@@ -30,12 +35,11 @@ skan tree
             [Region-based]
             [Global-based]
         ]  
-    [Energy-based
+    [Energy-aware
         [HVAC]
         [Green IT]
         [PUE]
         [Energy Source]
-        [VM Migration]
     ]
     [Security-based
         [Public]
@@ -45,7 +49,7 @@ skan tree
 ]
 \end{forest}
 }
-\caption{Cloud Scheduling Model Metrics}
+\caption{Cloud Scheduling Models}
 \label{F:graph-taxonomy}
 \end{figure}
 

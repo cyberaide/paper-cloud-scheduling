@@ -35,6 +35,8 @@
  
 \usetikzlibrary{arrows.meta,shadows}
 
+\usepackage{makecell}
+
 \newcommand{\ngreen}{bottom color=green!20}
 \newcommand{\ngrey}{bottom color=gray!20}
 \newcommand{\nred}{bottom color=red!20}
@@ -42,6 +44,7 @@
 \newcommand{\TODO}[1]{\todo[inline]{#1}}
 \newcommand{\GVL}[1]{{\begin{blue} #1}}
 
+  
 %\usepackage[linguistics]{forest}
 \usepackage{smartdiagram}
 
@@ -78,7 +81,7 @@
   },
 }
 
-\newcolumntype{g}{>{\columncolor{Gray}}p}
+\newcolumntype{g}{>{\raggedright\arraybackslash\columncolor{Gray}}p}
 
 \newcommand{\TITLE}{Cloud Resource Scheduling Taxonomy }
 
@@ -484,8 +487,6 @@ Clouds promote large scale network traffic to, from, and within network-aware sc
 
 Minimizing the distance between data providers and data consumers while for example replicating data~\cite{www-akamai} can save a significant amount of traffic and has long been applied on the internet as one of its beneficial strategies. Service level agreements (SLA)~\cite{breitgand2012improving} are playing an important role to achieve proper utilization as part of the scheduling effort. Treating the network as shared scarce resource~\cite{rampersaud2016sharing} motivates the development of network-based scheduling algorithms. Also in network-aware scheduling, we find the distinction between static~\cite{biran2012stable} and dynamic scheduling at runtime so we can deal with traffic bursts.
 
-\TODO{THIS FIGURE IS MISSING}
-
 A variety of traditional scheduling metrics (see Figure~\ref{F:graph-metrics}) are often used to improve scheduling while considering network traffic. An example is demonstrated in ~\cite{yu2017survivable} to optimize traffic in virtual clusters. Scheduling across multiple layers is especially of benefit for networking~\cite{bi2015sla} that minimize across different tiers. Scheduling of platforms such as Hadoop offers advantages when networking is integrated~\cite{kondikoppa2012network}. Having access to lower-level infrastructure such as offered by OpenStack presents opportunities to include Network Function Virtualization (NVF)~\cite{lucrezia2015introducing}.
 
 Table \ref{T:c} shows examples of network-aware scheduling algorithms in cloud computing.
@@ -790,15 +791,18 @@ In this paper, we have surveyed the many important classes related to scheduling
 
 We realize that although we have analyzed a large number of papers, there are more papers in that area of cloud scheduling available. The papers cited here are used as examples to showcase some important features related to cloud scheduling. We appreciate it if you inform us about other efforts as we intend to collect them for further updates to this paper. We like to especially pay attention to papers that may motivate us to refine the taxonomy. Please send us your reference in \textsc{Bib}\TeX format while pointing out how your paper enhances the taxonomy. The contribution can be sent either to \verb|laszewski@gmail.com|, or via a GitHub pull request at \url{https://github.com/cyberaide/paper-cloud-scheduling/blob/master/aug2019/vonlaszewski.bib}.
 
+\section*{Acknowledgment}
+
+We like to thank the reviewers for helping us improve this paper
+with their thoughtful comments.
 
 %\bibliographystyle{elsarticle-num}
 \bibliographystyle{elsarticle}
 
 \bibliography{strings,cloud-scheduling,vonlaszewski}
 
-\appendix
 
-\section{Tables}
+% \section{Tables}
 
 \input{table-dynamic-placement}
 \input{table-energy}
@@ -814,8 +818,9 @@ We realize that although we have analyzed a large number of papers, there are mo
 \input{table-container}
 \input{table-distr-cloud}
 
-
 \clearpage
+
+\appendix
 
 \input{0REVIEW.tex}
 
