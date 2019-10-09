@@ -161,7 +161,8 @@
 
 \begin{abstract}
 
-The growth and development of scientific applications in the demands the creation of efficient resource management systems. to the scale of resources, the heterogeneity of services, the inter-dependencies, and unpredictability of load this is a complex problem. We present a resource scheduling taxonomy that originates from the experience in utilizing and managing multi-cloud environments. This study is backed up by a literature review that targets not only virtual machine but also container and Function as a Service frameworks. It justifies a proposed resource provider focused Y-cloud taxonomy and introduces an overview of existing scheduling techniques in cloud computing. As a result, this work can lead to a better understanding of the complex field of scheduling for clouds in general. Furthermore, the study promotes through the Y-cloud taxonomy the vision of a layered scheduling architecture that will be useful for the implementation of application and resource-based scheduling frameworks in support of the NIST Big Data Reference Architecture.
+ The growth and development of commercial and scientific applications in the cloud demand the creation of efficient resource management systems to coordinate the resources while addressing the heterogeneity of services, the inter-dependencies, and unpredictability of load posed by the users.
+We present a resource scheduling taxonomy that originates from the experience of the authors in utilizing and managing multi-cloud environments. This study is backed up by a literature review that targets not only virtual machines but also container and Function as a Service frameworks. It justifies a proposed resource provider focused Y-cloud taxonomy and introduces an overview of existing scheduling techniques in cloud computing. As a result, this work can lead to a better understanding of the complex field of scheduling for clouds in general. Furthermore, the study promotes through the Y-cloud taxonomy the vision of a layered scheduling architecture that will be useful for the implementation of application and resource-based scheduling frameworks in support of the NIST Big Data Reference Architecture.
 
 \end{abstract}
 
@@ -262,7 +263,7 @@ list next the terminology related to provisioning:
 
 \begin{description}
 
-\item[Resource] is a basic computational entity that can be used to fulfill the requirements of the application's execution. Resources have specific characteristics such as CPU, memory, software, disks, etc. Various performance and policy parameters are associated with a resource, among them, the data speed, the processing speed, space and workload, which change over time, as well as cost, authentication, and authorization policies.
+\item[Resource] is a basic computational entity that can be used to fulfill the requirements of the application's execution. Resources have specific characteristics such as CPU, memory, software, disks, etc. Various performance and policy parameters are associated with a resource, among them, the data speed, the processing speed, space, and workload, which change over time, as well as cost, authentication, and authorization policies.
 
 \item[Deployment] is a series of jobs that deploy services onto the cloud that can be used for subsequent use as part of an application or service.
 
@@ -270,7 +271,7 @@ list next the terminology related to provisioning:
 
 \item[Virtual machine (VM)] is a simple software program that simulates the functions of a physical machine.
 
-\item[Virtual cluster] is an agglomeration of virtual services that build the core of a computational resource hosted in the cloud. A virtual cluster can be comprised out of many resources including virtual machines, containers, platform as a service frameworks, data services and resources, and more. A virtual cluster may be associated with an application and optimized for its use. Just as containers or virtual machines, a virtual cluster can be created, suspended, resumed, or terminated. 
+\item[Virtual cluster] is an agglomeration of virtual services that build the core of a computational resource hosted in the cloud. A virtual cluster can be comprised out of many resources including virtual machines, containers, Platform as a Service frameworks, data services, and resources, and more. A virtual cluster may be associated with an application and optimized for its use. Just as containers or virtual machines, a virtual cluster can be created, suspended, resumed, or terminated. 
 
 \item[Scheduler] is a process that decides which task and process should be accessed and run at a specific time by the resources. Schedulers help to keep the performance of the cloud at the highest level by using optimization strategies. Based on the scope of resources involved in the scheduling decision we distinguish between global, regional, and local schedulers.
  
@@ -439,7 +440,7 @@ In literature, we find the distinction between static and dynamic cloud scheduli
 
 The later is often motivated by the need for scalability~\cite{keller2014hierarchical} across and within data centers or increased fault tolerance~\cite{tighe2013distributed}. Association of other metrics into the dynamic scheduling approach is common while including power, network bandwidth and the integration of sophisticated service level agreements~\cite{tighe2013distributed}.
 
-In many cases not only the cloud user but also the cloud provider can benefit from dynamic scheduling~\cite{tighe2014integrating}.
+In many cases, not only the cloud user but also the cloud provider can benefit from dynamic scheduling~\cite{tighe2014integrating}.
 
 We find that it can be beneficial to separate the scheduling task in multiple steps such as shown in~\cite{sun2015live}. Here live migration for correlated VMs is optimizing on data, compute, and bandwidth is conducted in several steps. Other cloud metrics such as price~\cite{tordsson2012cloud} are also common and will be addressed in Section ~\ref{sec:cost}. To address the scale problem many such algorithms use heuristics as showcased in Section~\ref{sec:heuristic}.
 
@@ -452,7 +453,7 @@ Table~\ref{T:dynamic-scheduling} lists several efforts related to dynamic schedu
 
 \subsection{Cloud Metric-based Scheduling}\label{sec:vm-scheduling}
 
-Due to the complexity of cloud environments, many different metrics are used to guide the scheduling of virtual machines, containers, platforms, tasks, batch jobs, and workflows (see Figure~\ref{F:graph-metrics}). Next, we review  examples of literature that integrates such metrics into their scheduling algorithm.
+Due to the complexity of cloud environments, many different metrics are used to guide the scheduling of virtual machines, containers, platforms, tasks, batch jobs, and workflows (see Figure~\ref{F:graph-metrics}). Next, we review examples of literature that integrates such metrics into their scheduling algorithm.
 
 
 % Figure ~\ref{F:graph-metrics-flower} showcases
@@ -465,7 +466,7 @@ Energy consumption is a key issue for cloud providers due to the enormous cost a
 
 Various scheduling methods such as to minimize the total makespan~\cite{bessis2013using}, developing dynamic meta-heuristics~\cite{bi2017application}, fractal mathematics~\cite{duan2016energy}, and machine learning clustering and stochastic~\cite{bui2017energy} have been utilized to optimize energy-aware scheduling. Multiple metrics must be included to correlate for example CPU, RAM, and bandwidth~\cite{zhu2017three}.
 
-These features, for example, could be utilized to dynamically adapt to peak loads~\cite{duan2016energy} while making processors faster during such periods. Furthermore, migration~\cite{beloglazov2010energy} has naturally also an impact on energy cost. Energy cost in multi-cloud and hybrid-cloud data centers in the clouds are discussed in~\cite{quarati2013hybrid,garg2011environment,gai2016dynamic,2015energy} while at the same time increasing the cloud provider brokers revenue.
+These features, for example, could be utilized to dynamically adapt to peak loads~\cite{duan2016energy} while making processors faster during such periods. Furthermore, migration~\cite{beloglazov2010energy} has naturally also an impact on energy cost. Energy cost in multi-cloud and hybrid-cloud data centers in the clouds are discussed in~\cite{quarati2013hybrid,garg2011environment,gai2016dynamic,dabbagh2015energy} while at the same time increasing the cloud provider brokers revenue.
 
 
 Others create models to predict the energy consumption of each virtual machine~\cite{kim2014energy}. This requires the ability to properly monitoring the underlying server farms in a cloud data center as discussed in~\cite{van2012comparison}. Integration of historical or previous program executions while recording their energy consumption can also be utilized~\cite{hu2010scheduling}. Others focus on predicting future resource consumption needs~\cite{dabbagh2015energy}.
@@ -604,7 +605,7 @@ Table ~\ref{T:l} presents a selected comparison of the different batch resource 
 \subsection{Workflow Scheduling Frameworks} 
 \label{sec:workflow}
 
-In the previous sections, we already pointed out several workflow related scheduling algorithms while using specific metrics to conduct the scheduling. In addition, we can integrate virtual machines, containers, and tasks. The main intent of the cloud workflow is to automate repeated tasks in a reliable way.
+In the previous sections, we already pointed out several workflow related scheduling algorithms while using specific metrics to conduct the scheduling. Also, we can integrate virtual machines, containers, and tasks. The main intent of the cloud workflow is to automate repeated tasks in a reliable way.
 
 It is important to recognize that previous academic workflow engines can easily be utilized to integrate cloud scheduling activities. This includes traditionally, workflow schedulers are often distinguished by DAG~\cite{deelman2005pegasus,deelman2004pegasus,thain2005distributed} and non-DAG scheduling while some support both~\cite{las-karajan,las-cogkit-1,las06-workflow-book}.
 
@@ -657,7 +658,7 @@ For the first scheduling task, we need to consider data management to efficientl
 
 
 
-\item[Kubernetes.] Kubernetes is an open-source orchestrator developed by Google for automating container management and deployment~\cite{Kubernates2018}. The basic deployable object is a Pod that consists of one or more containers running in a shared context. An API is used to declare policies and scalability constraints. The Kubernetes scheduler is topology-aware and workload aware which can be integrated into the policy constraints to expose availability, performance, and capacity. Auto-scaling, load balancing and secrets management are also provided by Kubernetes.
+\item[Kubernetes.] Kubernetes is an open-source orchestrator developed by Google for automating container management and deployment~\cite{Kubernates2018}. The basic deployable object is a Pod that consists of one or more containers running in a shared context. An API is used to declare policies and scalability constraints. The Kubernetes scheduler is topology-aware and workload aware which can be integrated into the policy constraints to expose availability, performance, and capacity. Auto-scaling, load balancing, and secrets management are also provided by Kubernetes.
 
 \item[Singularity.] Singularity can be using a variety of container frameworks as backend. It allows the use of containers without being a superuser. Due to this, singularity is a popular choice for running containers on traditional HPC systems~\cite{www-singularity}. Due to this scheduling can be supported directly by the under-laying queuing system.
 
@@ -665,7 +666,7 @@ For the first scheduling task, we need to consider data management to efficientl
 \item[Mesos.] Mesos~\cite{hindman2011mesos,Mesos2018} provides an API for resource management and scheduling in data centers. Mesos abstracts CPU, memory, storage, and other compute resources. It integrates fault-tolerance. Mesos provides a thin resource sharing layer that helps to furnish fine-grained sharing by providing common interfaces among different cluster frameworks. Its goal is improved utilization, respond quickly to workload changes, by maintaining a system's capability in terms of scalability and robustness.
 
 
-\item[Community Efforts.] Many community efforts to improve container scheduling are conducted. This includes, for example, the use of genetic algorithm~\cite{guerrero2018genetic}, container and host selection policies for cloud deployment models~\cite{hanafy2017novel} with SLA's, the characterization of applications~\cite{medel2017client} scheduling of virtual clusters~\cite{dziurzanskivalue}, and migration~\cite{Flocker2018}, and systems integrating multiple schedulers such as Nomad which offer service scheduler, batch scheduler, and a systems scheduler while focusing on the support of long-running jobs~\cite{Nomad2018}.
+\item[Community Efforts.] Many community efforts to improve container scheduling are conducted. This includes, for example, the use of genetic algorithm~\cite{guerrero2018genetic}, container, and host selection policies for cloud deployment models~\cite{hanafy2017novel} with SLA's, the characterization of applications~\cite{medel2017client} scheduling of virtual clusters~\cite{dziurzanskivalue}, and migration~\cite{Flocker2018}, and systems integrating multiple schedulers such as Nomad which offer service scheduler, batch scheduler, and a systems scheduler while focusing on the support of long-running jobs~\cite{Nomad2018}.
 
 \end{description}
 
@@ -689,7 +690,7 @@ Table ~\ref{T:z} shows the comparison of existing work related to container sche
 
 To further improve scheduling on cloud resources, the concept of Function as a Services was introduced. It allows the invocation of small functions with limited resource constraints on servers~\cite{lasbook}. For example, a minimum execution time per request is five minutes provided by AWS lambda and Azure functions~\cite{ServerlessComputing2018}. It supports managed user-defined functions on highly available infrastructure in a unified fashion~\cite{nastic2017serverless}. This also allows the scheduling of workflows comprised out of functions~\cite{alqaryouti2018serverless}. In~\cite{fox2017status} we discuss the status of serverless computing and function as a service in Industry and research. Serverless computing is considered the backend for running FaaS at runtime. System allocation and other resource management activities are provided by the backend. Thus the users have not to worry about activities conducted by the server. Hence, the name serverless computing. Through the use of FaaS and serverless computing, cost can be reduced by more efficiently scheduling smaller tasks on resources.
 
-A number of FaaS frameworks exist that can be used on public clouds but also self-hosted clouds or network of workstations.
+Several FaaS frameworks exist that can be used on public clouds but also self-hosted clouds or network of workstations.
 
 Scheduling in FaaS is provided by triggers. Such triggers offer a publish-subscribe model in which events are conducted, once the trigger is fired. This includes triggers for time, data, and executions. Time-based scheduling is supported by cron. These frameworks are supported by all major public clouds including AWS lambda~\cite{AWSlambda2018}, Google cloud functions~\cite{GoogleCF2018}, Azure Function~\cite{Azure2018}
 
@@ -700,7 +701,7 @@ Other open-source frameworks such as Apache OpenWhisk~\cite{OpenWhisk2018} allow
 \label{sec:distributed}
 
 
-Users may have the desire to not only use services on one cloud but on multiple clouds. This is motivated largely by avoiding vendor lock-in, unique service offerings, or combining services from different vendors.
+Users may have the desire to not only use services on one cloud but multiple clouds. This is motivated largely by avoiding vendor lock-in, unique service offerings, or combining services from different vendors.
 
 Such scheduling efforts can be as simple as switching the cloud provider such as promoted in Cloudmesh~\cite{von2014accessing}. Other efforts such as Eagle, provide a hybrid data center scheduler for data-parallel programs~\cite{delgado2016job}; Hopper~\cite{ren2015hopper}, a job scheduler that trades off existing and speculated job scheduling decisions; Tetris ~\cite{grandl2015multi}, a cluster scheduler that aims to match multi-resource task requirements with resource availability; Fawkes~\cite{ghit2014balanced} a multi-cluster systems for map-reduce; Omega~\cite{schwarzkopf2013omega} with optimistic concurrency control; OurGrid~\cite{andrade2003ourgrid,cirne2006labs} for worldwide computing platform with isolated environments; Sparrow~\cite{ousterhout2013sparrow} and fine-grained task scheduling scheduler.
  
@@ -750,7 +751,7 @@ In this section, we summarize some of the lessons we learned from our activities
 
 \item[Fault tolerance and Risk Analysis.] As part of the policy-driven service level agreements with the cloud providers schedule must include the ability to integrate fault tolerance while leveraging risk analysis.
 
-\item[Traditional Scheduling.] Naturally we need to deal with scheduling with traditional issues such as load balancing, congestion, and service spikes. However, they are amplified by the large resource management issues in hyper-scale data centers.
+\item[Traditional Scheduling.] Naturally we need to deal with scheduling with traditional issues such as load balancing, congestion, and service spikes. However, they are amplified by formidable resource management issues in hyper-scale data centers.
 
 
 
@@ -766,16 +767,16 @@ In this section, we summarize some of the future directions we need to address.
 
 \item[Analytics Services.] While FaaS provides the ability to schedule resource-restricted functions the next level of schedulers will address Analytics as a Service (AaaS) where more resource bound functions are cast and exposed to cloud users as analytical calculations.
  
-\item[Edge Computing.] Due to the increased of computational power of edge devices scheduling algorithms must include the power available on these devices instead of sending all the requests to a cloud. Billions of cellphones today already conduct a significant amount of computation thus scheduling must balance between activities that can take place on the edge or needs to be conducted in the cloud.
+\item[Edge Computing.] Due to the increase of computational power of edge devices scheduling algorithms must include the power available on these devices instead of sending all the requests to a cloud. Billions of cellphones today already conduct a significant amount of computation thus scheduling must balance between activities that can take place on the edge or needs to be conducted in the cloud.
 
 \item[Scheduling Challenges Arising form use of Containers.] By using virtualization technologies such as virtual machines the cloud provides the illusion of hardware resources but introduces a cost to also virtualize the operating system.
 
- Containers, however, use virtualization within the operating system level. Multiple containers run on the top of the operating system kernel. Hence, a container is a lightweight approach to implement the virtualization technology leveraging the underlying OS. The memory consumption by containers is less than the resources required to boot a virtual machine with its virtualized OS. As an example we point out Kubernetes~\cite{Kuber2018} where containers within a pod~\cite{Kubernates2018} share an IP address and find each other via localhost. Communication among them is done by inter-process communications, such as SystemV semaphores or POSIX shared memory. Containers in different pods cannot communicate directly as they have distinct IP addresses. Kubernetes commonly uses flannel to accomplish container networking. Containers are joined in a virtual network. Kubernetes provides mechanisms to utilize a number of pre-existing scheduling algorithms but also provides the ability to replace them with customized approaches.
+ Containers, however, use virtualization within the operating system level. Multiple containers run on the top of the operating system kernel. Hence, a container is a lightweight approach to implement the virtualization technology leveraging the underlying OS. The memory consumption by containers is less than the resources required to boot a virtual machine with its virtualized OS. As an example, we point out Kubernetes~\cite{Kuber2018} where containers within a pod~\cite{Kubernates2018} share an IP address and find each other via localhost. Communication among them is done by inter-process communications, such as SystemV semaphores or POSIX shared memory. Containers in different pods cannot communicate directly as they have distinct IP addresses. Kubernetes commonly uses flannel to accomplish container networking. Containers are joined in a virtual network. Kubernetes provides mechanisms to utilize several pre-existing scheduling algorithms but also provides the ability to replace them with customized approaches.
 
  The challenge here is to assure that containers between users do not create security or violate privacy issues. Also, the access to potentially elevated system privileges may cause other Therefore systems such as Singularity offer users an isolated use of containers within traditional HPC queuing systems to mitigate that issue. Still once on such a system, we still have to be aware of elevated privileges, and containers may only be offered in limited form to its users. Once this has been clarified, also for containers the typical quality assertions during its use apply just as for virtual machines. Such challenges must be integrated into a scheduling strategy when adding containerized cloud resources.
 
 
-\item[Challenges in Function as a Service.] The {\em Function as a Service} model allows the developers to build and execute their requirements. Functions are uploaded to FaaS infrastructure and services and triggered by events. Due to resource limitations, they provide significant information for the underlying layers to provide more efficient resources. However, monitoring tools and fault tolerance have to be carefully integrated in order to avoid FaaS failures based on resource starvation or an excess of resources used. In addition, more intense functions may require splitting them up in smaller so they can be fulfilled resource constraints of the FaaS framework. Naturally, while splitting up a larger model into smaller functions increases the overhead. Such limitations must be understood by the developer in order not to create a function that is impossible to schedule.
+\item[Challenges in Function as a Service.] The {\em Function as a Service} model allows the developers to build and execute their requirements. Functions are uploaded to FaaS infrastructure and services and triggered by events. Due to resource limitations, they provide significant information for the underlying layers to provide more efficient resources. However, monitoring tools and fault tolerance have to be carefully integrated to avoid FaaS failures based on resource starvation or an excess of resources used. Also, more intense functions may require splitting them up in smaller so they can be fulfilled resource constraints of the FaaS framework. Naturally, while splitting up a larger model into smaller functions increases the overhead. Such limitations must be understood by the developer in order not to create a function that is impossible to schedule.
 
 \end{description}
 
