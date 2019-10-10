@@ -1,9 +1,9 @@
+\RequirePackage[hyphens]{url}
+
 % \documentclass[10pt,twocolumn]{article}
 %\documentclass[preprint,12pt,3p]{elsarticle}
 
 \documentclass[final,5p,times,twocolumn]{elsarticle}
-\usepackage[hyphens]{url}
-
 
 \usepackage{pdflscape}
 %\usepackage[tablesonly]{endfloat}
@@ -234,7 +234,7 @@ We use the following terminology for Cloud computing and Resource scheduling:
 
 \item[Cloud Scheduling Policy] refers to a policy employed by the scheduler to derive decisions as to how to guide a scheduling algorithm.
 
-\item[Cloud Scheduling Algorithm] refers to an algorithm that hs cloud units and policies, and resources as input and determines an optimized mapping of cloud scheduling units to cloud resources.
+\item[Cloud Scheduling Algorithm] refers to an algorithm that includes cloud scheduling units and policies (as defined next), and resources as input and determines an optimized mapping of cloud scheduling units to cloud resources.
  
 \end{description}
 
@@ -269,7 +269,7 @@ list next the terminology related to provisioning:
 
 \item[Deployment] is a series of jobs that deploy services onto the cloud that can be used for subsequent use as part of an application or service.
 
-\item[Container] is an agglomeration of software that includes all pancakes and dependencies so it can be run easily on cloud computing resources due to its standardized specification.
+\item[Container] is an agglomeration of software that includes all packages and dependencies so it can be run easily on cloud computing resources due to its standardized specification.
 
 \item[Virtual machine (VM)] is a simple software program that simulates the functions of a physical machine.
 
@@ -355,7 +355,7 @@ Some of the obvious cloud characteristics and challenges that lead to a categori
 
 \item [Dynamic nature of clouds:] Clouds encompass a dynamically changing resource environment in which resources belong to different administrative domains keep on joining and leaving the clouds. Hence, scheduling must be adaptive and address the dynamic resource availability.
 
-\item[Heterogeneous providers and services:] There is no single cloud. We have to recognize that the competitive nature in the cloud market promotes not only heterogeneous cloud providers but heterogeneous cloud services that may compete with each other and either offer the same or customized services targeting a particular user community. Resources in clouds are highly diversified in nature, capacity, working style, and administrative domains. The inclusion of different resource providers with the desire to lock customers into their services and products makes heterogeneous multi-cloud scheduling a multi-layered a formidable challenge.
+\item[Heterogeneous providers and services:] There is no single cloud. We have to recognize that the competitive nature in the cloud market promotes not only heterogeneous cloud providers but heterogeneous cloud services that may compete with each other and either offer the same or customized services targeting a particular user community. Resources in clouds are highly diversified in nature, capacity, working style, and administrative domains. The inclusion of different resource providers with the desire to lock customers into their services and products makes heterogeneous multi-cloud scheduling a formidable challenge.
 
 \item [Highly diversified:] Due to the large diverse set of applications (but also infrastructure) smart strategies to schedule such applications on the required resources are needed.
 
@@ -369,9 +369,9 @@ Some of the obvious cloud characteristics and challenges that lead to a categori
  
 \end{description}
 
-Thus, we need to distinguish many scheduling challenges, one of which is governed by differentiating users and providers. Here, on the one hand, we focus on cloud providers that try to utilize in the best possible way the existing resources for the customers under optimization constraints such as cost, high availability, fault tolerance for the providing cloud resources and services. On the other hand, we have customers that expect quality assurances, but also have their own constraints such as deadlines, cost, and implicit requirements from their applications including data placement and management that may influence the scheduling decision.
+Thus, we need to distinguish many scheduling challenges, one of which is governed by differentiating users and providers. Here, on the one hand, we focus on cloud providers that try to utilize in the best possible way to utilize the existing resources for the customers under optimization constraints such as cost, high availability, fault tolerance for the providing cloud resources and services. On the other hand, we have customers that expect quality assurances, but also have their own constraints such as deadlines, cost, and implicit requirements from their applications including data placement and management that may influence the scheduling decision.
 
-In both cases, we need to address the challenge of provisioning resources and also the challenge of scheduling services onto these resources. Although these steps can be done independently, it is obvious that interrelationship between them is needed in case of re-provisioning and dynamic adaptation to dynamic loads placed on the resources.
+In both cases, we need to address the challenge of provisioning resources and also the challenge of scheduling services onto these resources. Although they can be done independently, it is obvious that interrelationship between them is needed in case of re-provisioning and dynamic adaptation to dynamic loads placed on the resources.
 
 In both cases under-utilization prevents a resource from performing optimally, incurring idle time, whereas over-utilization causes a resource to degrade the node's performance.
 
@@ -427,7 +427,7 @@ reliability (Section~\ref{sec:reliability}),
 security (Section~\ref{sec:security}), 
 and heuristics (Section~\ref{sec:heuristic}).
 
-As High-Performance Computing in the cloud is also a service offered by several providers, we also review scheduling for HPC in the cloud (Section~\ref{sec:hpc}) and scientific workflows (Section~\ref{sec:workflow}) which is going to become a field of interest for the scientific community as the transition to clouds takes place and is explicitly an area of interest for NIST as discussed in the Big Data Reference Architecture Working Group while leveraging activities from the community including the past Grid community.
+As High-Performance Computing in the cloud is also a service offered by several providers, we also need to be aware of HPC in the cloud (Section~\ref{sec:hpc}) and scientific workflows (Section~\ref{sec:workflow}) that is going to become a field of interest for the scientific community. This is motivated by the fact that transition to cloud services takes place in academic and commercial settings and is explicitly an area of interest for NIST as discussed in the Big Data Reference Architecture Working Group while leveraging activities from the community including the past Grid community.
 
 In this section, we also review papers with emphasis on scheduling in public clouds (Section~\ref{sec:public}), containers (Section~\ref{sec:container}), function as a service (Section~\ref{sec:faas}) as well as distributed resource providers (Section~\ref{sec:distributed}) which can utilize a service mesh (Section~\ref{sec:mesh}).
 
@@ -444,7 +444,7 @@ The latter is often motivated by the need for scalability~\cite{keller2014hierar
 
 In many cases, not only the cloud user but also the cloud provider can benefit from dynamic scheduling~\cite{tighe2014integrating}.
 
-We find that it can be beneficial to separate the scheduling task in multiple steps such as shown in~\cite{sun2015live}. Here, live migration for correlated VMs is optimizing on data, compute, and bandwidth is conducted in several steps. Other cloud metrics such as price~\cite{tordsson2012cloud} are also common and will be addressed in Section ~\ref{sec:cost}. To address the scale problem many such algorithms use heuristics as showcased in Section~\ref{sec:heuristic}.
+We find that it can be beneficial to separate the scheduling task in multiple steps such as shown in~\cite{sun2015live}. Here, live migration for correlated VMs is optimizing on data, compute, and bandwidth conducted in several steps. Other cloud metrics such as price~\cite{tordsson2012cloud} are also common and will be addressed in Section ~\ref{sec:cost}. To address the scale problem many such algorithms use heuristics as showcased in Section~\ref{sec:heuristic}.
 
 Table~\ref{T:dynamic-scheduling} lists several efforts related to dynamic scheduling while focusing on virtual machine placement.
 
@@ -481,12 +481,11 @@ A comparison of energy-aware scheduling algorithms in cloud computing is shown i
 
 \subsubsection{Network Aware Scheduling}\label{sec:network}
 
-
-Clouds promote large scale network traffic to, from, and within network-aware scheduling must be considered for scheduling. This not only contains moving data in and out of the cloud data center, but may also contain message exchanges between complex distributed applications that run in these cloud data centers in many times distributed fashion.
+Clouds promote large-scale network traffic to, from, and within clouds. Thus network-aware scheduling must be considered for scheduling. This not only contains moving data in and out of the cloud data center but may also contain message exchanges between complex distributed applications that run in cloud data centers in a distributed fashion.
 
 Minimizing the distance between data providers and data consumers while, for example,replicating data~\cite{www-akamai} can save a significant amount of traffic and has long been applied on the internet as one of its beneficial strategies. Service level agreements (SLA)~\cite{breitgand2012improving} are playing an important role to achieve proper utilization as part of the scheduling effort. Treating the network as shared scarce resource~\cite{rampersaud2016sharing} motivates the development of network-based scheduling algorithms. Also in network-aware scheduling, we find the distinction between static~\cite{biran2012stable} and dynamic scheduling at runtime so we can deal with traffic bursts.
 
-A variety of traditional scheduling metrics (see Figure~\ref{F:graph-metrics}) are often used to improve scheduling while considering network traffic. An example is demonstrated in ~\cite{yu2017survivable} to optimize traffic in virtual clusters. Scheduling across multiple layers is especially of benefit for networking~\cite{bi2015sla} that minimize across different tiers. Scheduling of platforms such as Hadoop, offers advantages when networking is integrated~\cite{kondikoppa2012network}. Having access to lower-level infrastructure such as offered by OpenStack, presents opportunities to include Network Function Virtualization (NVF)~\cite{lucrezia2015introducing}.
+A variety of traditional scheduling metrics (see Figure~\ref{F:graph-metrics}) are often used to improve scheduling while considering network traffic. An example is demonstrated in ~\cite{yu2017survivable} to optimize traffic in virtual clusters. Scheduling across multiple layers is especially of benefit for networking~\cite{bi2015sla}. Scheduling of platforms such as Hadoop, offers advantages when networking is integrated~\cite{kondikoppa2012network}. Having access to lower-level infrastructure such as offered by OpenStack, presents opportunities to include Network Function Virtualization (NVF)~\cite{lucrezia2015introducing}.
 
 Table \ref{T:c} shows examples of network-aware scheduling algorithms in cloud computing.
 
@@ -497,12 +496,13 @@ Table \ref{T:c} shows examples of network-aware scheduling algorithms in cloud c
 
 \subsubsection{Cost Aware Scheduling}\label{sec:cost}
 
-
 Cost in clouds arises by using the data center facilities. These costs are passed along to the users.
 
-Through shared use of the facilities and keeping under-utilization low, clouds can have an advantageous cost-performance ratio compared to on-premise compute and data centers. Costs for such centers include hardware operation, costs such as energy and equipment, as well as, operating costs, such as software licensing and update and personnel costs. Dependent on the hardware and software used, cloud providers offer a tiered cost model that allows users to assess the need for data, speed, and reliability as part of their cost analysis. Other options such as renewable energy use of the data center in case of energy-aware customers may also play a role.
+Through shared use of the facilities and keeping under-utilization low, clouds can have an advantageous cost-performance ratio compared to on-premise compute and data centers. Costs for such centers include hardware operation, costs such as energy and equipment, as well as, operating costs, such as software licensing and update and personnel costs. Dependent on the hardware and software used, cloud providers offer a tiered cost model that allows users to assess the need for data, speed, and reliability as part of their cost analysis. Other options such as the selection of renewable energy use within the data center in case of energy conscious customers may also play a role.
 
-Cost aware scheduling has been applied to virtual machines~\cite{yuan2017ttsa}, tasks~\cite{yuan2017temporal,zuo2015multi}, workflows~\cite{arabnejad2015cost,arabnejad2016budget}, as well as high-throughput~\cite{yuan2016cawsac} computing. Revenue maximization~\cite{yuan2018warm} has not only been applied to metrics such as latency~\cite{ghahramani2017toward}, but is also useful via advanced Dynamic Voltage and Frequency Scaling (DVFS)~\cite{las10cloudsched,calheiros2014energy} due to reducing the high energy costs with little performance reduction. This also could be achieved through delayed execution~\cite{bi2016trs} or relaxation of deadlines~\cite{zhang2018dynamic}. Other strategies include the introduction of penalties as part of SLA~\cite{wu2012sla}. Typical resource utilization such as optimizing processor sharing~\cite{lee2012profit} data placements~\cite{lee2012profit}, have been known to decrease cost. Also, dynamic adaptations at run-time allow reduction of cost~\cite{ari2013design}
+Cost aware scheduling has been applied to virtual machines~\cite{yuan2017ttsa}, tasks~\cite{yuan2017temporal,zuo2015multi}, workflows~\cite{arabnejad2015cost,arabnejad2016budget}, as well as high-throughput~\cite{yuan2016cawsac} computing and use of data placement. Revenue maximization~\cite{yuan2018warm} has not only been applied to metrics such as latency~\cite{ghahramani2017toward}, but is also useful via advanced Dynamic Voltage and Frequency Scaling (DVFS)~\cite{las10cloudsched,calheiros2014energy} due to reducing the high energy costs with little performance reduction. This also could be achieved through delayed execution~\cite{bi2016trs} or relaxation of deadlines~\cite{zhang2018dynamic}. Other strategies include the introduction of penalties as part of SLA~\cite{wu2012sla}. Typical resource utilization such as optimizing processor sharing~\cite{lee2012profit} data placements~\cite{lee2012profit}, have been known to decrease cost. Also, dynamic adaptations at run-time allow reduction of cost~\cite{ari2013design}
+
+To allow customers to decide the usage of various services including compute, data, function, and platform, most publish extensive cost schemes that can then be integrated into customers scheduling decisions.
 
 Table \ref{T:e} presents a comparison of cost-aware scheduling algorithms.
 
@@ -511,7 +511,7 @@ Table \ref{T:e} presents a comparison of cost-aware scheduling algorithms.
 \subsubsection{Time-based Scheduling}\label{sec:time}
 
 
-Cloud users have the desire to reduce the time it takes to execute their applications and fulfill deadlines~\cite{arabnejad2017scheduling}. Besides virtual machine and time-based scheduling, it is also important to integrate data-aware scheduling to reduce access time to the data~\cite{vandenbosshe2013}. Historical data~\cite{thomas2015credit} or proxies~\cite{erdil2013autonomic} for execution times help designing time-aware scheduling algorithms. We find algorithms that integrate deadline constraint ~\cite{li2016energy}, completion time~\cite{xu2011job} with fairness, low downtime to improve time for execution~\cite{frincu2014scheduling}, and delay bounds ~\cite{yuan2017time}.
+Cloud users have the desire to reduce the time it takes to execute their applications and fulfill deadlines~\cite{arabnejad2017scheduling}. Besides virtual machine and time-based scheduling, it is also important to integrate data-aware scheduling to reduce access time to the data~\cite{vandenbosshe2013}. Historical data~\cite{thomas2015credit} or proxies~\cite{erdil2013autonomic} for execution times help designing time-aware scheduling algorithms. We find algorithms that integrate deadline constraints ~\cite{li2016energy}, completion time~\cite{xu2011job} with fairness, low downtime to improve time for execution~\cite{frincu2014scheduling}, and delay bounds ~\cite{yuan2017time}.
 
 Table~\ref{T:f} presents a comparison of time-aware scheduling algorithms.
 
@@ -755,7 +755,7 @@ In this section, we summarize some of the lessons we learned from our activities
 
 \begin{description}
 
-\item[More than VM scheduling.] Due to the shift and enhancement of clouds from VM to containers and FaaS, we must consider also new scheduling strategies as motivated by new cloud compute service offerings utilizing them.
+\item[More than VMs.] Due to the shift and enhancement of clouds from VM to containers and FaaS, we must consider also new scheduling strategies as motivated by new cloud compute service offerings utilizing them. This offers several opportunities for research activities.
 
 \item[Energy.] Energy costs for data centers are enormous and this plays a significant role for providers, but also for users to which energy costs are passed along. Not only good scheduling algorithms are needed, but the design of the data center close to cheap energy is an important issue.
 
