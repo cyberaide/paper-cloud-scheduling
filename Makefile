@@ -78,9 +78,13 @@ biber:
 	@make -f Makefile clean
 
 zip: clean
+	rm -rf vonLaszewski-cloud-scheduling
 	-mkdir -p vonLaszewski-cloud-scheduling
 	perl bin/latexexpand.pl laszewski-cloud-scheduling.tex > vonLaszewski-cloud-scheduling/laszewski-cloud-scheduling.tex
 	cp *.bib vonLaszewski-cloud-scheduling
+	ls vonLaszewski-cloud-scheduling
+	cd vonLaszewski-cloud-scheduling; zip vonLaszewski-cloud-scheduling.zip *
+	mv vonLaszewski-cloud-scheduling/vonLaszewski-cloud-scheduling.zip .
 
 #	cd ..; zip -x "*/graph-mindmap-1.tex" "diff.txt" "*/0REVIEW.tex" "*/laszewski-cloud-scheduling.pdf" "*/Conflict*.*" "*/rajni_bio.tex" "*/elsarticle-template.*" "*/review.*" "*/.DS*" "*/*.git*" "*/*bin*" "*/*zip" "*/*.md" "*/Makefile" -r $(DIR)/$(FILENAME).zip $(DIR)
 
