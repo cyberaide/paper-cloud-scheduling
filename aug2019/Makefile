@@ -29,6 +29,16 @@ simple:
 	pdflatex $(FILENAME).tex
 	open -a Skim $(FILENAME).pdf
 
+all:
+	make simple
+	-qpdf $(FILENAME).pdf --rotate=90:22-36 --replace-input
+	make review
+
+review:
+	pdflatex review.tex
+	pdflatex review.tex
+	open -a Skim review.pdf
+
 t:
 	make -f Makefile table
 	make -f Makefile table
