@@ -2,6 +2,7 @@
 
   % \centering
 \caption{Comparison of Different Batch Resource Management Systems}\label{T:l}
+\hspace{8pt}
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
@@ -11,38 +12,38 @@
  \textbf{Framework} & \textbf{Batch Features} &  \textbf{Cloud Bursting} & \textbf{Containers} & \textbf{Comment}  
 \\ \hline
 
-Cluster & Load Sharing Facility (LSF)~\cite{www-lsf} & 
+\makecell{Cloud bursting,\\ Cluster model} & Slurm~\cite{www-slurm} & 
+Policy driven, backfill, exclusive and non-exclusive access to compute nodes & 
+AWS, Azure, Google, Oracle & 
+Yes & 
+Open Source, popular
+  \\ \hline
+
+\makecell{Cloud bursting,\\ Cluster model} & Univa Grid Engine~\cite{www-univa} & 
+Policy driven, backfill, exclusive and non-exclusive access to compute nodes, fault tolerant master & 
+AWS, Azure, Google & 
+Yes & 
+previously SUN Grid Engine, Genias Codine
+\\ \hline  
+  
+\makecell{Cloud bursting,\\ Cluster model} & Load Sharing Facility (LSF)~\cite{www-lsf} & 
 Policy driven, backfill, exclusive, non-exclusive access to compute nodes &  IBM Cloud, AWS, Google and Azure & 
 Yes & 
 Previously OpenLava, IBM  Open Source 
 \\ \hline
 
-Cluster & Slurm~\cite{www-slurm} & 
-Policy driven, backfill, exclusive and non-exclusive access to compute nodes & 
-AWS, Azure, Google, Oracle & 
-Yes & 
-Open Source, popular
-\\ \hline
-
-Cluster & Open Portable Batch System (OpenPBS)~\cite{Openpbs2018,Henderson1995} & 
-Policy driven, backfill, exclusive and non-exclusive access to compute nodes, fault tolerant master & 
-AWS, Azure, Google, Oracle & 
-Yes & 
-Open Source
-\\ \hline
-
-Cluster & Moab~\cite{www-moab} & 
+\makecell{Cloud bursting,\\ Cluster model} & Moab~\cite{www-moab} & 
 Fairness policies, dynamic priorities, and extensive reservations &
 AWS, Azure, Oracle, Google &
 Yes & 
 Open Source
 \\ \hline
-
-Cluster & Univa Grid Engine~\cite{www-univa} & 
+  
+\makecell{Cloud bursting,\\ Cluster model} & Open Portable Batch System (OpenPBS)~\cite{Openpbs2018,Henderson1995} & 
 Policy driven, backfill, exclusive and non-exclusive access to compute nodes, fault tolerant master & 
-AWS, Azure, Google & 
+AWS, Azure, Google, Oracle & 
 Yes & 
-previously SUN Grid Engine, Genias Codine
+Open Source
 \\ \hline
 
 

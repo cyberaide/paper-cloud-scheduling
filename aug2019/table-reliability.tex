@@ -1,27 +1,25 @@
 \begin{sidewaystable*}[!htbp]
 \caption{Comparison of Reliability-based Scheduling Algorithms}\label{T:h}
+\hspace{8pt}
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|g{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{1.9cm}|}
   \hline
    \textbf{Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters} 
-   
 \\ \hline
 
-Compute resource-based, Task-based & Abdulhamid et al.~\cite{latiff2016fault} & Uncountable numeric nodes for resource in clouds & Lower makespan & No optimization & League championship algorithm & CloudSim & Failure ratio, the failure slowdown and the performance improvement rate
+\makecell{Compute\\ resource-based,\\ Job-based,\\ Reliability-based} & Malik et al.~\cite{malik2012reliability} & Reliability assessment mechanism for scheduling resources & Reliability assessment algorithms for general applications and real time applications  & No security and energy parameters consideration & Max -min & Amazon EC2 cloud & Fault tolerance, time
 \\ \hline
 
-Energy-aware , energy source & Tang et al.~\cite{tang2016energy} &  Reliability and energy-aware task scheduling architecture & To get good trade off among performance, reliability, and energy consumption & No support for cost optimization& Heuristic method & Discrete event simulation environment  & Schedule length, Energy consumption,  Application reliability 
+\makecell{Compute\\ resource-based,\\ Job-based,\\ Reliability-based} & Jing et al.~\cite{jing2015reliability} &  Model for fault-tolerant aware scheduling &  Low complexity  & No cost, time optimization & Adaptive secure scheduling algorithm & Simulated environment & Reliability
+\\ \hline
+  
+\makecell{Compute\\ resource-based,\\ Task-based,\\ Reliability-based} & Abdulhamid et al.~\cite{latiff2016fault} & Uncountable numeric nodes for resource in clouds & Lower makespan & No optimization & League championship algorithm & CloudSim & Failure ratio, the failure slowdown and the performance improvement rate
+\\ \hline
+
+\makecell{Energy-aware ,\\ Energy source,\\ Reliability-based} & Tang et al.~\cite{tang2016energy} &  Reliability and energy-aware task scheduling architecture & To get good trade off among performance, reliability, and energy consumption & No support for cost optimization& Heuristic method & Discrete event simulation environment  & Schedule length, Energy consumption,  Application reliability 
  \\ \hline
- 
- Compute resource-based, Job-based & Jing et al.~\cite{jing2015reliability} &  Model for fault-tolerant aware scheduling &  Low complexity  & No cost, time optimization & Adaptive secure scheduling algorithm & Simulated environment & Reliability
-\\ \hline
-
-
-Compute resource-based, Job-based & Malik et al.~\cite{malik2012reliability} & Reliability assessment mechanism for scheduling resources & Reliability assessment algorithms for general applications and real time applications  & No security and energy parameters consideration & Max -min & Amazon EC2 cloud & Fault tolerance, time
-\\ \hline
-
 
 
 \end{tabular}

@@ -1,5 +1,5 @@
 \begin{sidewaystable*}[!htbp]
-\caption{Comparison of Heuristic-based Scheduling Algorithms}\label{T:j}
+\caption{Comparison of Heuristic-based Scheduling Algorithms (A)}\label{T:j-a}
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
@@ -7,41 +7,61 @@
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
  \textbf{Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters} 
-   
-
 \\ \hline
 
-Compute resource-based, Job-based & Gasior et al.~\cite{gkasior2016metaheuristic} & Parallel and distributed scheme  for  scheduling  jobs  & Multi-objective optimization, consideration of security risks also& No cost consideration & Genetic algorithm & Simulation Testbed & Flow time, makespan, turnaround time
+\makecell{Compute\\ resource-based,\\  Job-based} & Mezmaz et al.~\cite{mezmaz2011parallel} & Addressed the precedence-constrained parallel applications for cloud computing & Reduced energy consumption & High complexity of implementation and operation& Genetic algorithm & Simulated environment & Energy, speed up
+\\ \hline
+  
+\makecell{Compute\\ resource-based,\\  Job-based} & Gasior et al.~\cite{gkasior2016metaheuristic} & Parallel and distributed scheme  for  scheduling  jobs  & Multi-objective optimization, consideration of security risks also& No cost consideration & Genetic algorithm & Simulation Testbed & Flow time, makespan, turnaround time
 \\ \hline
 
+\makecell{Compute\\ resource-based,\\  Job-based} & Cristian et al.~\cite{mateos2013aco} & Scheduler for job scheduling, consider static cloud  & Minimize weighted flowtime and makespan & does not handle energy consumption & Ant colony optimization and swarm intelligence approach & CloudSim & makepan
+  \\ \hline
 
-Compute resource-based, workflow-based & Bousselm et al.~\cite{bousselmi2016qos} & QoS-based & Consideration of QoS parameters & High complexity & Parallel Cat Swarm Optimization& Simulated environment  & Execution time, execution and storage cost, availability of resources and data transmission time
+\makecell{Compute\\ resource-based,\\  Task-based,\\  Energy-based} & Babu~\cite{ld2013honey} & Based  priority of tasks, designed load balancing algorithm & Maximize throughput & High operational complexity & Honey Bee algorithm & CloudSim & Makespan, Number of task migrations
 \\ \hline
 
-Compute resource-based, Job-based & Cristian et al.~\cite{mateos2013aco} & Scheduler for job scheduling, consider static cloud  & Minimize weighted flowtime and makespan & does not handle energy consumption & Ant colony optimization and swarm intelligence approach & CloudSim & makepan
+\makecell{Compute\\ resource-based,\\  Task-based} & Kousiouris et al.~\cite{kousiouris2011effects}& Virtual machines affect the performance of other VMs executing on the same node & Reduce performance overhead & Lacks implementation on a real-world cloud platform  & Genetic algorithm  &  Simulated environment & Degradation, test score delay
 \\ \hline
 
-Compute resource-based, workflow & Abrishami et al.~\cite{abrishami2013deadline} & Cost-optimized,  deadline-constrained execution of workflows in cloud. considered required run-time and data estimates in order to optimize workflow execution & Minimize execution cost with in deadline & Ignored data transfer time, security & PCP algorithm & Simulated environment & Normalized cost
+\makecell{Compute\\ resource-based,\\ VM-based} & Torabzadeh et al.~\cite{torabzadeh2010cloud} & Flowshow job problem  & Minimized makespan and mean completion time & Not considered cost & Simulated annealing & Simulated environment & Computation time
 \\ \hline
-
-Compute resource-based, task-based & Sen et al.~\cite{su2013cost} & Cost-efficient task-scheduling algorithm using two heuristic strategies & Reduced monetary costs & Ignored security & Heuristic strategies & Numerical experiments & Makespan
-\\ \hline
-
- Compute resource-based, Job-based & Gutierrez-Garcia et al.~\cite{gutierrez2013family} & Scheduling of Bag-of-tasks-based on allocation times of virtualized cloud resources & Makespan & Ignored cost & Heuristic algorithm &  Testbed & Makepan, overhead time
-\\ \hline
-
-Compute resource-based, task-based, energy-based & Babu~\cite{ld2013honey} & Based  priority of tasks, designed load balancing algorithm & Maximize throughput & High operational complexity & Honey Bee algorithm & CloudSim & Makespan, Number of task migrations
-\\ \hline
-
-Compute resource-based, task-based & Kousiouris et al.~\cite{kousiouris2011effects}& Virtual machines affect the performance of other VMs executing on the same node & Reduce performance overhead & Lacks implementation on a real-world cloud platform  & Genetic algorithm  &  Simulated environment & Degradation, test score delay
-\\ \hline
-
-Compute resource-based, Job-based & Mezmaz et al.~\cite{mezmaz2011parallel} & Addressed the precedence-constrained parallel applications for cloud computing & Reduced energy consumption & High complexity of implementation and operation& Genetic algorithm & Simulated environment & Energy, speed up
+    
+  \makecell{Compute\\ resource-based,\\  Task-based} & Sen et al.~\cite{su2013cost} & Cost-efficient task-scheduling algorithm using two heuristic strategies & Reduced monetary costs & Ignored security & Heuristic strategies & Numerical experiments & Makespan
 \\ \hline
 
 
-Compute resource-based, VM-based & Torabzadeh et al.~\cite{torabzadeh2010cloud} & Flowshow job problem  & Minimized makespan and mean completion time & Not considered cost & Simulated annealing & Simulated environment & Computation time
+  
+
+
+\end{tabular}
+}
+
+\end{sidewaystable*}
+
+
+\begin{sidewaystable*}[!htbp]
+\caption{Comparison of Heuristic-based Scheduling Algorithms (B)}\label{T:j-b}
+\hspace{8pt}
+\centering
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|g{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+ \textbf{Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} &\textbf{Experimental Parameters} 
+\\ \hline   
+
+\makecell{Compute\\ resource-based,\\  Workflow-based} & Abrishami et al.~\cite{abrishami2013deadline} & Cost-optimized,  deadline-constrained execution of workflows in cloud. considered required run-time and data estimates in order to optimize workflow execution & Minimize execution cost with in deadline & Ignored data transfer time, security & PCP algorithm & Simulated environment & Normalized cost
+  \\ \hline
+
+  \makecell{Compute\\ resource-based,\\  Workflow-based} & Bousselm et al.~\cite{bousselmi2016qos} & QoS-based & Consideration of QoS parameters & High complexity & Parallel Cat Swarm Optimization& Simulated environment  & Execution time, execution and storage cost, availability of resources and data transmission time
+  \\ \hline
+  
+
+\makecell{ Compute\\ resource-based,\\  Job-based} & Gutierrez-Garcia et al.~\cite{gutierrez2013family} & Scheduling of Bag-of-tasks-based on allocation times of virtualized cloud resources & Makespan & Ignored cost & Heuristic algorithm &  Testbed & Makepan, overhead time
 \\ \hline
+
 
 
 \end{tabular}

@@ -31,7 +31,7 @@ As mentioned in the Abstract part, the authors should make their descriptions mo
 
 In my own opinion, it is not necessary to use a section to put the terminologies used in a paper. A table can be used to summarize the terminologies that you should explain. Also, a present of the definition such as "Cloud Resource: Is a resource offered......" is not professional and looks strange.
 
-\RESOLUTION{We experimented with tables to place definitions in it but found it did not increase readability. of the paper as the table would have been over multiple pages. Hence we left the definitions in the main text. If however this were to be an issue that would prevent publication, we certainly can provide a table instead.}
+\OK{We experimented with tables to place definitions in it but found it did not increase readability. of the paper as the table would have been over multiple pages. Hence we left the definitions in the main text. If however this were to be an issue that would prevent publication, we certainly can provide a table instead.}
 
 
 4. The structure of Sec.3 is confusing. The first paragraph of this section should give readers a clear guide about what they are gonging to read.
@@ -87,7 +87,10 @@ reference 22 is missing in its respective table (Table 2), even though it is an 
 
 section may be unrelated to the paper's topic or may address too many topics, some of which may be unrelated. One of the topics are the HPC services and bare-metal provisioning offered by Cloud providers, both of which may rely on simple queue schedulers or the user's own infrastructure deployment choice, respectively, with little room for resource scheduling algorithms. Another topic is the Cloud but as an extension of HPC systems for bursting. Finally both using HPC infrastructure to run containers or otherwise Cloud platforms such as Hadoop may be unrelated to any scheduling algorithm study overall.
 
-\RESOLUTION{After many discussions, we still believe this section including Bare metal provisioning, HPC in the cloud and even Hadoop is worthwhile to be integrated into the paper to showcase the depth of the scheduling problems in the cloud. Yes, we have done research in these areas which precisely motivated us to include this section. We clarified that this section is important.}
+\OK{A) We find it important to address cloud bursting and to highlight that especially for academic resouces cloudbursting as a well established strategy that is integrated in the schedulers that run on HPC resources.
+
+  B) We find it also important to point out that Platforms such as Hadoop that are often run in the cloud can also be run while leveraging schedulers from HPC computing centers. These systems leverage fully existing schedulers and offer its users a cloud like service as showcased for example at SDSC Comet, one of the largest academic compute resource in the US offering cloud services. We realize that other institutions have not yet leveraged such cloud offereings and it is thus important to point to these capabilities that can be offered on-demand.}
+
 
 \paragraph{Subsection 4.5}
 
@@ -157,7 +160,7 @@ English should be greatly improved for this paper as numerous errors are present
 
 + The citations inside the tables are not ordered making it difficult to correlate the citations in the text (ordered) to the ones in the table (unordered).
 
-\RESOLUTION{TBD}
+\OK{All tables have ben soted within that table to have asending citations. Naturally some citations could also be used in other sections as many frameworks have multiple matching classifications.}
 
 + Table 9 is not referenced in the paper and I can not place where it could be.
 

@@ -1,6 +1,7 @@
 \begin{sidewaystable*}[!htbp]
    \caption{Comparison of Time-based Scheduling Algorithms}
     \label{T:f}
+\hspace{8pt}
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
@@ -8,31 +9,33 @@
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
  \textbf{Classification} & \textbf{Author} & \textbf{Basis} & \textbf{Advantages} & \textbf{Disadvantages} & \textbf{scheduling techniques} & \textbf{Experimental Scale} & \textbf{Experimental Parameters} 
- 
 \\ \hline
 
-Compute resource-based, task & Yuan et al.~\cite{yuan2017time} & Task scheduling in green data centers & Investigated temporal variations &  Ignored energy consumption and cost & PSO and SA & Simulated Environment & Delay bound and time
+\makecell{Compute\\ resource-based,\\ Workflow-based,\\ Time-based} & Arabnejad et al.~\cite{arabnejad2017scheduling} & Dynamically provisioned commercial cloud environments & Evaluation of task selection algorithms reveals impact of workflow symmetry & High complexity & Rank method & CloudSim & Response time, Cost
 \\ \hline
 
- Compute resource-based workflow & Arabnejad et al.~\cite{arabnejad2017scheduling} & Dynamically provisioned commercial cloud environments & Evaluation of task selection algorithms reveals impact of workflow symmetry & High complexity & Rank method & CloudSim & Response time, Cost
+  
+\makecell{ Compute\\ resource-based,\\ Data-based,\\ Task-based,\\ Time-based} & Van den Bossche et al. in~\cite{vandenbosshe2013} & Deadline-based workloads in a hybrid cloud setting & Minimize cost and time & does not handle multiple workflows & hybrid scheduling approach & Simulator & Total Cost, application deadline met, turnaround time, data transferred
 \\ \hline
 
-Compute resource-based, Workflow & Thomas et al.~\cite{thomas2015credit} & Task length aware scheduling & Lesser makespan and increased resource utilization & No comparison with existing algorithm & Min-min & CloudSim & Makespan
+  
+\makecell{Compute\\ resource-based,\\ Workflow-based,\\ Time-based} & Thomas et al.~\cite{thomas2015credit} & Task length aware scheduling & Lesser makespan and increased resource utilization & No comparison with existing algorithm & Min-min & CloudSim & Makespan
 \\ \hline 
 
-Compute resource-based, VM & Frincu~\cite{frincu2014scheduling} & A priory scheduling and  searching for an optimal allocation of components on nodes in order to ensure a homogeneous spread of component types on every node. & Minimizing the application cost & Centralized approach represents a single point of failure & Nonlinear-programming & Simulator platform & Average load per node, optimal allocation, reliability
+\makecell{Compute\\ resource-based,\\ VM-based} & Erdil~\cite{erdil2013autonomic} & Disseminated information as agents of dissemination sources for resource scheduling & Availability of resource state, reduces dissemination overhead & Ignored cost as parameters & Adaptive proxy algorithm & Scalable simulation network framework & Query satisfaction rates, random walk hop count limit
 \\ \hline
 
-Compute resource-based, VM & Erdil~\cite{erdil2013autonomic} & Disseminated information as agents of dissemination sources for resource scheduling & Availability of resource state, reduces dissemination overhead & Ignored cost as parameters & Adaptive proxy algorithm & Scalable simulation network framework & Query satisfaction rates, random walk hop count limit
+  
+\makecell{Compute\\ resource-based,\\ Task-based,\\ Time-based} & Xu et al.~\cite{xu2011job} & Berger model and assign tasks on optimal resources to meet user's QoS requirements & Optimal completion time & Ignored cost and energy efficiency, security& Resource allocation algorithm and then followed by job scheduling & CloudSim & Time, bandwidth
 \\ \hline
 
-
- Compute resource-based, Data-based, Task-based & Van den Bossche et al. in~\cite{vandenbosshe2013} & Deadline-based workloads in a hybrid cloud setting & Minimize cost and time & does not handle multiple workflows & hybrid scheduling approach & Simulator & Total Cost, application deadline met, turnaround time, data transferred
+\makecell{Compute\\ resource-based,\\ VM-based,\\ Time-based} & Frincu~\cite{frincu2014scheduling} & Priority scheduling and searching for optimal allocation of components on nodes to ensure a homogeneous spread of component types on nodes & Minimizing the application cost & Centralized approach represents a single point of failure & Nonlinear-programming & Simulator platform & Average load per node, optimal allocation, reliability
 \\ \hline
 
-Compute resource-based , task & Xu et al.~\cite{xu2011job} & Berger model and assign tasks on optimal resources to meet user's QoS requirements & Optimal completion time & Ignored cost and energy efficiency, security& Resource allocation algorithm and then followed by job scheduling & CloudSim & Time, bandwidth
+\makecell{Compute\\ resource-based,\\ Task-based,\\ Time-based} & Yuan et al.~\cite{yuan2017time} & Task scheduling in green data centers & Investigated temporal variations &  Ignored energy consumption and cost & PSO and SA & Simulated Environment & Delay bound and time
 \\ \hline
 
+  
 
 \end{tabular}
 }

@@ -1,5 +1,6 @@
 \begin{sidewaystable*}[!htbp]
 \caption{Comparison of Different IaaS Models}\label{T:iaas}
+\hspace{8pt}
 \centering
 \scriptsize
 \resizebox{\textwidth}{!}{%
@@ -11,20 +12,25 @@
 \textbf{Database RDS} & \textbf{Reliability} & \textbf{Monitoring} & 
 \textbf{Base OS}   & \textbf{Programming Framework}
  \\ \hline
- 
-& Amazon EC2~\cite{AmazonEC22015} & Pay-as-you-go or Yearly, reserved, spot & My SQL, Ms SQL, Oracle & Good & Good & Linux and windows & Python, Java, PHP, Ruby 
+
+\makecell{VM-based,\\ Data-based} & Future Grid (discontinued)~\cite{las12fg-bookchapter,fox2013futuregrid} & Free Academic &  User Choice &  Good & Good &  Linux & Openstack, OpenCirrus, Eucalyptus, Cloudmesh
+  \\ \hline
+
+\makecell{VM-based,\\ Data-based} & Rackspace~\cite{Rackspace2016} &  Pay-as-you-go  & MySQL & Good & Extensive  & Ubuntu & Java, Python 
 \\ \hline
 
-& Microsoft Window Azure~\cite{MicrosoftAzure2014} &  Pay-as-you-go, semester, year &  Microsoft SQL Database & Average & Average & Windows and linux & Java, Php, .net 
+\makecell{VM-based,\\ Data-based,\\ Container-based} & Google App Engine~\cite{GoogleAppEngine2018} & Pay as you go & Cloud SQL & Extensive & good & linux, free BSD, windows & Python,  Java,  PHP and Go, Node.js
+\\ \hline
+  
+  
+\makecell{VM-based,\\ Data-based,\\ Container-based} & Amazon WS~\cite{AmazonEC22015} & Pay-as-you-go or Yearly, reserved, spot & My SQL, Ms SQL, Oracle & Good & Good & Linux and windows & Python, Java, PHP, Ruby 
 \\ \hline
 
-& Rackspace~\cite{Rackspace2016} &  Pay-as-you-go  & MySQL & Good & Extensive  & Ubuntu & Java, Python 
+\makecell{VM-based,\\ Data-based,\\ Container-based} & Microsoft Window Azure~\cite{MicrosoftAzure2014} &  Pay-as-you-go, semester, year &  Microsoft SQL Database & Average & Average & Windows and linux & Java, Php, .net 
 \\ \hline
 
-& Google App Engine~\cite{GoogleAppEngine2018} & Pay as you go & Cloud SQL & Extensive & good & linux, free BSD, windows & Python,  Java,  PHP and Go, Node.js
-\\ \hline
 
-& Cloud Sigma~\cite{CloudSigma2016} & Pay-as-you-go  & SQL & Good& Good & Average &Python, Java, PHP, Python, Ruby, Clojour 
+\makecell{Data-based} & Cloud Sigma~\cite{CloudSigma2016} & Pay-as-you-go  & SQL & Good& Good & Average &Python, Java, PHP, Python, Ruby, Clojour 
 \\ \hline
 
 %Openstack~\cite{Openstack2018} & Pay-as you go, monthly  & My SQL& Good & Extensive & Linux, windows & Python, Perl, PHP,  
@@ -34,10 +40,8 @@
 %Open Nebula~\cite{OpenNebula2018} &Subscription &My SQL  & High & Good & Linux & C,C++, Ruby, java, 
 %\\ \hline
 
-& Future Grid (discontinued)~\cite{las12fg-bookchapter,fox2013futuregrid} & Free Academic &  User Choice &  Good & Good &  Linux & Openstack, OpenCirrus, Eucalyptus, Cloudmesh
-  \\ \hline
   
-& Chameleon Cloud~\cite{las-chameleon} & Free Academic &  User Choice &  Moderate & Moderate &  Linux & Openstack
+\makecell{VM-based,\\ Data-based} & Chameleon Cloud~\cite{las-chameleon} & Free Academic &  User Choice &  Moderate & Moderate &  Linux & Openstack
   \\ \hline
 \end{tabular}
 }

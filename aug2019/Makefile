@@ -27,7 +27,7 @@ simple:
 	bibtex $(FILENAME)
 	pdflatex $(FILENAME).tex
 	pdflatex $(FILENAME).tex
-	open $(FILENAME).pdf
+	open -a Skim $(FILENAME).pdf
 
 t:
 	make -f Makefile table
@@ -36,7 +36,7 @@ t:
 table:	
 	-rm $(FILENAME).pdf
 	-make -f Makefile $(FILENAME).pdf
-	-qpdf $(FILENAME).pdf --rotate=90:21-34 --replace-input
+	-qpdf $(FILENAME).pdf --rotate=90:21-35 --replace-input
 	# open -a Skim $(FILENAME).pdf
 
 
