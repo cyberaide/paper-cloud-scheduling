@@ -56,7 +56,7 @@ clean:
 	rm -f *.ttt
 	rm -rf *.prv
 	rm -f *.blg *.out *.spl *-orig
-	rm -f *.aux *.log
+	rm -f *.aux *.log *.fdb_latexmk
 	# latexmk -C -bibtex
 
 
@@ -78,7 +78,11 @@ biber:
 	@make -f Makefile clean
 
 zip: clean
-	cd ..; zip -x "*/.DS*" "*/*.git*" "*/*bin*" "*/*zip" "*/*.md" "*/Makefile" -r $(DIR)/$(FILENAME).zip $(DIR)
+	-mkdir -p vonLaszewski-cloud-scheduling
+	perl bin/latexexpand.pl laszewski-cloud-scheduling.tex > vonLaszewski-cloud-scheduling/laszewski-cloud-scheduling.tex
+	cp *.bib vonLaszewski-cloud-scheduling
+
+#	cd ..; zip -x "*/graph-mindmap-1.tex" "diff.txt" "*/0REVIEW.tex" "*/laszewski-cloud-scheduling.pdf" "*/Conflict*.*" "*/rajni_bio.tex" "*/elsarticle-template.*" "*/review.*" "*/.DS*" "*/*.git*" "*/*bin*" "*/*zip" "*/*.md" "*/Makefile" -r $(DIR)/$(FILENAME).zip $(DIR)
 
 flatzip: clean
 	zip -x "*.git*" "*bin*" "*zip" "*.md" "Makefile" -r $(FILENAME).zip .
