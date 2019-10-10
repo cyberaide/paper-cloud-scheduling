@@ -717,8 +717,29 @@ We contrast different resource management systems, used for maintaining resource
 \subsection{Service Mashups} 
 \label{sec:mesh}
 
+I would like to see the inclusion of the most popular workloads, benchmarks, simulation tools used by the researchers while implementing different scheduling policy in Cloud. Example TPC-H, BigDataBench, AMPLab Big data benchmark, Google Cluster traces, CloudSim etc.
+
 To support scheduling across clouds and services, service mashups can be used. This includes long-standing efforts such as Cloudmesh~\cite{von2014accessing}, which targets the creation of reproducible environments to easily manage virtual machines, bare-metal provisioned operating systems, platform deployments and more recently data services in a multi-cloud environment. It is a goal to integrate custom schedulers in such service mashups. Another example is Terraform~\cite{www-terraform} which focuses on reproducible environments.
 
+\subsection{Simulators}
+\label{sec:simulators}
+
+When developing scheduling frameworks it is important to evaluate them
+before use. For this reason, it is useful to simulate cloud
+environments before deploying them in realtime. As many researchers do
+not have access to large scale clouds this is often the only
+application we find for many papers and thus they stay more
+theoretical in nature. Efforts such as
+FutureGrid~\cite{https://github.com/google/cluster-data} that provided
+the earliest multi-cloud environment,
+ChameleonCloud~\cite{Chameleoncloud2019}, and
+CloudLab~\cite{www-cloudlab} did and do provide environments in which
+clouds can be deployed and algorithms can be tested.
+
+For simulation-based efforts we find that the following can be of help
+TPC-H \cite{www-tpc-h}, BigDataBench~\cite{bigdatabench}, Google
+Cluster traces~\cite{www-google-cluster-traces,},
+and CloudSim~\cite{www-cloudsim}.
 
 
 
