@@ -36,7 +36,7 @@ t:
 table:	
 	-rm $(FILENAME).pdf
 	-make -f Makefile $(FILENAME).pdf
-	-qpdf $(FILENAME).pdf --rotate=90:21-35 --replace-input
+	-qpdf $(FILENAME).pdf --rotate=90:22-36 --replace-input
 	# open -a Skim $(FILENAME).pdf
 
 

@@ -1,6 +1,6 @@
-\RequirePackage[hyphens]{url}
 
-% \documentclass[10pt,twocolumn]{article}
+\RequirePackage[hyphens]{url}
+%\documentclass[10pt,twocolumn]{article}
 %\documentclass[preprint,12pt,3p]{elsarticle}
 
 \documentclass[final,5p,times,twocolumn]{elsarticle}
@@ -738,6 +738,11 @@ For simulation-based efforts we find that the following can be of help TPC-H~\ci
 Cluster traces~\cite{www-google-cluster-traces}, DCSim~\cite{www-dcsim}
 and CloudSim~\cite{www-cloudsim}.
 
+\subsection{Selection of a Scheduling Framework}
+
+As we can see from the discussion in this paper, the number of parameters and considerations to select a scheduling algorithm fine-tuned for the particular cloud is a significant challenge.  Not only do we need to identify the parameters that will lead to a better schedule, but we also need to understand the scale and scope of compute, data, network and also other inputs that may not be available to users but only available to cloud providers. Hence as much information as possible must be exposed between the different layers so that smart scheduling algorithms can be developed and address quality of service assertions in time and space.
+
+One thing we observed is that some papers do present a fair number of simulations, but a precise formula for communicating the complexity of the algorithm may not be provided. We believe in a future research activity such a complexity analysis that needs to be conducted while including parameters use to determine the could needs. Furthermore, an automated simulation framework that predicts the performance of the scheduler based on its input can be derived. The need for this is motivated by the potential time constraints we have. Certainly,  we do not have the luxury to wait for a scheduling decision if it takes longer to derive it than the actual calculation or data analysis takes. Furthermore, we envision a REST service based on the NIST Big Data Reference Architecture principles that would allow us to stage an analytics service in which multiple competing algorithms can be evaluated to make the selection process of the scheduler more transparent. Not only would this framework be able to present the complexity but also instantiate or look up a benchmark for the particular scheduling problem formulated.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
