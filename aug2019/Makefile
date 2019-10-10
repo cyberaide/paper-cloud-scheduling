@@ -41,11 +41,12 @@ table:
 
 
 clean:
-	latexmk -C -bibtex
 	rm -rf $(FILENAME).spl
 	rm -f *_bibertool.bib
 	rm -f *.ttt
+	rm -rf *.prv
 	rm -f *.blg
+	latexmk -C -bibtex
 
 
 regular:
