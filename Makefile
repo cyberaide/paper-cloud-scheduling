@@ -55,8 +55,9 @@ clean:
 	rm -f *_bibertool.bib
 	rm -f *.ttt
 	rm -rf *.prv
-	rm -f *.blg
-	latexmk -C -bibtex
+	rm -f *.blg *.out *.spl *-orig
+	rm -f *.aux *.log
+	# latexmk -C -bibtex
 
 
 regular:

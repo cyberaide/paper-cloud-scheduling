@@ -1,0 +1,130 @@
+\RequirePackage[hyphens]{url}
+%\documentclass[10pt,twocolumn]{article}
+%\documentclass[preprint,12pt,3p]{elsarticle}
+
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+
+\usepackage{pdflscape}
+
+\usepackage[T1]{fontenc}
+\usepackage{comment}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{todonotes}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{mindmap,trees}
+\usetikzlibrary{backgrounds,shapes,arrows,positioning,calc,snakes,fit}
+\usepgflibrary{decorations.markings}
+\usepackage{color, colortbl}
+\usepackage[T1]{fontenc}
+%\usepackage[table]{xcolor}
+\definecolor{Gray}{gray}{0.9}
+\usepackage{forest}
+\usepackage{hyperref}
+\usepackage{adjustbox}
+\usepackage[figuresright]{rotating}
+ 
+\usetikzlibrary{arrows.meta,shadows}
+
+\newcommand{\ngreen}{bottom color=green!20}
+\newcommand{\ngrey}{bottom color=gray!20}
+\newcommand{\nred}{bottom color=red!20}
+\newcommand{\nwhite}{bottom color=white!20}
+\newcommand{\TODO}[1]{\todo[inline]{#1}}
+\newcommand{\GVL}[1]{{\begin{blue} #1}}
+
+%\usepackage[linguistics]{forest}
+\usepackage{smartdiagram}
+
+\setcounter{secnumdepth}{6}
+\setcounter{tocdepth}{6}
+
+\forestset{
+  skan tree/.style={
+    for tree={
+      drop shadow,
+      text width=3cm,
+      grow'=0,
+      rounded corners,
+      draw,
+      top color=white,
+      bottom color=blue!20,
+      edge={Latex-},
+      child anchor=parent,
+      %parent anchor=children,
+      anchor=parent,
+      tier/.wrap pgfmath arg={tier ##1}{level()},
+      s sep+=2.5pt,
+      l sep+=2.5pt,
+      edge path'={
+        (.child anchor) -- ++(-10pt,0) -- (!u.parent anchor)
+      },
+      node options={ align=center },
+    },
+    before typesetting nodes={
+      for tree={
+        content/.wrap value={\strut ##1},
+      },
+    },
+  },
+}
+
+
+\newenvironment{rotatepage}
+        {%
+            \if@twoside%
+                \ifthispageodd{\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}}{%
+                \pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 270}}%
+            \else%
+                \pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}%
+            \fi%
+        }%
+        {\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 0}}%
+\makeatother
+
+\BeforeBeginEnvironment{sidewaystable}{\begin{rotatepage}}
+  \AfterEndEnvironment{sidewaystable}{\end{rotatepage}}
+
+\begin{document}
+
+\onecolumn
+
+%\parindent0pt Draft:\\
+
+%{\Large \TITLE\\}
+
+%\setcounter{tocdepth}{3}
+%\tableofcontents
+%\newpage
+
+%\twocolumn
+
+
+
+\begin{frontmatter}
+\title{\TITLE}
+
+
+\input{table-dynamic-placement}
+\input{table-energy}
+\input{table-network}
+\input{table-cost}
+\input{table-time}
+\input{table-reliability}
+\input{table-security}
+\input{table-heuristic}
+\input{table-AI}
+\input{table-batch}
+\input{table-iaas}
+\input{table-container}
+\input{table-distr-cloud}
+
+
+\afterpage{\clearpage}
+
+\end{document}

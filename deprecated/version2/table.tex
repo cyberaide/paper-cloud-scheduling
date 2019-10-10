@@ -1,0 +1,203 @@
+\RequirePackage[hyphens]{url}
+%\documentclass[10pt,twocolumn]{article}
+%\documentclass[preprint,12pt,3p]{elsarticle}
+
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+
+\usepackage{pdflscape}
+\usepackage[tablesonly]{endfloat}
+\usepackage{fancyhdr}
+
+
+
+\usepackage[T1]{fontenc}
+\usepackage{comment}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{todonotes}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{mindmap,trees}
+\usetikzlibrary{backgrounds,shapes,arrows,positioning,calc,snakes,fit}
+\usepgflibrary{decorations.markings}
+\usepackage{color, colortbl}
+\usepackage[T1]{fontenc}
+%\usepackage[table]{xcolor}
+\definecolor{Gray}{gray}{0.9}
+\usepackage{forest}
+\usepackage{hyperref}
+\usepackage{adjustbox}
+\usepackage[figuresright]{rotating}
+ 
+\usetikzlibrary{arrows.meta,shadows}
+
+\newcommand{\ngreen}{bottom color=green!20}
+\newcommand{\ngrey}{bottom color=gray!20}
+\newcommand{\nred}{bottom color=red!20}
+\newcommand{\nwhite}{bottom color=white!20}
+\newcommand{\TODO}[1]{\todo[inline]{#1}}
+\newcommand{\GVL}[1]{{\begin{blue} #1}}
+
+%\usepackage[linguistics]{forest}
+\usepackage{smartdiagram}
+
+\setcounter{secnumdepth}{6}
+\setcounter{tocdepth}{6}
+
+\forestset{
+  skan tree/.style={
+    for tree={
+      drop shadow,
+      text width=3cm,
+      grow'=0,
+      rounded corners,
+      draw,
+      top color=white,
+      bottom color=blue!20,
+      edge={Latex-},
+      child anchor=parent,
+      %parent anchor=children,
+      anchor=parent,
+      tier/.wrap pgfmath arg={tier ##1}{level()},
+      s sep+=2.5pt,
+      l sep+=2.5pt,
+      edge path'={
+        (.child anchor) -- ++(-10pt,0) -- (!u.parent anchor)
+      },
+      node options={ align=center },
+    },
+    before typesetting nodes={
+      for tree={
+        content/.wrap value={\strut ##1},
+      },
+    },
+  },
+}
+
+\newcommand{\TITLE}{Cloud Resource Scheduling Taxonomy }
+
+\author[label1]{Gregor von Laszewski\corref{cor1}\fnref{label3}}
+\address[iu]{{\small $^1$ Intelligent Systems Engineering Dep., Indiana University, Bloomington, IN 47408, USA.}
+}
+\cortext[cor1]{Corresponding author}
+\ead{laszewski@gmail.com}
+\ead[url]{https://laszewski.github.io/}
+
+\author[label2]{Rajni Aron}
+\address[punjab]{School of Computer Science and Engineering, Lovely Professional University, Punjab, India}
+
+
+\author[label1]{Geoffrey C. Fox}
+
+
+
+% in final version remove the following line, it is included
+% so we can review better
+\usepackage[nomarkers,tablesonly]{endfloat}
+
+%\makeatletter
+%\def\ps@pprintTitle{%
+%   \let\@oddhead\@empty
+%   \let\@evenhead\@empty
+%   \let\@oddfoot\@empty
+%   \let\@evenfoot\@oddfoot
+%}
+%\makeatother
+
+\makeatletter
+\newenvironment{rotatepage}
+        {%
+            \if@twoside%
+                \ifthispageodd{\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}}{%
+                \pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 270}}%
+            \else%
+                \pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}%
+            \fi%
+        }%
+        {\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 0}}%
+\makeatother
+
+\BeforeBeginEnvironment{sidewaystable}{\begin{rotatepage}}
+  \AfterEndEnvironment{sidewaystable}{\end{rotatepage}}
+
+\begin{document}
+
+\onecolumn
+
+%\parindent0pt Draft:\\
+
+%{\Large \TITLE\\}
+
+%\setcounter{tocdepth}{3}
+%\tableofcontents
+%\newpage
+
+%\twocolumn
+
+
+
+\begin{frontmatter}
+\title{\TITLE}
+
+\maketitle
+
+
+
+\begin{keyword}
+
+  Y-Cloud Taxonomy,
+  Cloud Scheduling,
+  Scheduling Virtual Machines,
+  Scheduling Containers,
+  Scheduling FaaS
+
+\end{keyword}
+
+\begin{abstract}
+
+  The growth and development of scientific applications in the cloud
+  demands the creation of efficient resource management systems. Due
+  to the scale of resources, the heterogeneity of services, their
+  inter-dependencies and unpredictability of load this is a complex
+  problem. We present a resource scheduling taxonomy that originates
+  from the experience in utilizing and managing multi-cloud
+  environments.  This study is backed up by a literature review that
+  targets not only virtual machine, but also container and Function as
+  a Service frameworks. It justifies a proposed resource provider
+  focused Y-cloud taxonomy and provides a an overview of existing
+  scheduling techniques in cloud computing.  As a result this work can
+  lead to a better understanding of the complex field of scheduling
+  for clouds in general. Furthermore, the study promotes through the
+  Y-cloud taxonomy the vision of a layered scheduling architecture
+  that will be useful for the implementation of application and
+  resource-based scheduling frameworks in support of the NIST Big Data
+  Reference Architecture.
+
+\end{abstract}
+
+\end{frontmatter}
+
+\section{Tables}
+
+
+\input{table-dynamic-placement}
+\input{table-energy}
+\input{table-network}
+\input{table-cost}
+\input{table-time}
+\input{table-reliability}
+\input{table-security}
+\input{table-heuristic}
+\input{table-AI}
+\input{table-batch}
+\input{table-iaas}
+\input{table-container}
+\input{table-distr-cloud}
+
+
+
+\end{document}
