@@ -28,7 +28,7 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{comment}
-\usepackage{fullpage}
+%\usepackage{fullpage}
 \usepackage{graphicx}
 \usepackage{adjustbox}
 \usepackage{todonotes}
@@ -41,7 +41,6 @@
 \usetikzlibrary{backgrounds,shapes,arrows,positioning,calc,snakes,fit}
 \usepgflibrary{decorations.markings}
 \usepackage{color, colortbl}
-\usepackage[T1]{fontenc}
 %\usepackage[table]{xcolor}
 \definecolor{Gray}{gray}{0.9}
 \usepackage{forest}
@@ -102,46 +101,13 @@
 \newcommand{\TITLE}{Cloud Resource Scheduling Taxonomy}
 
 
+\include{frotpage-acm}
 
-
-% in final version remove the following line, it is included
-% so we can review better
-\usepackage[nomarkers,tablesonly]{endfloat}
-
-%\makeatletter
-%\def\ps@pprintTitle{%
-%   \let\@oddhead\@empty
-%   \let\@evenhead\@empty
-%   \let\@oddfoot\@empty
-%   \let\@evenfoot\@oddfoot
-%}
-%\makeatother
-
-%\makeatletter
-%\newenvironment{rotatepage}
-%        {%
-%            \if@twoside%
-%                \ifthispageodd{\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}}{%
-%                \pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 270}}%
-%            \else%
-%                \pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}%
-%            \fi%
-%        }%
-%        {\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 0}}%
-%\makeatother
-%
-%\BeforeBeginEnvironment{sidewaystable}{\begin{rotatepage}}
-%  \AfterEndEnvironment{sidewaystable}{\end{rotatepage}}
-
-
-
-
-  
 \begin{document}
 
 \input{abstract}
 
-\include{frotpage-acm}
+
 
 \title{\TITLE}
 
